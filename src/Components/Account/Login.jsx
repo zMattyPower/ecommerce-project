@@ -6,7 +6,7 @@ import { faEnvelope, faLock, faEye } from '@fortawesome/free-solid-svg-icons'
 import './Style.css';
 
 const Login = () => {
-    const [name, setName] = useState("");
+    const [email, setName] = useState("");
     const [result, setResult] = useState("");
 
     const handleChange = (e) => {
@@ -37,7 +37,7 @@ const Login = () => {
             <h1><img src={require("./Login_Icon.png")} alt='login' width="100" draggable="false"/></h1> 
             <div className="input-box">
                 <FontAwesomeIcon icon={faEnvelope} id="login"/>
-                <input type="email" placeholder="E-Mail" id="name" name="name" value={name}
+                <input type="email" placeholder="E-Mail" id="email" name="email" value={email}
                 onChange={(event) =>
                     handleChange(event)
                 }
