@@ -25,14 +25,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-right">
-
+        <a href="/cart" className="cart-icon">
+          <i className="bi bi-bag"></i>
+          <span className="cart-count">0</span>
+        </a>
         <a href="/account" className="user-icon">
           <i className="fas fa-user"></i>
-        </a>
-
-        <a href = "/carrello" className="cart-icon"> 
-        <i className="bi bi-bag"></i>
-        <span className="cart-count">0</span>
         </a>
       </div>
     </nav>
