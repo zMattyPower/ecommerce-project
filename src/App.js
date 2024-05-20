@@ -7,7 +7,6 @@ function App() {
     <div>
       <Navbar/>
       Test2
-      Test3
       <Footer/>
     </div>
   );
