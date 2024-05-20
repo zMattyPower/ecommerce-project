@@ -4,31 +4,35 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
+
       <div className="navbar-left">
-        <a href="/" className="logo">
-          Clothem
-        </a>
+         Clothem
       </div>
       <div className="navbar-center">
         <ul className="nav-links">
           <li>
-            <a href="/products">Prodotti</a>
+            Donna
           </li>
           <li>
-            <a href="/about">Chi siamo</a>
+            Uomo
           </li>
           <li>
-            <a href="/contact">Contattaci</a>
+            Bambino
+          </li>
+          <li>
+            Neonato
           </li>
         </ul>
       </div>
       <div className="navbar-right">
-        <a href="/cart" className="cart-icon">
-          <i className="bi bi-bag"></i>
-          <span className="cart-count">0</span>
-        </a>
+
         <a href="/account" className="user-icon">
           <i className="fas fa-user"></i>
+        </a>
+
+        <a href = "/carrello" className="cart-icon"> 
+        <i className="bi bi-bag"></i>
+        <span className="cart-count">0</span>
         </a>
       </div>
     </nav>
