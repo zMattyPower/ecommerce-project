@@ -1,13 +1,12 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/Footer'
-
+import Payment from "./Components/Payment/payment"
 function App() {
   return (
     <div>
       <Navbar/>
-      Test2 
-      hey
+        <Payment></Payment>
       <Footer/>
     </div>
   );
