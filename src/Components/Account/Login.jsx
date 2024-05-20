@@ -20,8 +20,8 @@ const Login = () => {
             
             <div class="input-box">
                 <FontAwesomeIcon icon={faLock} id="login"/>
-                <input type="password" id="password" name="password" ref={passwordRef} placeholder="Password" required/>
-                <FontAwesomeIcon icon={faEye} name="togglePassword" ref={toggleRef} id="togglePassword" onclick="TogglePassword()"/>
+                <input type="password" id="password" name="password" placeholder="Password" required/>
+                <FontAwesomeIcon icon={faEye} name="togglePassword" id="togglePassword" onclick="TogglePassword()"/>
             </div>
 
             <button type="submit" class="btn">Accedi</button>
