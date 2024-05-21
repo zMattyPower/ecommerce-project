@@ -27,7 +27,7 @@
     background: transparent;
     user-select: none;
     /*box-shadow: 0 0 10px rgba(0, 0, 0, .2);*/
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px rgb(255, 7, 238);
     border-radius: 40px;
     padding-top: 1px;
     padding-bottom: 1px;
