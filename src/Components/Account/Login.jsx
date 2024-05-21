@@ -1,43 +1,77 @@
 import React from 'react';
+import { useState } from "react";
+import $ from "jquery";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLock, faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLock, faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons'
 import './Style.css';
 
 const Login = () => {
-  return (
-    <div class="wrapper" id="wrapper">
-        <form name="frmLogin" id="frmLogin" onsubmit="event.preventDefault(); LoginSimulation()">
-            <button type="button" class="backLogin" onclick="showLoginForm()">✕</button>
-            <h1><img src={require("./Login_Icon.png")} alt='login' width="100" draggable="false"/></h1> 
-            <div class="input-box">
-                <FontAwesomeIcon icon={faEnvelope} id="login"/>
-                <input type="email" placeholder="E-Mail" id="email" name="email" required/>
-            </div>
-            
-            <div class="remember-forgot">
-                <a href='about:blank' onclick="showForgotForm()">Password Dimenticata?</a>
-            </div>
-            
-            <div class="input-box">
-                <FontAwesomeIcon icon={faLock} id="login"/>
-                <input type="password" id="password" name="password" placeholder="Password" required/>
-                <FontAwesomeIcon icon={faEye} name="togglePassword" id="togglePassword" onclick="TogglePassword()"/>
-            </div>
+    const [passwordShown, setPasswordShown] = useState(false);
+    const [result, setResult] = useState("");
 
-            <button type="submit" class="btn">Accedi</button>
+    const togglePasswordVisibility = () => {
+        setPasswordShown(!passwordShown);
+    };
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = $(e.target);
+        $.ajax({
+            type: "POST",
+            url: form.attr("action"),
+            data: form.serialize(),
+            success(data) {
+                setResult(data);
+            },
+        });
+    };
 
-            <div class="register-link">
-                <hr/>
-                <p><a href='about:blank' onclick="showRegisterForm()">Crea un account gratuitamente<i class='bx bx-chevrons-right'></i></a></p>
-            </div>
-        </form>
-    </div>
+    return (
+        <div className="wrapper" id="wrapper">
+            <form name="frmLogin" id="frmLogin"
+                action="http://localhost:8000/server.php"
+                method="post"
+                onSubmit={(event) => handleSubmit(event)}
+            >
+                <button type="button" className="backLogin">✕</button>
+                <h1><img src={require("./Login_Icon.png")} alt='login' width="100" draggable="false"/></h1>
+
+                <div className="input-box">
+                    <FontAwesomeIcon icon={faEnvelope} id="login"/>
+                    <input type="email" placeholder="E-Mail" id="email" name="email"
+                    required/>
+                </div>
+                
+                <div className="remember-forgot">
+                    <a href='about:blank'>Password Dimenticata?</a>
+                </div>
+
+                <div className="input-box">
+                    <FontAwesomeIcon icon={faLock} id="login"/>
+                    <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required/>
+                    <FontAwesomeIcon
+                        icon={passwordShown ? faEyeSlash : faEye}
+                        onClick={togglePasswordVisibility}
+                        id='eye-icon'
+                    />
+                </div>
+                
+                <button type="submit" className="btn">Accedi</button>
+
+                {result}
+
+                <div className="register-link">
+                    <hr/>
+                    <p><a href='about:blank'>Crea un account gratuitamente<i className='bx bx-chevrons-right'></i></a></p>
+                </div>
+            </form>
+        </div>
   );
 };
 
 export default Login
 
-var currentLog = 0;
+/*var currentLog = 0;
 var toggleLog = false;
 var toggleReg = false;
 var toggleForgot = false;
@@ -69,7 +103,7 @@ function showLoginForm() {
 }
 
 //Mostra il Form della Registrazione
-function showRegisterForm() {
+/*function showRegisterForm() {
     if (toggleReg) {
         document.getElementById("wrapper-reg").style.visibility = "hidden";
         document.getElementById("wrapper").style.visibility = "visible";
@@ -114,21 +148,19 @@ function showRegisterForm() {
 });*/
 
 /*function TogglePassword() {
-    const passwordRef = React.useRef();
-    const toggleRef = useRef(null);
     //const password = document.querySelector("#password");
-    React.useEffect(() => {
-        const password = passwordRef.current;
-        const toggle = toggleRef.current;
-        if (!toggle) return;
-        if (!password) return;
-        const type = password.getAttribute("type") === "password" ? "text" : "password";
-        password.setAttribute("type", type);
-        toggle.classList.toggle("bx-show");
-    });    
+    const password = pass;
+    console.log(password)
+    const toggle = toggleRef.current;
+    if (!toggle) return;
+    if (!password) return;
+    //const type = password.getAttribute("type") === "password" ? "text" : "password";
+    //password.setAttribute("type", type);
+    //toggle.classList.toggle("bx-show");
+    //print("test");
 }*/
 
-function togglePasswordReg() {
+/*function togglePasswordReg() {
     const password = document.querySelector("#password2");
     const toggle = document.querySelector("#togglePassword2");
     const type = password.getAttribute("type") === "password" ? "text" : "password";
@@ -244,8 +276,8 @@ function isLogged() {
     localStorage.clear();
     alert("Logout Effettuato Correttamente")
     location.reload();
-}*/
+}
 
 function messaggioContatti() {
     alert("Messaggio Inviato, ti risponderemo il prima possibile!\nNOTA: Dacci fino a 72 ore lavorative, sennò inviate un altro messaggio.")
-}
+}*/

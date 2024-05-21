@@ -8,7 +8,6 @@ function App() {
     <div>
       <Navbar/>
       <Login/>
-      Test2 
       hey
       <Footer/>
     </div>

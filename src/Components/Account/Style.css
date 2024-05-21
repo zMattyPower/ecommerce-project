@@ -124,6 +124,14 @@
     padding: 20px 45px 20px 40px;
 }
 
+.input-box #eye-icon { /*Icona cliccabile per nascondere la password*/
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
 .input-box input::placeholder {
     color: #d3d3d3;
 }
@@ -135,15 +143,6 @@
 .input-box #login {
     position: absolute;
     left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-}
-
-.input-box #togglePassword, .input-box #togglePassword2 {
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
@@ -196,12 +195,12 @@
 }
 
 .wrapper .btn:hover, .wrapper-reg .btn:hover, .wrapper-forgot .btn:hover {
-    background: linear-gradient(90deg, rgba(210, 210, 210, 0.8) 40%, rgba(154, 154, 154, 0.737) 93%);
+    background: linear-gradient(90deg, rgba(224, 223, 223, 0.8) 40%, rgba(174, 174, 174, 0.737) 93%);
 }
 
 .wrapper .btn:active, .wrapper-reg .btn:active, .wrapper-forgot .btn:active {
     transform: scale(0.98);
-    background: linear-gradient(90deg, rgba(63, 147, 126, 0.723) 40%, rgba(53, 141, 100, 0.737) 93%);
+    background: linear-gradient(90deg, rgba(177, 177, 177, 0.8) 40%, rgba(139, 139, 139, 0.737) 93%);
 }
 
 .wrapper .register-link, .wrapper-reg .register-link {
