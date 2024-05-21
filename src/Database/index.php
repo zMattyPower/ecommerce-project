@@ -24,25 +24,6 @@ if ($conn->query($sql) === TRUE) {
     echo "Database non creato :'( " . $conn->error;
 }
 
-//Creazione tabella carta
-$sql = "CREATE TABLE t_carta_di_pagamento (
-    email varchar(255) NOT NULL,
-    numero int(12) NOT NULL,
-    scadenza date NOT NULL,
-    nome varchar(255) NOT NULL,
-    cognome varchar(255) NOT NULL,
-    debito tinyint(4) NOT NULL,
-    credito tinyint(4) NOT NULL,
-    prepagata tinyint(4) NOT NULL,
-    PRIMARY KEY (numero)
-);";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Tabella carta creata con successo";
-} else {
-    echo "Errore creazione tabella carta: " . $conn->error;
-}
-
 //Creazione tabella utente
 $sql = "CREATE TABLE t_utente (
     email varchar(255) NOT NULL UNIQUE,
@@ -59,14 +40,33 @@ $sql = "CREATE TABLE t_utente (
     tessera tinyint(4) DEFAULT NULL,
     cognome varchar(255) NOT NULL,
     numero int(12) NOT NULL,
-    PRIMARY KEY (email),
-    FOREIGN KEY (numero) REFERENCES t_carta_di_pagamento(numero)
+    PRIMARY KEY (email)
 );";
 
 if ($conn->query($sql) === TRUE) {
     echo "Tabella utente creata con successo";
 } else {
     echo "Errore creazione tabella utente: " . $conn->error;
+}
+
+//Creazione tabella carta
+$sql = "CREATE TABLE t_carta_di_pagamento (
+    email varchar(255) NOT NULL,
+    numero int(12) NOT NULL,
+    scadenza date NOT NULL,
+    nome varchar(255) NOT NULL,
+    cognome varchar(255) NOT NULL,
+    debito tinyint(4) NOT NULL,
+    credito tinyint(4) NOT NULL,
+    prepagata tinyint(4) NOT NULL,
+    PRIMARY KEY (numero)
+    FOREIGN KEY (email) REFERENCES t_utente(email)
+);";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Tabella carta creata con successo";
+} else {
+    echo "Errore creazione tabella carta: " . $conn->error;
 }
 
 //Creazione tabella categoria
