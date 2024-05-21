@@ -10,10 +10,18 @@ const Navbar = () => {
       </div>
       <div className="navbar-center">
         <ul className="nav-links">
+
           <li>
             Donna
-          </li>
+              <ul className="dropdown">
+                <li>Option 11</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                {/* Add more dropdown options */}
+              </ul>
+            </li>
           <li>
+            
             Uomo
           </li>
           <li>

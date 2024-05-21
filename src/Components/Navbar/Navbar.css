@@ -93,3 +93,36 @@
    cursor: pointer;
  }
 }
+
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #050404;
+  padding: 2px;
+  width: 60%;
+}
+
+.dropdown li {
+  padding: 10px;
+  /* Stili per gli elementi del menu */
+}
+
+li:hover .dropdown {
+  display: block;
+}
