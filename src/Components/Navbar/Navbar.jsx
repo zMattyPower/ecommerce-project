@@ -68,6 +68,7 @@ const Navbar = () => {
               type="search"
               placeholder="Search"
               className="me-2"
+              id='search'
               aria-label="Search"
             />
           </Form>
