@@ -33,7 +33,7 @@ const Login = () => {
                 method="post"
                 onSubmit={(event) => handleSubmit(event)}
             >
-                <button type="button" className="backLogin" onclick="showLoginForm()">✕</button>
+                <button type="button" className="backLogin">✕</button>
                 <h1><img src={require("./Login_Icon.png")} alt='login' width="100" draggable="false"/></h1>
 
                 <div className="input-box">
@@ -43,15 +43,16 @@ const Login = () => {
                 </div>
                 
                 <div className="remember-forgot">
-                    <a href='about:blank' onclick="showForgotForm()">Password Dimenticata?</a>
+                    <a href='about:blank'>Password Dimenticata?</a>
                 </div>
 
                 <div className="input-box">
                     <FontAwesomeIcon icon={faLock} id="login"/>
-                    <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" />
+                    <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required/>
                     <FontAwesomeIcon
                         icon={passwordShown ? faEyeSlash : faEye}
                         onClick={togglePasswordVisibility}
+                        id='eye-icon'
                     />
                 </div>
                 
@@ -61,7 +62,7 @@ const Login = () => {
 
                 <div className="register-link">
                     <hr/>
-                    <p><a href='about:blank' onclick="showRegisterForm()">Crea un account gratuitamente<i className='bx bx-chevrons-right'></i></a></p>
+                    <p><a href='about:blank'>Crea un account gratuitamente<i className='bx bx-chevrons-right'></i></a></p>
                 </div>
             </form>
         </div>

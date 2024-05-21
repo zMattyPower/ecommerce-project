@@ -124,7 +124,7 @@
     padding: 20px 45px 20px 40px;
 }
 
-.input-box svg { /*Icona cliccabile per nascondere la password*/
+.input-box #eye-icon { /*Icona cliccabile per nascondere la password*/
     position: absolute;
     right: 10px;
     top: 50%;
