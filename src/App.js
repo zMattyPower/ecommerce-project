@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Navbar/>
-
+      <Login/>
       hey
       <Footer/>
     </div>
