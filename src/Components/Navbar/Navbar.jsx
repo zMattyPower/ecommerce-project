@@ -8,9 +8,9 @@ import { useLoginContext } from '../GlobalVariables'; // Import the context hook
 
 //Page Link
 import { Link } from 'react-router-dom';
-import Donna from "../../pages/Donna";
-import Uomo from "../../pages/Uomo";
-import Bambino from "../../pages/Bambino";
+import Donna from "../../pages/DonnaMaglietta";
+import Uomo from "../../pages/UomoMaglietta";
+import Bambino from "../../pages/BambinoMaglietta";
 
 import { IconName } from "react-icons/ai";
 import Button from 'react-bootstrap/Button';
@@ -33,17 +33,20 @@ const Navbar = () => {
       </div>
       <nav className="navbar">
 
-          <div className="navbar-left">
+
+      <Link to="/"><div className="navbar-left">
             Clothem
-          </div>
+          </div></Link>
 
           <div className="navbar-center">
+
 
             <ul className="nav-links">
 
               <li>
                 Donna
                 <ul className="dropdown">
+
 
                   <li><Link to="/donna/maglietta">Maglietta</Link></li>
                   <li><Link to="/donna/pantaloni">Pantaloni</Link></li>
