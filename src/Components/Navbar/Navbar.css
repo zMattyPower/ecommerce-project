@@ -7,7 +7,7 @@
  justify-content: space-between;
  align-items: center;
  font-size: 2rem;
- background-color: #ffffff;
+ background-color:white;
  color: #000000;
  padding: 1rem;
 }
@@ -70,18 +70,30 @@
   height: 35px;
 }
 
-#search_icon{
+#b_search_icon{
   height: 30px;
   background-color: #00000011;
   color: black;
   padding: auto;
   position: absolute;
   right: 0;
-  top : 5px;
+  top : 5px; /* posizione all'interno della barra ricerca*/
 }
 
-#s_icon{
-  margin:auto;
+
+
+
+
+#b_login_icon{
+  margin-bottom: 16px;
+  margin-left: 9px;
+  background-color: white;
+
+}
+
+#l_icon{
+
+  color : rgb(0, 0, 0);
 }
 
 
