@@ -20,7 +20,6 @@ function App() {
         <Route path="/Uomo" element={<Uomo />} />
         <Route path="/Bambino" element={<Bambino/>} />
       </Routes>
-      
 
       <Footer/>
     </div>
