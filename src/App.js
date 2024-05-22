@@ -5,12 +5,15 @@ import Footer from "./Components/Footer/Footer";
 
 
 //Link Page
-import { Route, Routes } from "react-router-dom";
+
 import Home from "./pages/Home";
 import DonnaMaglietta from "./pages/DonnaMaglietta";
 import UomoMaglietta from "./pages/UomoMaglietta";
 import BambinoMaglietta from "./pages/BambinoMaglietta";
 import NeonatoMaglietta from "./pages/NeonatoMaglietta";
+
+import Tendina from "./Components/prova/Tendina";
+
 
 function App() {
   return (
@@ -25,7 +28,8 @@ function App() {
         <Route path="/bambino/maglietta" element={<BambinoMaglietta />} />
         <Route path="/neonato/maglietta" element={<NeonatoMaglietta />} />
       </Routes>
-      
+
+     
     </div>
   );
 }
