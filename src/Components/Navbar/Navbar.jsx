@@ -1,6 +1,8 @@
 import React from 'react';
 import './Navbar.css';
+import { AiOutlineSearch } from "react-icons/ai";
 
+import { IconName } from "react-icons/ai";
 import Button from 'react-bootstrap/Button';
 
 import Form from 'react-bootstrap/Form';
@@ -63,17 +65,11 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-right">
-        <Form className="d-flex">
-        <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              id='search'
-              aria-label="Search"
-            />
-          </Form>
-
-      </div>
+          <form action="/action_page.php" className="search_form">
+          <input type="text" placeholder="Search.." name="search" id = "search"/>
+          <button type="submit" id = "search_icon"><AiOutlineSearch /></button>
+          </form>
+          </div>
     </nav>
   );
 };

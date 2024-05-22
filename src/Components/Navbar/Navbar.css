@@ -48,14 +48,24 @@
  align-items: center;
 }
 
-.me-2{
+.search_form{
+  margin: 10px;
+}
+
+#search{
   display: flex;
   justify-content: center;
   align-items: start;
   height: 30px;
-  width: 200px;
+  width: 250px;
 }
 
+#search_icon{
+  height: 30px;
+  background-color: #00000011;
+  color: black;
+  padding: auto;
+}
 
 
 .navbar-right .cart-icon,
