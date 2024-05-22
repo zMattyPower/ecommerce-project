@@ -65,13 +65,16 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-right">
+        <div class='inputWithButton'>
           <form action="/action_page.php" className="search_form">
-          <input type="text" placeholder="Search.." name="search" id = "search"
-          
-          />
-           <button type="submit" id = "search_icon"><AiOutlineSearch/></button>
+            <input type="text" placeholder="Cerca.." name="search" id = "search"/>
+           <button type="submit" id = "search_icon"><AiOutlineSearch id = "s_icon"/></button>
           </form>
-          </div>
+        </div>
+      </div>
+
+
+
     </nav>
   );
 };

@@ -50,12 +50,24 @@
 
 
 
+/* posizione barra ricerca */
+.inputWithButton { 
+  position: relative;
+  width : 200px;
+}
+
+.inputWithButton input{
+    width: 70%;
+    height: 25px;
+    padding-right: 60px;
+}
+
+
 #search{
   display: flex;
   justify-content: center;
   align-items: start;
-  height: 30px;
-  width: 250px;
+  height: 35px;
 }
 
 #search_icon{
@@ -63,6 +75,13 @@
   background-color: #00000011;
   color: black;
   padding: auto;
+  position: absolute;
+  right: 0;
+  top : 5px;
+}
+
+#s_icon{
+  margin:auto;
 }
 
 
