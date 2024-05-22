@@ -1,12 +1,23 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.Carta{
+    width: 40%;
+    height: 580px;
+    border: 3px solid black;
 }
 
-.Area{
-    border: 2px solid black;
-    width: 30%;
-    height: 50%;
+.col-50 {
+    display: grid;
+  padding: 0 16px;
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  
 }
+.label{
+  display: relative;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }

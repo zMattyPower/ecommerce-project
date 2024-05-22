@@ -6,8 +6,9 @@
  display: flex;
  justify-content: space-between;
  align-items: center;
- background-color: #333;
- color: #fff;
+ font-size: 2rem;
+ background-color:white;
+ color: #000000;
  padding: 1rem;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .navbar-center .nav-links {
- font-size: 1.5rem;
+ font-size: 1.2rem;
  list-style-type: none;
  display: flex;
  margin: 0;
@@ -42,10 +43,75 @@
 }
 
 .navbar-right {
- font-size: 1.5rem;
+ font-size: 2.5rem;
  display: flex;
  align-items: center;
 }
+
+
+
+/* posizione barra ricerca */
+.inputWithButton { 
+  position: relative;
+  width : 200px;
+}
+
+.inputWithButton input{
+    width: 100%;
+    height: 25px;
+    padding-right: 60px;
+}
+
+
+#search{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 40px;
+}
+
+#b_search_icon{
+  height: 35px;
+  background-color: #00000011;
+  padding: auto;
+  position: absolute;
+  right: 2px;
+  top : 3px; /* posizione all'interno della barra ricerca*/
+}
+
+#s_icon{
+  color : rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+/* login icon */
+#b_login_icon{
+  margin-bottom: 16px;
+  margin-left: 5px; 
+  background-color: white;
+
+}
+
+#l_icon{
+
+  color : rgb(0, 0, 0);
+}
+
+/* cart icon*/
+#b_cart_icon{
+  margin-bottom: 16px;
+  margin-left: 5px; 
+  background-color: white;
+
+}
+
+#c_icon{
+
+  color : rgb(0, 0, 0);
+}
+
+
+
 
 .navbar-right .cart-icon,
 .navbar-right .user-icon {
@@ -92,4 +158,36 @@
    font-size: 1.5rem;
    cursor: pointer;
  }
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #050404;
+  padding: 2px;
+}
+
+.dropdown li {
+  padding: 10px;
+  /* Stili per gli elementi del menu */
+}
+
+li:hover .dropdown {
+  display: block;
 }

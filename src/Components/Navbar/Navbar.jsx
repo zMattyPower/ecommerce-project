@@ -1,38 +1,111 @@
 import React from 'react';
 import './Navbar.css';
+import { AiOutlineSearch } from "react-icons/ai";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faMagnifyingGlass, faUser, faCartShopping} from '@fortawesome/free-solid-svg-icons'
+
+//Page Link
+import { Link } from 'react-router-dom';
+import Donna from "../../pages/Donna";
+import Uomo from "../../pages/Uomo";
+import Bambino from "../../pages/Bambino";
+
+import { IconName } from "react-icons/ai";
+import Button from 'react-bootstrap/Button';
+import { IoMdPerson } from "react-icons/io";
+
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+
+
+
 
 const Navbar = () => {
   return (
     <nav className="navbar">
+
       <div className="navbar-left">
-        <a href="/" className="logo">
-          Clothem
-        </a>
+         Clothem
       </div>
+
       <div className="navbar-center">
+
         <ul className="nav-links">
+
           <li>
-            <a href="/products">Prodotti</a>
+            Donna
+              <ul className="dropdown">
+              
+                <li><Link to="/donna/maglietta">Maglietta</Link></li>
+                <li><Link to="/donna/pantaloni">Pantaloni</Link></li>
+                <li><Link to="/donna/sport">Sport</Link></li>
+                {/* Add more dropdown options */}
+              </ul>
           </li>
+          
           <li>
-            <a href="/about">Chi siamo</a>
+            Uomo
+              <ul className="dropdown">
+                <li><Link to="/Uomo/Maglietta">Maglietta</Link></li>
+                <li><Link to="/Uomo/Pantaloni">Pantaloni</Link></li>
+                <li><Link to="/Uomo/Sport">Sport</Link></li>
+                {/* Add more dropdown options */}
+              </ul>
           </li>
+
           <li>
-            <a href="/contact">Contattaci</a>
+            Bambino
+              <ul className="dropdown">
+                <li><Link to="/uomo/maglietta">Maglietta</Link></li>
+                <li><Link to="/uomo/pantaloni">Pantaloni</Link></li>
+                <li><Link to="/uomo/sport">Sport</Link></li>
+                {/* Add more dropdown options */}
+              </ul>
+          </li>
+          
+          <li>   
+            Neonato
+              <ul className="dropdown">
+                <li><Link to="/bambino/maglietta">Maglietta</Link></li>
+                <li><Link to="/bambino/pantaloni">Pantaloni</Link></li>
+                <li><Link to="/bambino/sport">Sport</Link></li>
+                {/* Add more dropdown options */}
+              </ul>
           </li>
         </ul>
       </div>
+
       <div className="navbar-right">
-        <a href="/cart" className="cart-icon">
-          <i className="bi bi-bag"></i>
-          <span className="cart-count">0</span>
-        </a>
-        <a href="/account" className="user-icon">
-          <i className="fas fa-user"></i>
-        </a>
+
+        <div class='inputWithButton'>
+          <form action="/action_page.php" className="search_form">
+            <input type="text" placeholder="Cerca.." name="search" id = "search"/>
+           <button type="submit" id = "b_search_icon"> <FontAwesomeIcon icon={faMagnifyingGlass}id = "s_icon"/></button>
+          </form>
+        </div>
+
+        <div className = "login"> 
+        <button type="submit" id = "b_login_icon"><FontAwesomeIcon icon={faUser} id = "l_icon"/></button>
+        </div>
+
+        <div className = "cart"> 
+        <button type="submit" id = "b_cart_icon"><FontAwesomeIcon icon={faCartShopping} id = "c_icon"/></button>
+        </div>
+
+
       </div>
+
+
+
     </nav>
   );
 };
+/*
+npm install @react-icons/all-files --save
+npm install react-icons --save
+import { IoMdPerson } from "react-icons/io";
+
+*/
+
 
 export default Navbar;
