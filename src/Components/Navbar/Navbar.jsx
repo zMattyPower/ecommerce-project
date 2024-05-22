@@ -1,6 +1,8 @@
 import React from 'react';
 import './Navbar.css';
 import { AiOutlineSearch } from "react-icons/ai";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faMagnifyingGlass, faUser, faCartShopping} from '@fortawesome/free-solid-svg-icons'
 
 //Page Link
 import { Link } from 'react-router-dom';
@@ -74,13 +76,18 @@ const Navbar = () => {
         <div class='inputWithButton'>
           <form action="/action_page.php" className="search_form">
             <input type="text" placeholder="Cerca.." name="search" id = "search"/>
-           <button type="submit" id = "b_search_icon"><AiOutlineSearch id = "s_icon"/></button>
+           <button type="submit" id = "b_search_icon"> <FontAwesomeIcon icon={faMagnifyingGlass}id = "s_icon"/></button>
           </form>
         </div>
 
         <div className = "login"> 
-        <button type="submit" id = "b_login_icon"><IoMdPerson id = "l_icon"/></button>
+        <button type="submit" id = "b_login_icon"><FontAwesomeIcon icon={faUser} id = "l_icon"/></button>
         </div>
+
+        <div className = "cart"> 
+        <button type="submit" id = "b_cart_icon"><FontAwesomeIcon icon={faCartShopping} id = "c_icon"/></button>
+        </div>
+
 
       </div>
 

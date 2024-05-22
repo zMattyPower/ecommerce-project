@@ -57,7 +57,7 @@
 }
 
 .inputWithButton input{
-    width: 70%;
+    width: 100%;
     height: 25px;
     padding-right: 60px;
 }
@@ -67,26 +67,27 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  height: 35px;
+  height: 40px;
 }
 
 #b_search_icon{
-  height: 30px;
+  height: 35px;
   background-color: #00000011;
-  color: black;
   padding: auto;
   position: absolute;
-  right: 0;
-  top : 5px; /* posizione all'interno della barra ricerca*/
+  right: 2px;
+  top : 3px; /* posizione all'interno della barra ricerca*/
 }
 
+#s_icon{
+  color : rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
 
-
-
-
+/* login icon */
 #b_login_icon{
   margin-bottom: 16px;
-  margin-left: 9px;
+  margin-left: 5px; 
   background-color: white;
 
 }
@@ -95,6 +96,21 @@
 
   color : rgb(0, 0, 0);
 }
+
+/* cart icon*/
+#b_cart_icon{
+  margin-bottom: 16px;
+  margin-left: 5px; 
+  background-color: white;
+
+}
+
+#c_icon{
+
+  color : rgb(0, 0, 0);
+}
+
+
 
 
 .navbar-right .cart-icon,
