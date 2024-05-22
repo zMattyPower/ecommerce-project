@@ -4,6 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faMagnifyingGlass, faUser, faCartShopping} from '@fortawesome/free-solid-svg-icons'
 import Login from '../Account/Login'
+import { useLoginContext } from '../GlobalVariables'; // Import the context hook
 
 //Page Link
 import { Link } from 'react-router-dom';
@@ -18,51 +19,17 @@ import { IoMdPerson } from "react-icons/io";
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 
-
-
-
 const Navbar = () => {
-  var toggleLog = false;
-  const [page, setPage] = useState(toggleLog)
+  const { useLogin, setUseLogin } = useLoginContext(); // Access the useLogin state
+  const toggleLogin = () => {
+    setUseLogin(!useLogin);
+  };
+
   
-  var currentLog = 0;
-  var toggleReg = false;
-  var toggleForgot = false;
-  var loggedIn = localStorage['loggedIn'] || "false";
-  var loggedEmail = localStorage['loggedEmail'] || null;
-  var loggedUsername = localStorage['loggedUsername'] || null;
-
-  function toggle() {
-    toggleLog = !toggleLog
-  }
-
-  function ShowLoginForm() {
-      if (loggedIn == "true") {
-          alert("Sei loggato come " + loggedUsername + "\nEmail: " + loggedEmail);
-          return;
-      }
-      if (toggleLog) {
-          const BlurredDiv = document.getElementById("blur");
-          <Login/>
-          //BlurredDiv.parentNode.removeChild(BlurredDiv);
-          //document.getElementById("wrapper").style.visibility = "hidden";
-          toggleLog = false;
-          currentLog = 0;
-      }
-      else {
-          const BlurredDiv = document.createElement("div");
-          //BlurredDiv.id = "blur";
-          document.body.appendChild(BlurredDiv);
-          //document.getElementById("wrapper").style.visibility = "visible";
-          console.log("test");
-          toggleLog = true;
-          currentLog = 1;
-      }
-  }
   return (
     <>
       <div>
-        {page == true && <Login />}
+        {useLogin == true && <Login/>}
       </div>
       <nav className="navbar">
 
@@ -127,7 +94,7 @@ const Navbar = () => {
             </div>
 
             <div className="login">
-              <a href="#" className="user" id="b_login_icon" onClick={() => setPage(!page)}><FontAwesomeIcon icon={faUser} id="l_icon" /></a>
+              <a href="#" className="user" id="b_login_icon" onClick={toggleLogin}><FontAwesomeIcon icon={faUser} id="l_icon" /></a>
             </div>
             <div className="cart">
               <button type="submit" id="b_cart_icon"><FontAwesomeIcon icon={faCartShopping} id="c_icon" /></button>
