@@ -87,7 +87,7 @@ $sql = "CREATE TABLE t_prodotto (
     id_categoria int(4) NOT NULL,
     nome varchar(255) NOT NULL,
     prezzo float NOT NULL,
-    taglia varchar(5) NOT NULL,
+    descrizione varchar(255) NOT NULL,
     id_prodotto int(4) NOT NULL,
     PRIMARY KEY (id_prodotto),
     FOREIGN KEY (id_categoria) REFERENCES t_categoria(id_categoria)
@@ -164,7 +164,54 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Errore creazione tabella ticket reso: " . $conn->error;
 }
+//Creazione tabella prodotto categoria
+$sql = "CREATE TABLE t_prod_cat (
+    id_prod_cat int(5) NOT NULL UNIQUE AUTO_INCREMENT,
+    id_prodotto int(4) NOT NULL,
+    id_categoria int(4) NOT NULL,
+    PRIMARY KEY (id_prod_cat),
+    FOREIGN KEY (id_prodotto) REFERENCES t_prodotto (id_prodotto),
+    FOREIGN KEY (id_categoria) REFERENCES t_categoria (id_categoria)
+);";
 
+if ($conn->query($sql) === TRUE) {
+    echo "Tabella prodotto categoria creata con successo";
+} else {
+    echo "Errore creazione tabella prodotto categoria: " . $conn->error;
+}
+
+//Creazione tabella taglia 
+$sql = "CREATE TABLE t_taglia(
+    id_taglia int(4) NOT NULL UNIQUE AUTO_INCREMENT,
+    id_prodotto int(4) NOT NULL,
+    taglia varchar(255) NOT NULL,
+    prezzo_offerta float NOT NULL,
+    PRIMARY KEY (id_taglia),
+    FOREIGN KEY (id_prodotto) REFERENCES t_prodotto (id_prodotto)
+
+);";
+if ($conn->query($sql) === TRUE) {
+    echo "Tabella taglia creata con successo";
+} else {
+    echo "Errore creazione tabella taglia: " . $conn->error;
+}
+
+
+//Creazione tabella colore  
+$sql = "CREATE TABLE t_colore(
+    id_colore int(4) NOT NULL UNIQUE AUTO_INCREMENT,
+    id_prodotto int(4) NOT NULL,
+    colore varchar(255) NOT NULL,
+    prezzo_offerta float NOT NULL,
+    PRIMARY KEY (id_colore),
+    FOREIGN KEY (id_prodotto) REFERENCES t_prodotto (id_prodotto)
+
+);";
+if ($conn->query($sql) === TRUE) {
+    echo "Tabella colore creata con successo";
+} else {
+    echo "Errore creazione tabella colore: " . $conn->error;
+}
 
 $conn->close();
 
