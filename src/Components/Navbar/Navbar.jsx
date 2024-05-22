@@ -66,12 +66,17 @@ const Navbar = () => {
 
       <div className="navbar-right">
           <form action="/action_page.php" className="search_form">
-          <input type="text" placeholder="Search.." name="search" id = "search"/>
-          <button type="submit" id = "search_icon"><AiOutlineSearch /></button>
+          <input type="text" placeholder="Search.." name="search" id = "search"
+          
+          />
+           <button type="submit" id = "search_icon"><AiOutlineSearch/></button>
           </form>
           </div>
     </nav>
   );
 };
+/*npm install @react-icons/all-files --save
+npm install react-icons --save*/
+
 
 export default Navbar;
