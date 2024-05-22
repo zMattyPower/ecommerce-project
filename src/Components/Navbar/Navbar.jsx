@@ -2,6 +2,10 @@ import React from 'react';
 import './Navbar.css';
 import { AiOutlineSearch } from "react-icons/ai";
 
+//Page Link
+import { Link } from 'react-router-dom';
+
+
 import { IconName } from "react-icons/ai";
 import Button from 'react-bootstrap/Button';
 import { IoMdPerson } from "react-icons/io";
@@ -26,9 +30,9 @@ const Navbar = () => {
           <li>
             Donna
               <ul className="dropdown">
-                <li>Option 11</li>
-                <li>Option 2</li>
-                <li>Option 3</li>
+                <li> <Link to="/">Maglietta</Link></li>
+                <li><Link to="/">Pantaloni</Link></li>
+                <li><Link to="/">Sport</Link></li>
                 {/* Add more dropdown options */}
               </ul>
           </li>
@@ -36,9 +40,9 @@ const Navbar = () => {
           <li>
             Uomo
               <ul className="dropdown">
-                <li>Option 1</li>
-                <li>Option 23</li>
-                <li>Option 3</li>
+                <li><Link to="/">Maglietta</Link></li>
+                <li><Link to="/">Pantaloni</Link></li>
+                <li><Link to="/">Sport</Link></li>
                 {/* Add more dropdown options */}
               </ul>
           </li>
@@ -46,9 +50,9 @@ const Navbar = () => {
           <li>
             Bambino
               <ul className="dropdown">
-                <li>Option 1</li>
-                <li>Option 25</li>
-                <li>Option 3</li>
+                <li><Link to="/">Maglietta</Link></li>
+                <li><Link to="/">Pantaloni</Link></li>
+                <li><Link to="/">Sport</Link></li>
                 {/* Add more dropdown options */}
               </ul>
           </li>
@@ -56,9 +60,9 @@ const Navbar = () => {
           <li>   
             Neonato
               <ul className="dropdown">
-                <li>Option t77</li>
-                <li>Option 2</li>
-                <li>Option 3</li>
+                <li><Link to="/"></Link></li>
+                <li><Link to="/"></Link></li>
+                <li><Link to="/"></Link></li>
                 {/* Add more dropdown options */}
               </ul>
           </li>
