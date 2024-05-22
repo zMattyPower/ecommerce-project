@@ -6,7 +6,9 @@ import {  faMagnifyingGlass, faUser, faCartShopping} from '@fortawesome/free-sol
 
 //Page Link
 import { Link } from 'react-router-dom';
-
+import Donna from "../../pages/Donna";
+import Uomo from "../../pages/Uomo";
+import Bambino from "../../pages/Bambino";
 
 import { IconName } from "react-icons/ai";
 import Button from 'react-bootstrap/Button';
@@ -27,14 +29,16 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-center">
+
         <ul className="nav-links">
 
           <li>
             Donna
               <ul className="dropdown">
-                <li> <Link to="/">Maglietta</Link></li>
-                <li><Link to="/">Pantaloni</Link></li>
-                <li><Link to="/">Sport</Link></li>
+              
+                <li><Link to="/donna/maglietta">Maglietta</Link></li>
+                <li><Link to="/donna/pantaloni">Pantaloni</Link></li>
+                <li><Link to="/donna/sport">Sport</Link></li>
                 {/* Add more dropdown options */}
               </ul>
           </li>
@@ -42,9 +46,9 @@ const Navbar = () => {
           <li>
             Uomo
               <ul className="dropdown">
-                <li><Link to="/">Maglietta</Link></li>
-                <li><Link to="/">Pantaloni</Link></li>
-                <li><Link to="/">Sport</Link></li>
+                <li><Link to="/Uomo/Maglietta">Maglietta</Link></li>
+                <li><Link to="/Uomo/Pantaloni">Pantaloni</Link></li>
+                <li><Link to="/Uomo/Sport">Sport</Link></li>
                 {/* Add more dropdown options */}
               </ul>
           </li>
@@ -52,9 +56,9 @@ const Navbar = () => {
           <li>
             Bambino
               <ul className="dropdown">
-                <li><Link to="/">Maglietta</Link></li>
-                <li><Link to="/">Pantaloni</Link></li>
-                <li><Link to="/">Sport</Link></li>
+                <li><Link to="/uomo/maglietta">Maglietta</Link></li>
+                <li><Link to="/uomo/pantaloni">Pantaloni</Link></li>
+                <li><Link to="/uomo/sport">Sport</Link></li>
                 {/* Add more dropdown options */}
               </ul>
           </li>
@@ -62,9 +66,9 @@ const Navbar = () => {
           <li>   
             Neonato
               <ul className="dropdown">
-                <li><Link to="/"></Link></li>
-                <li><Link to="/"></Link></li>
-                <li><Link to="/"></Link></li>
+                <li><Link to="/bambino/maglietta">Maglietta</Link></li>
+                <li><Link to="/bambino/pantaloni">Pantaloni</Link></li>
+                <li><Link to="/bambino/sport">Sport</Link></li>
                 {/* Add more dropdown options */}
               </ul>
           </li>

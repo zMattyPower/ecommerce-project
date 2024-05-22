@@ -10,7 +10,6 @@ import Donna from "./pages/Donna";
 import Uomo from "./pages/Uomo";
 import Bambino from "./pages/Bambino";
 
-
 function App() {
   return (
     <div>
@@ -22,6 +21,7 @@ function App() {
         <Route path="/Bambino" element={<Bambino/>} />
       </Routes>
       
+
       <Footer/>
     </div>
   );
