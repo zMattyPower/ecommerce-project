@@ -9,6 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 import Donna from "./pages/Donna";
 import Uomo from "./pages/Uomo";
 import Bambino from "./pages/Bambino";
+import Tendina from "./Components/prova/Tendina";
 
 function App() {
   return (
