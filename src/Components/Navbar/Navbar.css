@@ -46,7 +46,7 @@
 #l_icon{
   color : rgb(0, 0, 0);
   height: 35px; /* dimensione icona*/
-  width: 25px; 
+  width: 15px; 
 }
 
 /* cart icon*/
@@ -251,14 +251,16 @@ a{
 }
 
 /*responsive*/
-@media(max-width: 991px){
+@media (max-width: 991px) and (min-width: 480px){
 	.header .item-center{
 		order:3;
 		flex:0 0 100%;
+    
 	}
 	.header .item-left,
 	.header .item-right{
 		flex:0 0 auto;
+    background-color: red;
 	}
 	.v-center{
 		justify-content: space-between;
@@ -295,7 +297,7 @@ a{
 		top:6px;
 	}
 	.header .item-right{
-		align-items: center;
+		align-items: left;
 	}
 
 	.header .menu{
@@ -338,7 +340,7 @@ a{
 	.header .menu .mobile-menu-head{
 		display: flex;
 		height: 50px;
-		border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 1px solid rgb(28, 216, 128);
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
@@ -460,3 +462,4 @@ a{
 	  opacity:1;	
 	}
 }
+
