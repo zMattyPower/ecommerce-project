@@ -124,7 +124,7 @@ const Navbar = () => {
 
             <div className='inputWithButton'>
               <form action="/action_page.php" className="search_form">
-                <input type="text" placeholder="Cerca.." name="search" id="search" />
+                <input type="text" placeholder="  Cerca.." name="search" id="search" />
                 <button type="submit" id="b_search_icon"> <FontAwesomeIcon icon={faMagnifyingGlass} id="s_icon" /></button>
               </form>
             </div>

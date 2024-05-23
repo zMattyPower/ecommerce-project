@@ -94,6 +94,8 @@
 
 #l_icon{
   color : rgb(0, 0, 0);
+  height: 35px; /* dimensione icona*/
+  width: 25px; 
 }
 
 /* cart icon*/
