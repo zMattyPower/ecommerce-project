@@ -5,14 +5,14 @@ import Footer from "./Components/Footer/Footer";
 
 
 //Link Page
-
+import {Routes,Route} from "react-router-dom"
 import Home from "./pages/Home";
 import DonnaMaglietta from "./pages/DonnaMaglietta";
 import UomoMaglietta from "./pages/UomoMaglietta";
 import BambinoMaglietta from "./pages/BambinoMaglietta";
 import NeonatoMaglietta from "./pages/NeonatoMaglietta";
 
-import Tendina from "./Components/prova/Tendina";
+//import Tendina from "./Components/prova/Tendina";
 
 
 function App() {
