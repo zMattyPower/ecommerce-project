@@ -73,7 +73,7 @@ const Navbar = () => {
           <div className="row v-center">
             <div className="header-item item-left">
               <div className="logo">
-                <a href="#">MyStore</a>
+                <Link to="/">Logo</Link>
               </div>
             </div>
 
@@ -90,115 +90,288 @@ const Navbar = () => {
                   <div className="mobile-menu-close">&times;</div>
                 </div>
                 <ul className="menu-main">
-                  <li>
-                    <a href="#">Home</a>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <a href="#">New <i className="fa fa-angle-down"></i></a>
-                    <div className="sub-menu mega-menu mega-menu-column-4">
-                      <div className="list-item text-center">
-                        <a href="#">
-                          <img src="" alt="new Product" />
-                          <h4 className="title">Product 1</h4>
-                        </a>
-                      </div>
-                      <div className="list-item text-center">
-                        <a href="#">
-                          <img src="img/p2.jpg" alt="new Product" />
-                          <h4 className="title">Product 2</h4>
-                        </a>
-                      </div>
-                      <div className="list-item text-center">
-                        <a href="#">
-                          <img src="img/p3.jpg" alt="new Product" />
-                          <h4 className="title">Product 3</h4>
-                        </a>
-                      </div>
-                      <div className="list-item text-center">
-                        <a href="#">
-                          <img src="img/p4.jpg" alt="new Product" />
-                          <h4 className="title">Product 4</h4>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <a href="#">Shop <i className="fa fa-angle-down"></i></a>
+                <li className="menu-item-has-children">
+                    <Link to="#">
+                      Donna<i className="fa fa-angle-down"></i>
+                    </Link>
                     <div className="sub-menu mega-menu mega-menu-column-4">
                       <div className="list-item">
-                        <h4 className="title">Men's Fashion</h4>
+                        <h4 className="title">Maglietta</h4>
                         <ul>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
+                          <li>
+                            <Link to="/Donna/Maglietta/TShirt">T-Shirt</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
                         </ul>
-                        <h4 className="title">Beauty</h4>
+                        <h4 className="title">Pantaloni</h4>
                         <ul>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                        </ul>
-                      </div>
-                      <div className="list-item">
-                        <h4 className="title">Women's Fashion</h4>
-                        <ul>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                        </ul>
-                        <h4 className="title">Furniture</h4>
-                        <ul>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
                         </ul>
                       </div>
                       <div className="list-item">
-                        <h4 className="title">Home, Kitchen</h4>
+                        <h4 className="title">Vestiti</h4>
                         <ul>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
-                          <li><a href="#">Product List</a></li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                        <h4 className="title">Felpe</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
                         </ul>
                       </div>
                       <div className="list-item">
-                        <img src="img/shop1.jpg" alt="shop" />
+                        <h4 className="title">Cappotto</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
                       </div>
+                      
                     </div>
                   </li>
+
                   <li className="menu-item-has-children">
-                    <a href="#">Blog <i className="fas fa-angle-down"></i></a>
-                    <div className="sub-menu single-column-menu">
-                      <ul>
-                        <li><a href="#">Standard Layout</a></li>
-                        <li><a href="#">Grid Layout</a></li>
-                        <li><a href="#">single Post Layout</a></li>
-                      </ul>
+                    <Link to="#">
+                      Uomo<i className="fa fa-angle-down"></i>
+                    </Link>
+                    <div className="sub-menu mega-menu mega-menu-column-4">
+                      <div className="list-item">
+                        <h4 className="title">Maglietta</h4>
+                        <ul>
+                          <li>
+                            <Link to="/">T-Shirt</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                        <h4 className="title">Pantaloni</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="list-item">
+                        <h4 className="title">Vestiti</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                        <h4 className="title">Felpe</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="list-item">
+                        <h4 className="title">Cappotto</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      
                     </div>
                   </li>
+
                   <li className="menu-item-has-children">
-                    <a href="#">Pages <i className="fas fa-angle-down"></i></a>
-                    <div className="sub-menu single-column-menu">
-                      <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Faq</a></li>
-                        <li><a href="#">404 Page</a></li>
-                      </ul>
+                    <Link to="#">
+                      Bambino<i className="fa fa-angle-down"></i>
+                    </Link>
+                    <div className="sub-menu mega-menu mega-menu-column-4">
+                      <div className="list-item">
+                        <h4 className="title">Maglietta</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">T-Shirt</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                        <h4 className="title">Pantaloni</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="list-item">
+                        <h4 className="title">Vestiti</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                        <h4 className="title">Felpe</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="list-item">
+                        <h4 className="title">Cappotto</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+
+                      
                     </div>
                   </li>
-                  <li>
-                    <a href="#">Contact</a>
+
+                  <li className="menu-item-has-children">
+                    <Link to="#">
+                      Neonato<i className="fa fa-angle-down"></i>
+                    </Link>
+                    <div className="sub-menu mega-menu mega-menu-column-4">
+                      <div className="list-item">
+                        <h4 className="title">Maglietta</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">T-Shirt</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                        <h4 className="title">Pantaloni</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="list-item">
+                        <h4 className="title">Vestiti</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                        <h4 className="title">Felpe</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="list-item">
+                        <h4 className="title">Cappotto</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Product List</Link>
+                          </li>
+                        </ul>
+                      </div>
+
+                      
+                    </div>
                   </li>
                 </ul>
               </nav>

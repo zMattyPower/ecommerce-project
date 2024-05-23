@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
+
 import Login from "./Components/Account/Login";
 import Footer from "./Components/Footer/Footer";
 
@@ -22,13 +22,13 @@ function App() {
       <Routes>
         
         <Route path="/" element={<Home/>} />
-        <Route path="/donna/maglietta" element={< DonnaMaglietta/>} />
+        <Route path="/Donna/Maglietta/TShirt" element={< DonnaMaglietta/>} />
         <Route path="/uomo/maglietta" element={<UomoMaglietta />} />
         <Route path="/bambino/maglietta" element={<BambinoMaglietta />} />
         <Route path="/neonato/maglietta" element={<NeonatoMaglietta />} />
       </Routes>
 
-     
+    <Footer></Footer> 
     </div>
   );
 }

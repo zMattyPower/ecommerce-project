@@ -92,6 +92,7 @@ body{
 .row{
 	display: flex;
 	flex-wrap: wrap;
+	gap: 5%;
 }
 .v-center{
 	align-items: center;
@@ -112,10 +113,13 @@ a{
 	position: relative;
 	z-index: 99;
 	padding:15px;
+	
+	
 }
 .header .item-left{
 	flex:0 0 17%;
   border: 3px solid rgb(0, 255, 89);
+  
 }
 .header .logo a{
 	font-size: 30px;
@@ -124,7 +128,7 @@ a{
 	text-decoration: none;
 }
 .header .item-center{
-	flex:0 0 55%;
+	flex:0 0 45%;
   border: 3px solid rgb(0, 42, 255);
 }
 .header .item-right{
