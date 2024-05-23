@@ -59,6 +59,10 @@ const Navbar = () => {
       currentLog = 1;
     }
   }
+
+
+  {/*Menu Laterale*/}
+  
   return (
     <>
 
