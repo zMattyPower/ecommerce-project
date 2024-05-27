@@ -12,77 +12,43 @@
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <input type="text" name="numero_inserito">
         <input type="submit" value="Invia"></br>
+        <?php $servername = "127.0.0.1";
+        $username = "root";
+        $password = "";
+        $database = "progetto_scuola";
+
+        // Creazione connessione
+        $conn = mysqli_connect($servername, $username, $password);
+
+        // Controllo connessione
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        } else {
+            echo "Connected successfully";
+        }
+        ?>
         <?php echo '1 maglietta' ?> </br>
         <?php echo '2 jeans' ?> </br>
-        <?php echo '3 intimo maschile' ?> </br>
-        <?php echo '4 intimo femminile' ?> </br>
-        <?php echo '5 body neonati' ?> </br>
+        <?php echo '3 maglione' ?> </br> 
+        <?php echo '4 intimo maschile' ?> </br>
+        <?php echo '5 intimo femminile' ?> </br>
+        <?php echo '6 body neonati' ?> </br>        
+
+        <?php include 'C:\xampp\htdocs\DB_E-Commerce\Funzioni\Funzioni.php' ?>
+
+        <?php   $maglietta = "maglietta";
+                $jeans = "jeans";
+                $maglione = "maglione";
+                $intimoMaschile = "intimo maschile";
+                $intimoFemminile = "intimo femminile";
+                $bodyNeo = "body neonati"; 
+                $numero_inserito = ""; ?>
+
+        <?php $prodotto = new SceltaProdotto($maglietta, $jeans, $maglione, $intimoMaschile, $intimoFemminile, $bodyNeo); ?>
+
+        <?php $prodotto->sceltaProdotto($numero_inserito); ?>
+
     </form>
 </body>
 
 </html>
-<?php
-
-class Scelta_prodotto
-{
-
-    public $maglietta = "XS";
-    public $jeans = "S";
-    public $maglione = "M";
-    public $intimoMaschile = "L";
-    public $intimoFemminile = "XL";
-    public $bodyNeo = "bambino/a";
-
-    public function __construct($maglietta, $jeans, $maglione, $intimoMaschile, $intimoFemminile, $bodyNeo)
-    {
-        $this->maglietta = $maglietta;
-        $this->jeans = $jeans;
-        $this->maglione = $maglione;
-        $this->intimoMaschile = $intimoMaschile;
-        $this->intimoFemminile = $intimoFemminile;
-        $this->bodyNeo = $bodyNeo;
-    }
-
-    //Controllo del numero se compreso tra 1 e 6
-    public function sceltaProdotto($numeroInserito)
-    {
-        echo $_POST['numero_inserito'];
-        if (isset($_POST['numero_inserito']) && $_POST > 0) {
-            $numeroInserito = $_POST['numero_inserito'];
-
-            //Scelta colore in base al numero
-            switch ($numeroInserito) {
-                case 1:
-                    echo 'Categoria ' . $this->maglietta . ' scelto.';
-                    break;
-
-                case 2:
-                    echo 'Categoria ' . $this->jeans . ' scelto.';
-                    break;
-
-                case 3:
-                    echo 'Categoria ' . $this->maglione . ' scelto.';
-                    break;
-
-                case 4:
-                    echo 'Categoria ' . $this->intimoMaschile . ' scelto.';
-                    break;
-
-                case 5:
-                    echo 'Categoria ' . $this->intimoFemminile . ' scelto.';
-                    break;
-
-                case 5:
-                    echo 'Categoria ' . $this->bodyNeo . ' scelto.';
-                    break;
-
-                default:
-                    echo 'Non hai scelto nessuna categoria, per favore scegline una.';
-            }
-        }
-        echo 'ciao5943u85';
-    }
-
-}
-
-?>
