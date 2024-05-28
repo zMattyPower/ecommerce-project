@@ -44,7 +44,7 @@
                 $bodyNeo = "body neonati"; 
                 $numero_inserito = ""; ?>
 
-        <?php $prodotto = new SceltaProdotto($maglietta, $jeans, $maglione, $intimoMaschile, $intimoFemminile, $bodyNeo); ?>
+        <?php $prodotto = new Scelta_prodotto($maglietta, $jeans, $maglione, $intimoMaschile, $intimoFemminile, $bodyNeo); ?>
 
         <?php $prodotto->sceltaProdotto($numero_inserito); ?>
 

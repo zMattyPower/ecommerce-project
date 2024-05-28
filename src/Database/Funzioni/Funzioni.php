@@ -7,7 +7,7 @@ $database = "progetto_scuola";
 
 
 //qui c'è lo switch della scelta del prodotto 
-class SceltaProdotto
+class Scelta_prodotto
 {
 
     public String $maglietta;
