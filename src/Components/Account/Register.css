@@ -207,13 +207,21 @@ div.form_r .input-box input {
 */
 
 
+div.form_r{
+    border: 2px solid red;
+    background-color: rgba(0, 0, 0, 0.382);
+    color: blue;
+    margin-top: 60px;
+    margin-left: 350px;
+    margin-right: 350px;
+    height: 450px;
+}
 h1{
     color: red;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
-
-
-
-
 
 
 div.due_colonne{
@@ -231,10 +239,6 @@ div.input-box input.trattamento{
     width: 10px;
 }
 
-
-div.form_r{
-    border: 2px solid red;
-    background-color: black;
-    margin: 100px;
-    height: 1000px;
+div.register-link{
+    text-align: center;
 }
