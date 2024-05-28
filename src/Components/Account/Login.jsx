@@ -10,7 +10,7 @@ import './Login.css';
 const Login = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const [result, setResult] = useState("");
-    const { useLogin, setUseLogin } = useLoginContext();
+    const { useLogin, setUseLogin } = useLoginContext(); // Access the useLogin state
 
 
     const toggleLogin = () => {
@@ -39,7 +39,7 @@ const Login = () => {
         <>
         <div className='blur' id='blur' onClick={toggleLogin}></div>
         <div className="wrapper" id="wrapper">
-            {/*<form name="frmLogin" id="frmLogin"
+            <form name="frmLogin" id="frmLogin"
                 action="http://localhost:8000/login.php"
                 method="post"
                 onSubmit={(event) => handleSubmit(event)}
