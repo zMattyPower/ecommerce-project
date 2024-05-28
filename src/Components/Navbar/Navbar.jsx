@@ -20,7 +20,7 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 
 const Navbar = () => {
-  const { useLogin, setUseLogin } = useLoginContext(); // Access the useLogin state
+  const { useLogin, setUseLogin } = useLoginContext();
   const toggleLogin = () => {
     setUseLogin(!useLogin);
   };

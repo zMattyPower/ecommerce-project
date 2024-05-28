@@ -20,7 +20,7 @@ function connectDatabase() {
     return $conn;
 }
 
-function makePreparedStatement($conn, $query, $var1, $var2=null) {
+function makePreparedStatement($conn, $query, $var1, $var2=null, $var3=null) {
     if ($var2 == null) {
         $stmt = $conn->prepare("$query");
         $stmt->bind_param("s", $var1);
@@ -29,9 +29,16 @@ function makePreparedStatement($conn, $query, $var1, $var2=null) {
         
         return $stmt->get_result();
     }
-    else {
+	else if ($var3 == null) {
         $stmt = $conn->prepare("$query");
 		$stmt->bind_param("ss", $var1, $var2);
+        
+		$stmt->execute();
+
+        return $stmt->get_result();
+    } else {
+        $stmt = $conn->prepare("$query");
+		$stmt->bind_param("sss", $var1, $var2, $var3);
         
 		$stmt->execute();
 

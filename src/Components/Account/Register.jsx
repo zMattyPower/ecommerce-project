@@ -3,15 +3,16 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import $ from "jquery";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLock, faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons'
-import { useLoginContext } from '../GlobalVariables'; // Import the context hook
-import './Login.css';
+import { faUser, faEnvelope, faLock, faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons'
+import { useLoginContext } from '../GlobalVariables';
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+import './Register.css';
 
-const Login = () => {
+const Register = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const [result, setResult] = useState("");
-    const { useLogin, setUseLogin } = useLoginContext(); // Access the useLogin state
-
+    const { useLogin, setUseLogin } = useLoginContext();
 
     const toggleLogin = () => {
         setUseLogin(!useLogin);
@@ -37,10 +38,11 @@ const Login = () => {
 
     return (
         <>
-        <div className='blur' id='blur' onClick={toggleLogin}></div>
-        <div className="wrapper" id="wrapper">
+        <Navbar/>
+           
+        <div className="wrapper-reg" id="wrapper-reg">
             <form name="frmLogin" id="frmLogin"
-                action="http://localhost:8000/login.php"
+                action="http://localhost:8000/register.php"
                 method="post"
                 onSubmit={(event) => handleSubmit(event)}
             >
@@ -48,13 +50,15 @@ const Login = () => {
                 <h1><img src={require("./Login_Icon.png")} alt='login' width="100" draggable="false"/></h1>
 
                 <div className="input-box">
+                    <FontAwesomeIcon icon={faUser} id="login"/>
+                    <input type="text" placeholder="Nome Utente" id="username" name="username"
+                    required/>
+                </div>
+
+                <div className="input-box">
                     <FontAwesomeIcon icon={faEnvelope} id="login"/>
                     <input type="email" placeholder="E-Mail" id="email" name="email"
                     required/>
-                </div>
-                
-                <div className="remember-forgot">
-                    <a href='about:blank'>Password Dimenticata?</a>
                 </div>
 
                 <div className="input-box">
@@ -67,21 +71,23 @@ const Login = () => {
                     />
                 </div>
                 
-                <button type="submit" className="btn">Accedi</button>
+                <button type="submit" className="btn">Registrati</button>
 
                 {result}
 
                 <div className="register-link">
                     <hr/>
-                    <p><a href='about:blank' onClick={toggleLogin}><Link to="/registrazione">Crea un account gratuitamente</Link><i className='bx bx-chevrons-right'></i></a></p>
+                    <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
                 </div>
             </form>
         </div>
+
+        <Footer/>
         </>
   );
 };
 
-export default Login
+export default Register
 
 /*var currentLog = 0;
 var toggleLog = false;

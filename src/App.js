@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 import Home from "./pages/Home";
+import Register from "./Components/Account/Register";
 import DonnaMaglietta from "./pages/DonnaMaglietta";
 import UomoMaglietta from "./pages/UomoMaglietta";
 import BambinoMaglietta from "./pages/BambinoMaglietta";
@@ -22,6 +23,7 @@ function App() {
       <GlobalVariables>     
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/registrazione" element={<Register/>} />
           <Route path="/donna/maglietta" element={< DonnaMaglietta/>} />
           <Route path="/uomo/maglietta" element={<UomoMaglietta />} />
           <Route path="/bambino/maglietta" element={<BambinoMaglietta />} />
