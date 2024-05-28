@@ -48,9 +48,11 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $numero_inserito = isset($_POST['numero_inserito']) ? (int)$_POST['numero_inserito'] : 0;
 
-            $prodotto = new Scelta_prodotto("maglietta ", "jeans ", "maglione ", "intimo maschile ", "intimo femminile ", "body neonati");
+            //$prodotto = new Scelta_prodotto("maglietta ", "jeans ", "maglione ", "intimo maschile ", "intimo femminile ", "body neonati");
 
-            $prodotto->sceltaProdotto($numero_inserito);
+            Scelta_prodotto::sceltaProdotto($numero_inserito);
+
+            //$prodotto->sceltaProdotto($numero_inserito);
         }
         ?>
     </form>
