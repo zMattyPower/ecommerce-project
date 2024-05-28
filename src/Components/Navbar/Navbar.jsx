@@ -33,6 +33,13 @@ const Navbar = () => {
       <header className="header">
         <div className="container">
           <div className="row v-center">
+          <div className="header-item item-left">
+              <div className="logo">
+                <Link to="/">Logo</Link>
+              </div>
+            </div>
+
+
 
             {/* menu start here */}
             <div className="header-item item-center">

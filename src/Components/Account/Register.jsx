@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import $ from "jquery";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faEnvelope, faLock, faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons'
+import { faUser, faEnvelope, faPhone, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { useLoginContext } from '../GlobalVariables';
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
@@ -17,12 +17,12 @@ const Register = () => {
     const toggleLogin = () => {
         setUseLogin(!useLogin);
     };
-    
+
 
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
     };
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = $(e.target);
@@ -38,53 +38,83 @@ const Register = () => {
 
     return (
         <>
-        <Navbar/>
-           
-        <div className="wrapper-reg" id="wrapper-reg">
-            <form name="frmLogin" id="frmLogin"
-                action="http://localhost:8000/register.php"
-                method="post"
-                onSubmit={(event) => handleSubmit(event)}
-            >
-                <button type="button" className="backLogin" onClick={toggleLogin}>✕</button>
-                <h1><img src={require("./Login_Icon.png")} alt='login' width="100" draggable="false"/></h1>
+            <Navbar />
 
-                <div className="input-box">
-                    <FontAwesomeIcon icon={faUser} id="login"/>
-                    <input type="text" placeholder="Nome Utente" id="username" name="username"
-                    required/>
-                </div>
+            <div className="form_r" id="form_r">
+                <form name="frmLogin" id="frmLogin"
+                    action="http://localhost:8000/register.php"
+                    method="post"
+                    onSubmit={(event) => handleSubmit(event)}>
 
-                <div className="input-box">
-                    <FontAwesomeIcon icon={faEnvelope} id="login"/>
-                    <input type="email" placeholder="E-Mail" id="email" name="email"
-                    required/>
-                </div>
+                    <h1>Registrazione</h1>
 
-                <div className="input-box">
-                    <FontAwesomeIcon icon={faLock} id="login"/>
-                    <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required/>
-                    <FontAwesomeIcon
-                        icon={passwordShown ? faEyeSlash : faEye}
-                        onClick={togglePasswordVisibility}
-                        id='eye-icon'
-                    />
-                </div>
-                
-                <button type="submit" className="btn">Registrati</button>
+                    <div className="due_colonne">
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faUser} id="login" />
+                            <input type="text" placeholder="Nome" id="name" name="name"
+                                required />
+                        </div>
 
-                {result}
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faUser} id="login" />
+                            <input type="text" placeholder="Cognome" id="lastname" name="lastname"
+                                required />
+                        </div>
+                    </div>
 
-                <div className="register-link">
-                    <hr/>
-                    <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
-                </div>
-            </form>
-        </div>
+                    <div className="due_colonne">
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faEnvelope} id="login" />
+                            <input type="email" placeholder="E-Mail" id="email" name="email"
+                                required />
+                        </div>
 
-        <Footer/>
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faLock} id="login" />
+                            <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required />
+                            <FontAwesomeIcon
+                                icon={passwordShown ? faEyeSlash : faEye}
+                                onClick={togglePasswordVisibility}
+                                id='eye-icon'
+                            />
+
+                        </div>
+
+                    </div>
+
+                    <div className="due_colonne">
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faUser} id="login" />
+                            <input type="date" id="d_nascita" name="d_nascita"
+                                required />
+                        </div>
+
+                        <div className="input-box">
+
+                            <FontAwesomeIcon icon={faPhone} id="login" />
+                            <input type="tel" placeholder="Telefono" id="tel" name="tel"
+                                required />
+                        </div>
+
+                    </div>
+
+                    
+                    <input type="checkbox" id="trattamento" name="trattamento"
+                                required />
+                    
+
+                    <button type="submit" className="btn">Registrati</button>
+
+                    {result}
+
+                    <div className="register-link">
+                        <hr />
+                        <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
+                    </div>
+                </form>
+            </div>
         </>
-  );
+    );
 };
 
 export default Register

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-* {
+/* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -72,7 +72,7 @@
     margin-right: auto;
     width: 820px;
     /*background-color: rgba(34, 109, 32, 0.30);
-    background: transparent;*/
+    background: transparent;
     background-color: rgba(16, 13, 13, 0.8);
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
@@ -96,8 +96,8 @@
     height: 50px;
     margin: 25px 0;
 }
-
-.wrapper-reg .input-box input {
+*//*
+div.form_r .input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -108,9 +108,9 @@
     font-size: 16px;
     color: #fff;
     padding: 20px 45px 20px 40px;
-}
-
-.wrapper-reg .input-box #eye-icon { /*Icona cliccabile per nascondere la password*/
+} */
+/*
+.wrapper-reg .input-box #eye-icon { /*Icona cliccabile per nascondere la password*//*
     position: absolute;
     right: 10px;
     top: 50%;
@@ -203,4 +203,38 @@
 
 .wrapper-reg .register-link p a:hover {
     text-decoration: underline;
+}
+*/
+
+
+h1{
+    color: red;
+}
+
+
+
+
+
+
+div.due_colonne{
+    width: 100%;
+    overflow: auto;
+}
+
+div.due_colonne div.input-box{
+    width: 48%;  
+    float: left;
+    margin: 7px;
+}
+
+div.input-box input.trattamento{
+    width: 10px;
+}
+
+
+div.form_r{
+    border: 2px solid red;
+    background-color: black;
+    margin: 100px;
+    height: 1000px;
 }
