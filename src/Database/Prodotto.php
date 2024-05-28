@@ -35,8 +35,8 @@
         include 'C:\xampp\htdocs\DB_E-Commerce\Scelta_prodotto.php';
 ?>
 
-    <?php $prodotto->sceltaProdotto($numero_inserito); ?>
-    <?php
+    <?php //$prodotto->sceltaProdotto($numero_inserito); ?>
+    <?php /*
     function sceltaProdotto($numero_inserito)
     {
         return $numero_inserito;
@@ -59,7 +59,7 @@
     {
         return $numero_inserito;
     }
-    ?>
+    */?>
 </body>
 
 </html>
