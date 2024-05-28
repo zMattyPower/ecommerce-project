@@ -26,16 +26,15 @@
             echo "Connected successfully";
         }
         ?>
-    <?php echo '1 colore Rosso' ?> </br>
-    <?php echo '2 colore Rosso' ?> </br>
-    <?php echo '3 colore Rosso' ?> </br>
-    <?php echo '4 colore Rosso' ?> </br>
-    <?php echo '5 colore Rosso' ?> </br>
-    <?php echo 'Nessuna scelta colore bianco.' ?> </br>
+    <?php echo '1 colore rosso' ?> </br>
+    <?php echo '2 colore blu' ?> </br>
+    <?php echo '3 colore nero' ?> </br>
+    <?php echo '4 colore bianco' ?> </br>
+    <?php echo '5 colore verde scuro' ?> </br>
+    <?php echo '6 colore beige' ?> </br>
 
     <?php include 'C:\xampp\htdocs\DB_E-Commerce\Funzioni\Funzioni.php' ?>
 
-    <input type="submit" value="Invia">
   <?php
     $coloreRosso = "Rosso";
     $coloreBlu = "Blu";

@@ -24,23 +24,24 @@
 </html>
 
 <?php
-class Prodotto
-{
+include 'C:\xampp\htdocs\DB_E-Commerce\Scelta_colore.php';
+include 'C:\xampp\htdocs\DB_E-Commerce\Scelta_taglia.php';
+include 'C:\xampp\htdocs\DB_E-Commerce\Scelta_prodotto.php';
 
-    public function sceltaProdotto($numeroInserito)
+
+    function sceltaProdotto($numeroInserito)
     {
         return $numeroInserito;
     }
 
-    public function sceltaTaglia($numeroInserito)
+    function sceltaTaglia($numeroInserito)
     {
         return $numeroInserito;
     }
 
-    public function sceltaColore($numeroInserito)
+    function sceltaColore($numeroInserito)
     {
         return $numeroInserito;
     }
-}
 
 ?>

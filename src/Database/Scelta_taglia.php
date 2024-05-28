@@ -15,8 +15,10 @@
         $username = "root";
         $password = "";
         $database = "progetto_scuola";
+        ?>
 
-        // Creazione connessione
+        
+        <?php
         $conn = mysqli_connect($servername, $username, $password);
 
         // Controllo connessione
@@ -31,16 +33,18 @@
         <?php echo '2 taglia S' ?> </br>
         <?php echo '3 taglia M' ?> </br>
         <?php echo '4 taglai L' ?> </br>
-        <?php echo '5 taglia bambino/a' ?> </br>
+        <?php echo '5 taglai XL' ?> </br>
+        <?php echo '6 taglia bambino/a' ?> </br>
+        
 
         <?php include 'C:\xampp\htdocs\DB_E-Commerce\Funzioni\Funzioni.php' ?>
 
-        <?php   $tagliaXS = "Taglia XS";
-                $tagliaS = "Taglia S";
-                $tagliaM = "Taglia M";
-                $tagliaL = "Taglia L";
-                $tagliaXL = "Taglia XL";
-                $tagliaBambinoA = "Taglia Bambino/a";
+        <?php   $tagliaXS = "XS";
+                $tagliaS = "S";
+                $tagliaM = "M";
+                $tagliaL = "L";
+                $tagliaXL = "XL";
+                $tagliaBambinoA = "bambino/a";
                 $numero_inserito = "";
         ?>
 
