@@ -38,7 +38,7 @@ const Login = () => {
         <>
         <div className='blur' id='blur' onClick={toggleLogin}></div>
         <div className="wrapper" id="wrapper">
-            <form name="frmLogin" id="frmLogin"
+            {/*<form name="frmLogin" id="frmLogin"
                 action="http://localhost:8000/server.php"
                 method="post"
                 onSubmit={(event) => handleSubmit(event)}
@@ -74,7 +74,7 @@ const Login = () => {
                     <hr/>
                     <p><a href='about:blank'>Crea un account gratuitamente<i className='bx bx-chevrons-right'></i></a></p>
                 </div>
-            </form>
+    </form>*/}
         </div>
         </>
   );
