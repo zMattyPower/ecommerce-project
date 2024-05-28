@@ -32,7 +32,7 @@ function App() {
       </GlobalVariables>
 
 
-     
+    <Footer></Footer> 
     </div>
   );
 }
