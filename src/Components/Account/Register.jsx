@@ -38,80 +38,80 @@ const Register = () => {
 
     return (
         <>
-            <Navbar />
+            <div className="div_f">
+                <div className="form_r" id="form_r">
+                    <form name="frmLogin" id="frmLogin"
+                        action="http://localhost:8000/register.php"
+                        method="post"
+                        onSubmit={(event) => handleSubmit(event)}>
 
-            <div className="form_r" id="form_r">
-                <form name="frmLogin" id="frmLogin"
-                    action="http://localhost:8000/register.php"
-                    method="post"
-                    onSubmit={(event) => handleSubmit(event)}>
+                        <h1>Registrazione</h1>
+                        <div className="riga">
+                            <div className="input-box_1">
+                                <FontAwesomeIcon icon={faUser} id="login" />
+                                <input type="text" placeholder="Nome" id="name" name="name"
+                                    required />
+                            </div>
 
-                    <h1>Registrazione</h1>
-
-                    <div className="due_colonne">
-                        <div className="input-box">
-                            <FontAwesomeIcon icon={faUser} id="login" />
-                            <input type="text" placeholder="Nome" id="name" name="name"
-                                required />
+                            <div className="input-box_1">
+                                <FontAwesomeIcon icon={faUser} id="login" />
+                                <input type="text" placeholder="Cognome" id="lastname" name="lastname"
+                                    required />
+                            </div>
                         </div>
 
-                        <div className="input-box">
-                            <FontAwesomeIcon icon={faUser} id="login" />
-                            <input type="text" placeholder="Cognome" id="lastname" name="lastname"
-                                required />
-                        </div>
-                    </div>
+                        <div className="riga">
+                            <div className="input-box_1">
+                                <FontAwesomeIcon icon={faEnvelope} id="login" />
+                                <input type="email" placeholder="E-Mail" id="email" name="email"
+                                    required />
+                            </div>
 
-                    <div className="due_colonne">
-                        <div className="input-box">
-                            <FontAwesomeIcon icon={faEnvelope} id="login" />
-                            <input type="email" placeholder="E-Mail" id="email" name="email"
-                                required />
-                        </div>
+                            <div className="input-box_1">
+                                <FontAwesomeIcon icon={faLock} id="login" />
+                                <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required />
+                                <FontAwesomeIcon
+                                    icon={passwordShown ? faEyeSlash : faEye}
+                                    onClick={togglePasswordVisibility}
+                                    id='eye-icon'
+                                />
 
-                        <div className="input-box">
-                            <FontAwesomeIcon icon={faLock} id="login" />
-                            <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required />
-                            <FontAwesomeIcon
-                                icon={passwordShown ? faEyeSlash : faEye}
-                                onClick={togglePasswordVisibility}
-                                id='eye-icon'
-                            />
+                            </div>
 
                         </div>
 
-                    </div>
+                        <div className="riga">
+                            <div className="input-box_1">
+                                <FontAwesomeIcon icon={faUser} id="login" />
+                                <input type="date" id="d_nascita" name="d_nascita"
+                                    required />
+                            </div>
 
-                    <div className="due_colonne">
-                        <div className="input-box">
-                            <FontAwesomeIcon icon={faUser} id="login" />
-                            <input type="date" id="d_nascita" name="d_nascita"
-                                required />
+                            <div className="input-box_1">
+
+                                <FontAwesomeIcon icon={faPhone} id="login" />
+                                <input type="tel" placeholder="Telefono" id="tel" name="tel"
+                                    required />
+                            </div>
+
                         </div>
 
-                        <div className="input-box">
-
-                            <FontAwesomeIcon icon={faPhone} id="login" />
-                            <input type="tel" placeholder="Telefono" id="tel" name="tel"
+                        <div className="riga">
+                            <input type="checkbox" id="trattamento" name="trattamento"
                                 required />
+                            <button type="submit" className="btn">Registrati</button>
                         </div>
 
-                    </div>
+                        {result}
 
-                    
-                    <input type="checkbox" id="trattamento" name="trattamento"
-                                required />
-                    
-
-                    <button type="submit" className="btn">Registrati</button>
-
-                    {result}
-
-                    <div className="register-link">
-                        <hr />
-                        <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
-                    </div>
-                </form>
+                        <div className="riga">
+                            <div className="register-link">
+                                <hr />
+                                <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </>
     );

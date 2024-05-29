@@ -5,9 +5,7 @@ import Footer from "../Components/Footer/Footer";
 function DonnaMaglietta() {
   return (
     <>
-      <Navbar />
       
-      <Footer />
     </>
   );
 }
