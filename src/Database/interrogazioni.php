@@ -47,3 +47,26 @@ try{
 }catch(PDOException $e) {
     echo "Errore: " . $e->getMessage();
 }
+//query di inserimento 
+try {
+    //creazione della query
+    $stmt = $conn->prepare("INSERT INTO t_dipendente (id_dipendente, nome, cognome, data_nascita) VALUES (:id_dipendente, :nome, :cognome, :data_nascita)");
+    $stmt->bindParam(':id_dipendente', $id_dipendente);
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':cognome', $cognome);
+    $stmt->bindParam(':data_nascita', $data_nascita);
+
+    //inserimento dei dati nella query
+    $id_dipendente = '11111';
+    $nome = 'Pippo';
+    $cognome = 'Baudo';
+    $data_nascita = '1980-12-12';
+
+    //esecuzuione della query
+    $stmt->execute();
+
+    //verifica dei dati
+    echo "Dati inseriti con successo";
+}catch(PDOException $e) {
+    echo "Errore: " . $e->getMessage();
+}
