@@ -58,10 +58,10 @@ try {
     $stmt->bindParam(':data_nascita', $data_nascita);
 
     //inserimento dei dati nella query
-    $id_dipendente = '11111';
-    $nome = 'Pippo';
-    $cognome = 'Baudo';
-    $data_nascita = '1980-12-12';
+    $id_dipendente = '11112';
+    $nome = 'Buongiorno';
+    $cognome = 'Mike';
+    $data_nascita = '1960-12-12';
 
     //esecuzuione della query
     $stmt->execute();
@@ -74,37 +74,24 @@ try {
 
 try{
     //creazione della query utente
-    $stmt = $conn->prepare("INSERT INTO t_utente (email, nome, sesso, pass, data_nascita, indirizzo, citta, provincia, telefono, consenso_trattamento, consenso_mail, tessera, cognome) 
-    VALUES (:email, :nome, :sesso, :pass, :data_nascita, :indirizzo, :citta, :provincia, :telefono, :consenso_trattamento, :consenso_mail, :tessera, :cognome)");
+    $stmt = $conn->prepare("INSERT INTO t_utente (email, nome, pass, data_nascita, telefono, consenso_trattamento, cognome) 
+    VALUES (:email, :nome, :pass, :data_nascita, :telefono, :consenso_trattamento, :cognome)");
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':nome', $nome);
-    $stmt->bindParam(':sesso', $sesso);
     $stmt->bindParam(':pass', $password);
     $stmt->bindParam(':data_nascita', $data_nascita);
-    $stmt->bindParam(':indirizzo', $indirizzo);
-    $stmt->bindParam(':citta', $citta);
-    $stmt->bindParam(':provincia', $provincia);
     $stmt->bindParam(':telefono', $telefono);
     $stmt->bindParam(':consenso_trattamento', $trattamento);
-    $stmt->bindParam(':consenso_mail', $cons_mail);
-    $stmt->bindParam(':tessera', $tessera);    
     $stmt->bindParam(':cognome', $cognome);
 
     //inserimento dati prova nella query
-    $email = 'adriano@studenti.it';
-    $nome = 'Eduard';
-    $sesso = 'true';    
-    $password = 'eduard';
+    $email = 'micole@studenti.it';
+    $nome = 'Micole';
+    $password = 'micole';
     $data_nascita = '2000-12-12';   
-    $indirizzo = 'Via Sezze 1';
-    $citta = 'Sezze';
-    $provincia = 'LT';    
-    $telefono = '3456871429';
+    $telefono = '3896458732';
     $trattamento = 'true';
-    $cons_mail = 'true';
-    $tessera = 'false';    
-    $cognome = 'Ene';
-    $numero = '535569874560';
+    $cognome = 'Santos';
 
     //esecuzuione della query
     $stmt->execute();
