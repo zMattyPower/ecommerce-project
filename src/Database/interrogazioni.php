@@ -26,25 +26,25 @@ if($result->num_rows>0){
 }else{
     echo "0 risultati";
 }*/
-try{
-    $conn = new PDO("mysql:host=$servername;dbname=$database",$username,$password);
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     //impostate il metodo di errore
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connessione riuscita";
-} catch(PDOException $e) {
+} catch (PDOException $e) {
     echo "Connessione fallita" . $e->getMessage();
 }
 //query
-try{
+try {
     $stmt = $conn->prepare("SELECT id_categoria FROM t_prodotto");
     $stmt->execute();
 
     //impostate il fetch
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    foreach($stmt->fetchAll()as $row) {
+    foreach ($stmt->fetchAll() as $row) {
         echo "id_categoria " . $row["id_categoria"] . "<br>";
     }
-}catch(PDOException $e) {
+} catch (PDOException $e) {
     echo "Errore: " . $e->getMessage();
 }
 //query di inserimento 
