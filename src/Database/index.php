@@ -17,29 +17,22 @@ echo "Connected successfully";
 
 mysqli_select_db($conn, $database);
 
-$sql = "CREATE DATABASE Progetto_Scuola";
-if ($conn->query($sql) === TRUE) {
-    echo "Database creato con successo :) ";
-} else {
-    echo "Database non creato :'( " . $conn->error;
-}
+//$sql = "CREATE DATABASE Progetto_Scuola";
+//if ($conn->query($sql) === TRUE) {
+//    echo "Database creato con successo :) ";
+//} else {
+//    echo "Database non creato :'( " . $conn->error;
+//}
 
 //Creazione tabella utente
 $sql = "CREATE TABLE t_utente (
     email varchar(255) NOT NULL UNIQUE,
-   nome varchar(255) NOT NULL,
-    sesso tinyint(4) DEFAULT NULL,
+    nome varchar(255) NOT NULL,
     pass varchar(255) NOT NULL,
     data_nascita date NOT NULL,
-    indirizzo varchar(255) NOT NULL,
-    citta varchar(255) NOT NULL,
-    provincia varchar(2) NOT NULL,
     telefono varchar(10) DEFAULT NULL,
     consenso_trattamento tinyint(4) NOT NULL,
-    consenso_mail tinyint(4) DEFAULT NULL,
-    tessera tinyint(4) DEFAULT NULL,
     cognome varchar(255) NOT NULL,
-    numero int(12) NOT NULL,
     PRIMARY KEY (email)
 );";
 
@@ -59,7 +52,7 @@ $sql = "CREATE TABLE t_carta_di_pagamento (
     debito tinyint(4) NOT NULL,
     credito tinyint(4) NOT NULL,
     prepagata tinyint(4) NOT NULL,
-    PRIMARY KEY (numero)
+    PRIMARY KEY (numero),
     FOREIGN KEY (email) REFERENCES t_utente(email)
 );";
 
@@ -106,6 +99,8 @@ $sql = "CREATE TABLE t_acquisto (
     id_acquisto int(5) NOT NULL,
     qualità varchar(255) NOT NULL,
     data_acquisto date NOT NULL,
+    via varchar(255) NOT NULL,
+    citta varchar(255) NOT NULL,
     PRIMARY KEY (id_acquisto),
     FOREIGN KEY (email) REFERENCES t_utente(email),
     FOREIGN KEY (id_prodotto) REFERENCES t_prodotto(id_prodotto)
@@ -188,8 +183,8 @@ $sql = "CREATE TABLE t_taglia(
     prezzo_offerta float NOT NULL,
     PRIMARY KEY (id_taglia),
     FOREIGN KEY (id_prodotto) REFERENCES t_prodotto (id_prodotto)
-
 );";
+
 if ($conn->query($sql) === TRUE) {
     echo "Tabella taglia creata con successo";
 } else {
@@ -205,8 +200,8 @@ $sql = "CREATE TABLE t_colore(
     prezzo_offerta float NOT NULL,
     PRIMARY KEY (id_colore),
     FOREIGN KEY (id_prodotto) REFERENCES t_prodotto (id_prodotto)
-
 );";
+
 if ($conn->query($sql) === TRUE) {
     echo "Tabella colore creata con successo";
 } else {

@@ -1,67 +1,39 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Content-Type: application/json; charset=UTF-8");
+
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$database = "progetto_scuola";
+$database = "d_ecommerce_project";
 
-// Creazione connessione
-/*$conn = mysqli_connect($servername, $username, $password);
 
-// Controllo connessione
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-} else {
-    echo "Connected successfully";
-}
-
-use LDAP\Result;
-
-$sql = "SELECT id_categoria FROM t_prodotto";
-$result = $conn -> mysqli_connect($sql);
-
-if($result->num_rows>0){
-    while($row=$result->fetch_assoc()){
-        echo "id_categoria " . $row["id_categoria"] . "<br>";
-    }
-}else{
-    echo "0 risultati";
-}*/
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    //impostate il metodo di errore
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connessione riuscita";
-} catch (PDOException $e) {
-    echo "Connessione fallita" . $e->getMessage();
-}
-//query
-try {
-    $stmt = $conn->prepare("SELECT id_categoria FROM t_prodotto");
-    $stmt->execute();
-
-    //impostate il fetch
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    foreach ($stmt->fetchAll() as $row) {
-        echo "id_categoria " . $row["id_categoria"] . "<br>";
-    }
-} catch (PDOException $e) {
-    echo "Errore: " . $e->getMessage();
-}
 //query di inserimento 
 try {
+
+    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Ricezione dei dati dal corpo della richiesta
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    // Estrazione dei dati
+    $id_dipendente = $data['id_dipendente'];
+    $nome = $data['nome'];
+    $cognome = $data['cognome'];
+    $data_nascita = $data['data_nascita'];
+    $trattamento = isset($data['trattamento']) && $data['trattamento'] == 'on' ? 1 : 0;
+
+
     //creazione della query dipendente
-    $stmt = $conn->prepare("INSERT INTO t_dipendente (id_dipendente, nome, cognome, data_nascita) VALUES (:id_dipendente, :nome, :cognome, :data_nascita)");
+    $stmt = $conn->prepare("INSERT INTO t_dipendente (id_dipendente, nome, cognome, data_nascita) 
+                            VALUES (:id_dipendente, :nome, :cognome, :data_nascita)");
     $stmt->bindParam(':id_dipendente', $id_dipendente);
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':cognome', $cognome);
     $stmt->bindParam(':data_nascita', $data_nascita);
 
-    //inserimento dei dati nella query
-    $id_dipendente = '11111';
-    $nome = 'Pippo';
-    $cognome = 'Baudo';
-    $data_nascita = '1980-12-12';
-
     //esecuzuione della query
     $stmt->execute();
 
@@ -71,40 +43,71 @@ try {
     echo "Errore: " . $e->getMessage();
 }
 
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-try{
-    //creazione della query utente
-    $stmt = $conn->prepare("INSERT INTO t_utente (email, nome, sesso, pass, data_nascita, indirizzo, citta, provincia, telefono, consenso_trattamento, consenso_mail, tessera, cognome) 
-    VALUES (:email, :nome, :sesso, :pass, :data_nascita, :indirizzo, :citta, :provincia, :telefono, :consenso_trattamento, :consenso_mail, :tessera, :cognome)");
+    // Ricezione dei dati dal corpo della richiesta
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    // Estrazione dei dati
+    $name = $data['name'];
+    $lastname = $data['lastname'];
+    $email = $data['email'];
+    $password = $data['password'];
+    $d_nascita = $data['d_nascita'];
+    $tel = $data['tel'];
+    $trattamento = isset($data['trattamento']) && $data['trattamento'] == 'on' ? 1 : 0;
+
+    // Preparazione della query di inserimento
+    $stmt = $conn->prepare("INSERT INTO t_utente (email, nome, pass, data_nascita, telefono, consenso_trattamento, cognome) 
+                            VALUES (:email, :nome, :pass, :data_nascita, :telefono, :consenso_trattamento, :cognome)");
     $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':nome', $nome);
-    $stmt->bindParam(':sesso', $sesso);
+    $stmt->bindParam(':nome', $name);
     $stmt->bindParam(':pass', $password);
-    $stmt->bindParam(':data_nascita', $data_nascita);
-    $stmt->bindParam(':indirizzo', $indirizzo);
-    $stmt->bindParam(':citta', $citta);
-    $stmt->bindParam(':provincia', $provincia);
-    $stmt->bindParam(':telefono', $telefono);
+    $stmt->bindParam(':data_nascita', $d_nascita);
+    $stmt->bindParam(':telefono', $tel);
     $stmt->bindParam(':consenso_trattamento', $trattamento);
-    $stmt->bindParam(':consenso_mail', $cons_mail);
-    $stmt->bindParam(':tessera', $tessera);    
-    $stmt->bindParam(':cognome', $cognome);
+    $stmt->bindParam(':cognome', $lastname);
 
-    //inserimento dati prova nella query
-    $email = 'adriano@studenti.it';
-    $nome = 'Eduard';
-    $sesso = 'true';    
-    $password = 'eduard';
-    $data_nascita = '2000-12-12';   
-    $indirizzo = 'Via Sezze 1';
-    $citta = 'Sezze';
-    $provincia = 'LT';    
-    $telefono = '3456871429';
-    $trattamento = 'true';
-    $cons_mail = 'true';
-    $tessera = 'false';    
-    $cognome = 'Ene';
-    $numero = '535569874560';
+    // Esecuzione della query
+    $stmt->execute();
+
+    // Messaggio di successo
+    echo json_encode(["message" => "Dati inseriti con successo"]);
+} catch (PDOException $e) {
+    // Messaggio di errore
+    echo json_encode(["message" => "Errore: " . $e->getMessage()]);
+}
+
+//query di inserimento 
+try {
+
+    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Ricezione dei dati dal corpo della richiesta
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    // Estrazione dei dati
+    $id_dipendente = $data['id_dipendente'];
+    $nome = $data['nome'];
+    $cognome = $data['cognome'];
+    $data_nascita = $data['data_nascita'];
+    $trattamento = isset($data['trattamento']) && $data['trattamento'] == 'on' ? 1 : 0;
+
+
+    //creazione della query dipendente
+    $stmt = $conn->prepare("INSERT INTO t_carta_di_pagamento (email, numero, scadenza, nome, cognome, debito, credito, prepagata) 
+                            VALUES (:email, :numero, ;scadenza, :nome, :cognome, debito, credito, prepagata)");
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':numero', $numero);
+    $stmt->bindParam(':scadenza', $scadenza);
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':cognome', $cognome);
+    $stmt->bindParam(':debito', $debito);
+    $stmt->bindParam(':credito', $credito);
+    $stmt->bindParam(':prepagata', $prepagata);
 
     //esecuzuione della query
     $stmt->execute();
@@ -114,3 +117,4 @@ try{
 }catch(PDOException $e) {
     echo "Errore: " . $e->getMessage();
 }
+?>
