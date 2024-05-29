@@ -1,103 +1,47 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Content-Type: application/json; charset=UTF-8");
+
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$database = "progetto_scuola";
+$database = "d_ecommerce_project";
 
-// Creazione connessione
-/*$conn = mysqli_connect($servername, $username, $password);
-
-// Controllo connessione
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-} else {
-    echo "Connected successfully";
-}
-
-use LDAP\Result;
-
-$sql = "SELECT id_categoria FROM t_prodotto";
-$result = $conn -> mysqli_connect($sql);
-
-if($result->num_rows>0){
-    while($row=$result->fetch_assoc()){
-        echo "id_categoria " . $row["id_categoria"] . "<br>";
-    }
-}else{
-    echo "0 risultati";
-}*/
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    //impostate il metodo di errore
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connessione riuscita";
-} catch (PDOException $e) {
-    echo "Connessione fallita" . $e->getMessage();
-}
-//query
-try {
-    $stmt = $conn->prepare("SELECT id_categoria FROM t_prodotto");
-    $stmt->execute();
 
-    //impostate il fetch
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    foreach ($stmt->fetchAll() as $row) {
-        echo "id_categoria " . $row["id_categoria"] . "<br>";
-    }
-} catch (PDOException $e) {
-    echo "Errore: " . $e->getMessage();
-}
+    // Ricezione dei dati dal corpo della richiesta
+    $data = json_decode(file_get_contents('php://input'), true);
 
-//query di inserimento 
-try {
-    //creazione della query dipendente
-    $stmt = $conn->prepare("INSERT INTO t_dipendente (id_dipendente, nome, cognome, data_nascita) VALUES (:id_dipendente, :nome, :cognome, :data_nascita)");
-    $stmt->bindParam(':id_dipendente', $id_dipendente);
-    $stmt->bindParam(':nome', $nome);
-    $stmt->bindParam(':cognome', $cognome);
-    $stmt->bindParam(':data_nascita', $data_nascita);
+    // Estrazione dei dati
+    $name = $data['name'];
+    $lastname = $data['lastname'];
+    $email = $data['email'];
+    $password = $data['password'];
+    $d_nascita = $data['d_nascita'];
+    $tel = $data['tel'];
+    $trattamento = isset($data['trattamento']) && $data['trattamento'] == 'on' ? 1 : 0;
 
-    //inserimento dei dati nella query
-    $id_dipendente = '11112';
-    $nome = 'Buongiorno';
-    $cognome = 'Mike';
-    $data_nascita = '1960-12-12';
-
-    //esecuzuione della query
-    $stmt->execute();
-
-    //verifica dei dati
-    echo "Dati inseriti con successo";
-}catch(PDOException $e) {
-    echo "Errore: " . $e->getMessage();
-}
-
-try{
-    //creazione della query utente
+    // Preparazione della query di inserimento
     $stmt = $conn->prepare("INSERT INTO t_utente (email, nome, pass, data_nascita, telefono, consenso_trattamento, cognome) 
-    VALUES (:email, :nome, :pass, :data_nascita, :telefono, :consenso_trattamento, :cognome)");
+                            VALUES (:email, :nome, :pass, :data_nascita, :telefono, :consenso_trattamento, :cognome)");
     $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':nome', $name);
     $stmt->bindParam(':pass', $password);
-    $stmt->bindParam(':data_nascita', $data_nascita);
-    $stmt->bindParam(':telefono', $telefono);
+    $stmt->bindParam(':data_nascita', $d_nascita);
+    $stmt->bindParam(':telefono', $tel);
     $stmt->bindParam(':consenso_trattamento', $trattamento);
-    $stmt->bindParam(':cognome', $cognome);
+    $stmt->bindParam(':cognome', $lastname);
 
-    //inserimento dati prova nella query
-    $email = 'micole@studenti.it';
-    $nome = 'Micole';
-    $password = 'micole';
-    $data_nascita = '2000-12-12';   
-    $telefono = '3896458732';
-    $trattamento = 'true';
-    $cognome = 'Santos';
-
-    //esecuzuione della query
+    // Esecuzione della query
     $stmt->execute();
 
-    //verifica dei dati
-    echo "Dati inseriti con successo";
-}catch(PDOException $e) {
-    echo "Errore: " . $e->getMessage();
+    // Messaggio di successo
+    echo json_encode(["message" => "Dati inseriti con successo"]);
+} catch (PDOException $e) {
+    // Messaggio di errore
+    echo json_encode(["message" => "Errore: " . $e->getMessage()]);
 }
+?>
