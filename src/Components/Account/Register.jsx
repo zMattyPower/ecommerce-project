@@ -48,50 +48,71 @@ const Register = () => {
                         <h1>Registrazione</h1>
                         <div className="riga">
                             <div className="input-box_1">
-                                <FontAwesomeIcon icon={faUser} id="login" />
+
                                 <input type="text" placeholder="Nome" id="name" name="name"
                                     required />
+                                <div className="icon">
+                                    <FontAwesomeIcon icon={faUser} id="login" />
+                                </div>
                             </div>
 
                             <div className="input-box_1">
-                                <FontAwesomeIcon icon={faUser} id="login" />
+
                                 <input type="text" placeholder="Cognome" id="lastname" name="lastname"
                                     required />
+                                <div className="icon">
+                                    <FontAwesomeIcon icon={faUser} id="login" />
+                                </div>
                             </div>
                         </div>
 
                         <div className="riga">
                             <div className="input-box_1">
-                                <FontAwesomeIcon icon={faEnvelope} id="login" />
+
                                 <input type="email" placeholder="E-Mail" id="email" name="email"
                                     required />
+
+                                <div className="icon">
+                                    <FontAwesomeIcon icon={faEnvelope} id="login" />
+                                </div>
                             </div>
 
                             <div className="input-box_1">
-                                <FontAwesomeIcon icon={faLock} id="login" />
-                                <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required />
-                                <FontAwesomeIcon
-                                    icon={passwordShown ? faEyeSlash : faEye}
-                                    onClick={togglePasswordVisibility}
-                                    id='eye-icon'
-                                />
 
+                                <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required />
+
+                                <div className="icon_pass">
+                                        <div><FontAwesomeIcon icon={faLock} id="login" /></div>
+                                    <div>
+                                        <FontAwesomeIcon
+                                            icon={passwordShown ? faEyeSlash : faEye}
+                                            onClick={togglePasswordVisibility}
+                                            id='eye-icon' />
+                                   </div>
+                                </div>
                             </div>
 
                         </div>
 
                         <div className="riga">
                             <div className="input-box_1">
-                                <FontAwesomeIcon icon={faUser} id="login" />
+
                                 <input type="date" id="d_nascita" name="d_nascita"
                                     required />
+
+
+                                <div className="icon"><FontAwesomeIcon icon={faUser} id="login" />
+                                </div>
                             </div>
 
                             <div className="input-box_1">
 
-                                <FontAwesomeIcon icon={faPhone} id="login" />
+
                                 <input type="tel" placeholder="Telefono" id="tel" name="tel"
                                     required />
+
+                                <div className="icon"> <FontAwesomeIcon icon={faPhone} id="login" />
+                                </div>
                             </div>
 
                         </div>

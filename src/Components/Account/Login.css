@@ -141,7 +141,7 @@
 
 .input-box #login {
     position: absolute;
-    left: 15px;
+    left: 7px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
