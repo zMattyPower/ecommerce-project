@@ -16,6 +16,7 @@ import UomoMaglietta from "./pages/UomoMaglietta";
 import BambinoMaglietta from "./pages/BambinoMaglietta";
 import NeonatoMaglietta from "./pages/NeonatoMaglietta";
 
+{/*import logo from "./logo.svg";*/}
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
         <Footer/>
       </GlobalVariables>
       
-
+      {/*<img src={logo} alt="logo"/>*/}
     </div>
   );
 }

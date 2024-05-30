@@ -8,17 +8,14 @@ function DonnaMaglietta() {
     <>
       <div className="contenitore_cat">
         <div className="riga_prod">
-        dtytytf
           <div className="prod">
-            dfjdfhbdfhdf
+            <img ></img>
           </div>
 
           <div className="prod">
-            popoihgiygkjhkj
           </div>
 
           <div className="prod">
-            mnbmv
           </div>
 
         </div>
