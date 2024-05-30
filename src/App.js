@@ -15,10 +15,12 @@ import DonnaMaglietta from "./pages/DonnaMaglietta";
 import UomoMaglietta from "./pages/UomoMaglietta";
 import BambinoMaglietta from "./pages/BambinoMaglietta";
 import NeonatoMaglietta from "./pages/NeonatoMaglietta";
+import Card  from "./Components/Card/Card";
 
 {/*import logo from "./logo.svg";*/}
 
 function App() {
+  
   return (
     <div>
       
@@ -32,10 +34,11 @@ function App() {
           <Route path="/bambino/maglietta" element={<BambinoMaglietta />} />
           <Route path="/neonato/maglietta" element={<NeonatoMaglietta />} />
         </Routes>
+
+      
         <Footer/>
       </GlobalVariables>
       
-      {/*<img src={logo} alt="logo"/>*/}
     </div>
   );
 }
