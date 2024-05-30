@@ -3,11 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 header("Content-Type: application/json; charset=UTF-8");
 
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$database = "d_ecommerce_project";
-
+include_once 'C:\Users\PC-A59\Documents\GitHub\ecommerce-project\src\Database\Funzioni\Connection.php';
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);

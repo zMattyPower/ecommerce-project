@@ -1,28 +1,15 @@
 <?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$database = "progetto_scuola";
 
-
-// Creazione connessione
-$conn = mysqli_connect($servername, $username, $password);
-
-// Controllo connessione
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}else{
-echo "Connected successfully";
-}
-
+include_once 'C:\Users\PC-A59\Documents\GitHub\ecommerce-project\src\Database\Funzioni\Connection.php';
+//Connessione
 mysqli_select_db($conn, $database);
 
-//$sql = "CREATE DATABASE Progetto_Scuola";
-//if ($conn->query($sql) === TRUE) {
-//    echo "Database creato con successo :) ";
-//} else {
-//    echo "Database non creato :'( " . $conn->error;
-//}
+$sql = "CREATE DATABASE Progetto_Scuola";
+if ($conn->query($sql) === TRUE) {
+    echo "Database creato con successo :) ";
+} else {
+    echo "Database non creato :'( " . $conn->error;
+}
 
 //Creazione tabella utente
 $sql = "CREATE TABLE t_utente (
