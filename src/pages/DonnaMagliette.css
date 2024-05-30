@@ -1,19 +1,34 @@
 
-div.riga_prod{
+div.riga1_prod{
     border: 2px solid black;
     display: flex;
     justify-content: space-between;
     color: blue;
 }
 
-div.riga_prod div.prod{
-    border: 2px solid pink;
-    width: 33%;
-    
+div.riga2_prod{
+    border: 2px solid black;
+    display: flex;
 }
 
-div.riga_prod div.prod img{
-    border: 2px solid rgb(21, 255, 0);
-    width: 100%;
+
+div.riga2_1_prod {
+    border: 2px solid pink;
+}
+
+div.riga2_2_1_prod {
+    border: 2px solid rgb(255, 0, 0);
     background-color: red;
+}
+
+div.riga2_2_prod div.prod img{
+    border: 2px solid rgb(200, 0, 255);
+    
+
+}
+
+div.riga2_2_2_prod {
+    border: 2px solid rgb(0, 26, 255);
+    background-color: rgb(8, 0, 255);
+    width: 10%;
 }

@@ -15,12 +15,21 @@ function DonnaMagliette() {
   return (
     <>
       <div className="contenitore_cat">
-      <div className="riga_prod">
+
+      <div className="riga1_prod"> {/* riga 1*/}
       <Link to="#">Magliette</Link>
       <Link to="/Donna/Felpe">Felpe</Link>
       <Link to="/Donna/Giacche">Giacche</Link>
       </div>
-        <div className="riga_prod">
+
+      <div className="riga2_prod"> {/* riga 2 */}
+
+        <div className="riga2_1_prod"> {/* riga 2 e colonna 1 */}
+        guygiutyvubbbbbbbbbbbbbbbbbbbbbbbbbb
+        </div>
+
+        <div className="riga2_2_1_prod"> {/* riga 2 e colonna 2 */}
+
           <div className="prod">
             <img src = {d_maglietta_1_1} alt ="d_maglietta_1_1"></img>
           </div>
@@ -35,7 +44,7 @@ function DonnaMagliette() {
 
         </div>
 
-        <div className="riga_prod">
+        <div className="riga2_2_2_prod">
           <div className="prod">
             <img src = {d_maglietta_1_2} alt ="d_maglietta_1_1"></img>
           </div>
@@ -48,6 +57,7 @@ function DonnaMagliette() {
           <img src = {d_maglietta_3_2} alt ="d_maglietta_3_1"></img>
           </div>
 
+        </div>
         </div>
       </div>
     </>
