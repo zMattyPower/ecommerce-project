@@ -118,8 +118,9 @@ const Register = () => {
                         </div>
 
                         <div className="riga">
-                            <input type="checkbox" id="trattamento" name="trattamento"
-                                required />
+                            <p><input type="checkbox" id="trattamento" name="trattamento"
+                                required /> Termini e condizioni</p>
+                                <br/>
                             <button type="submit" className="btn">Registrati</button>
                         </div>
 

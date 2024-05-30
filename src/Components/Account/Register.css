@@ -15,15 +15,16 @@ div.div_f {
 }
 
 div.form_r {
-    width: 700px;
-    height: 340px;
-    /*border: 2px solid black;
-    background-color: rgba(255, 253, 253, 0.382);*/
+    border: 2px solid black;
+    /*background-color: rgba(255, 253, 253, 0.382);*/
     color: black;
-    margin-top: 60px;
-    margin-left: 400px;
-    margin-right: 400px;
-    margin-bottom: 60px;
+   
+        margin-top: 5%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 5%;
+        
+        float:inline-start;
 }
 
 h1 {
@@ -36,7 +37,7 @@ h1 {
 div.riga {
    /* border: 2px solid rgb(229, 0, 255); */
     width: 90%;
-    height: 50px;
+   /* height: 50px; */
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -56,7 +57,7 @@ div.input-box_1 input{
 }
 input#name, input#lastname, input#email, input#password, input#d_nascita, input#tel{
   /*  border: 2px solid green; */
-    padding-top: 3px;
+    padding-top: 24px;
     padding-left: 28px;
 
 }
@@ -78,11 +79,12 @@ div.icon_pass{
 }
 
 div.riga input#trattamento {
-    margin-left: 100px;
+    margin-left: 10px;
 }
 
 div.riga button.btn {
-    width: 100%;
+    width: 97%;
+    margin-left: 10px;
 }
 
 div.register-link {
@@ -104,28 +106,39 @@ div.riga::after {
 /*}*/
 
 /*Tablet*/
-@media (max-width: 1000px) {
+@media screen and (max-width: 1400px){
 
-    /*div.form_r {
+    div.form_r {
 
-        background-color: rgb(255, 0, 0);
-
-    }*/
+        background-color: rgba(255, 0, 123, 0.358);
+        color: black;
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 5%;
+        
+        float:inline-start;
+    }
 }
 
 /*Telefoni iphone xr*/
-@media screen and (max-width: 650px) and (min-width: 46px) {
+@media screen and (max-width: 550px) and (min-width: 46px) {
+
+    div.div_f {
+        display: flex;
+    
+    }
 
     div.form_r {
         background-color: rgb(13, 0, 255);
-        width: 410px;
-        height: 495px;
+       
         color: black;
         margin-top: 10%;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 10%;
+        margin-right: 10%;
         margin-bottom: 10%;
-        height: 85%;
+        
+        float:inline-start;
     }
 
     h1 {
@@ -142,6 +155,10 @@ div.riga::after {
         margin-left:0;
         height: 100%;
         
+    }
+
+    div.riga p{
+        color:red;
     }
 
 
