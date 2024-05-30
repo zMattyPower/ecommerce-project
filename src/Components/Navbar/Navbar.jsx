@@ -28,12 +28,12 @@ const Navbar = () => {
   return (
     <>
       <div>
-        {useLogin == true && <Login/>}
+        {useLogin == true && <Login />}
       </div>
       <header className="header">
         <div className="container">
           <div className="row v-center">
-          <div className="header-item item-left">
+            <div className="header-item item-left">
               <div className="logo">
                 <Link to="/">Logo</Link>
               </div>
@@ -52,72 +52,71 @@ const Navbar = () => {
                   <div className="mobile-menu-close">&times;</div>
                 </div>
                 <ul className="menu-main">
-                <li className="menu-item-has-children">
+                  <li className="menu-item-has-children">
                     <Link to="#">
                       Donna<i className="fa fa-angle-down"></i>
                     </Link>
                     <div className="sub-menu mega-menu mega-menu-column-4">
                       <div className="list-item">
-                        <h4 className="title">Maglietta</h4>
+                        <h4 className="title">Top</h4>
                         <ul>
                           <li>
-                            <Link to="/Donna/Maglietta/TShirt">T-Shirt</Link>
+                            <Link to="/Donna/Maglietta/TShirt">Magliette</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Felpe</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Giacche</Link>
                           </li>
                         </ul>
-                        <h4 className="title">Pantaloni</h4>
-                        <ul>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                        </ul>
+
                       </div>
                       <div className="list-item">
-                        <h4 className="title">Vestiti</h4>
+                        <h4 className="title">Bottom</h4>
                         <ul>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Pantaloni</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Gonne e Vestiti</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Pantaloncini</Link>
                           </li>
                         </ul>
-                        <h4 className="title">Felpe</h4>
-                        <ul>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                        </ul>
+
                       </div>
                       <div className="list-item">
-                        <h4 className="title">Cappotto</h4>
+                        <h4 className="title">Scarpe</h4>
                         <ul>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Camminata</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Corsa</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Allenamento</Link>
                           </li>
                         </ul>
                       </div>
-                      
+
+                      <div className="list-item">
+                        <h4 className="title">Accessori</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Borse</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Cappelli</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Occhiali</Link>
+                          </li>
+                        </ul>
+                      </div>
+
                     </div>
                   </li>
 
@@ -126,73 +125,65 @@ const Navbar = () => {
                       Uomo<i className="fa fa-angle-down"></i>
                     </Link>
                     <div className="sub-menu mega-menu mega-menu-column-4">
-                      <div className="list-item">
-                        <h4 className="title">Maglietta</h4>
+                    <div className="list-item">
+                        <h4 className="title">Top</h4>
                         <ul>
                           <li>
-                            <Link to="/">T-Shirt</Link>
+                            <Link to="/">Magliette</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Felpe</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Giacche</Link>
                           </li>
                         </ul>
-                        <h4 className="title">Pantaloni</h4>
+
+                      </div>
+                      <div className="list-item">
+                        <h4 className="title">Bottom</h4>
                         <ul>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Pantaloni</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Vestiti</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Pantaloncini</Link>
+                          </li>
+                        </ul>
+
+                      </div>
+                      <div className="list-item">
+                        <h4 className="title">Scarpe</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Camminata</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Corsa</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Allenamento</Link>
                           </li>
                         </ul>
                       </div>
+
                       <div className="list-item">
-                        <h4 className="title">Vestiti</h4>
+                        <h4 className="title">Accessori</h4>
                         <ul>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Borse</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Cappelli</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                        </ul>
-                        <h4 className="title">Felpe</h4>
-                        <ul>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Occhiali</Link>
                           </li>
                         </ul>
                       </div>
-                      <div className="list-item">
-                        <h4 className="title">Cappotto</h4>
-                        <ul>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                        </ul>
-                      </div>
-                      
                     </div>
                   </li>
 
@@ -201,71 +192,67 @@ const Navbar = () => {
                       Bambino<i className="fa fa-angle-down"></i>
                     </Link>
                     <div className="sub-menu mega-menu mega-menu-column-4">
-                      <div className="list-item">
-                        <h4 className="title">Maglietta</h4>
+                    <div className="list-item">
+                        <h4 className="title">Top</h4>
                         <ul>
                           <li>
-                            <Link to="#">T-Shirt</Link>
+                            <Link to="/Donna/Maglietta/TShirt">Magliette</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Felpe</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Giacche</Link>
                           </li>
                         </ul>
-                        <h4 className="title">Pantaloni</h4>
-                        <ul>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                        </ul>
+
                       </div>
                       <div className="list-item">
-                        <h4 className="title">Vestiti</h4>
+                        <h4 className="title">Bottom</h4>
                         <ul>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Pantaloni</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Gonne e Vestiti</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Pantaloncini</Link>
                           </li>
                         </ul>
-                        <h4 className="title">Felpe</h4>
-                        <ul>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                        </ul>
+
                       </div>
                       <div className="list-item">
-                        <h4 className="title">Cappotto</h4>
+                        <h4 className="title">Scarpe</h4>
                         <ul>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Camminata</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Corsa</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Allenamento</Link>
                           </li>
                         </ul>
                       </div>
 
-                      
+                      <div className="list-item">
+                        <h4 className="title">Accessori</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Borse</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Cappelli</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Occhiali</Link>
+                          </li>
+                        </ul>
+                      </div>
+
+
                     </div>
                   </li>
 
@@ -274,65 +261,67 @@ const Navbar = () => {
                       Neonato<i className="fa fa-angle-down"></i>
                     </Link>
                     <div className="sub-menu mega-menu mega-menu-column-4">
-                      <div className="list-item">
-                        <h4 className="title">Maglietta</h4>
+                    <div className="list-item">
+                        <h4 className="title">Top</h4>
                         <ul>
                           <li>
-                            <Link to="#">T-Shirt</Link>
+                            <Link to="/Donna/Maglietta/TShirt">Magliette</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Felpe</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Giacche</Link>
                           </li>
                         </ul>
-                        <h4 className="title">Pantaloni</h4>
-                        <ul>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                        </ul>
+
                       </div>
                       <div className="list-item">
-                        <h4 className="title">Vestiti</h4>
+                        <h4 className="title">Bottom</h4>
                         <ul>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Pantaloni</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Gonne e Vestiti</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Pantaloncini</Link>
                           </li>
                         </ul>
-                        <h4 className="title">Felpe</h4>
-                        <ul>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                          <li>
-                            <Link to="#">Product List</Link>
-                          </li>
-                        </ul>
+
                       </div>
                       <div className="list-item">
-                        <h4 className="title">Cappotto</h4>
+                        <h4 className="title">Scarpe</h4>
                         <ul>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Camminata</Link>
                           </li>
                           <li>
-                            <Link to="#">Product List</Link>
+                            <Link to="#">Corsa</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Allenamento</Link>
                           </li>
                         </ul>
                       </div>
 
-                      
+                      <div className="list-item">
+                        <h4 className="title">Accessori</h4>
+                        <ul>
+                          <li>
+                            <Link to="#">Borse</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Cappelli</Link>
+                          </li>
+                          <li>
+                            <Link to="#">Occhiali</Link>
+                          </li>
+                        </ul>
+                      </div>
+
+
                     </div>
                   </li>
                 </ul>

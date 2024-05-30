@@ -69,7 +69,7 @@ const Register = () => {
                         <div className="riga">
                             <div className="input-box_1">
 
-                                <input type="email" placeholder="E-Mail" id="email" name="email"
+                                <input type="email" placeholder="E-Mail" id="email_r" name="email"
                                     required />
 
                                 <div className="icon">
@@ -79,16 +79,10 @@ const Register = () => {
 
                             <div className="input-box_1">
 
-                                <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required />
+                                <input type={passwordShown ? "text" : "password"} id="password_r" name="password" placeholder="Password" required />
 
                                 <div className="icon_pass">
                                         <div><FontAwesomeIcon icon={faLock} id="login" /></div>
-                                    <div>
-                                        <FontAwesomeIcon
-                                            icon={passwordShown ? faEyeSlash : faEye}
-                                            onClick={togglePasswordVisibility}
-                                            id='eye-icon' />
-                                   </div>
                                 </div>
                             </div>
 

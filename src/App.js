@@ -27,7 +27,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/registrazione" element={<Register/>} />
           <Route path="/Donna/Maglietta/TShirt" element={< DonnaMaglietta/>} />
-          <Route path="/uomo/maglietta" element={<UomoMaglietta />} />
+          <Route path="/Uomo/Maglietta" element={<UomoMaglietta />} />
           <Route path="/bambino/maglietta" element={<BambinoMaglietta />} />
           <Route path="/neonato/maglietta" element={<NeonatoMaglietta />} />
         </Routes>
