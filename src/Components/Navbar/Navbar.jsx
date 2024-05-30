@@ -8,7 +8,7 @@ import { useLoginContext } from '../GlobalVariables'; // Import the context hook
 
 //Page Link
 import { Link } from 'react-router-dom';
-import Donna from "../../pages/DonnaMaglietta";
+import DonnaMagliette from "../../pages/DonnaMagliette";
 import Uomo from "../../pages/UomoMaglietta";
 import Bambino from "../../pages/BambinoMaglietta";
 
@@ -61,7 +61,7 @@ const Navbar = () => {
                         <h4 className="title">Top</h4>
                         <ul>
                           <li>
-                            <Link to="/Donna/Maglietta/TShirt">Magliette</Link>
+                            <Link to="/Donna/Magliette">Magliette</Link>
                           </li>
                           <li>
                             <Link to="#">Felpe</Link>

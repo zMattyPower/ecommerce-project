@@ -1,0 +1,19 @@
+
+div.riga_prod{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+}
+
+div.riga_prod div.prod{
+    border: 2px solid pink;
+    width: 33%;
+    
+}
+
+div.riga_prod div.prod img{
+    border: 2px solid rgb(21, 255, 0);
+    width: 100%;
+    background-color: red;
+}
