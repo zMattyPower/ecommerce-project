@@ -1,4 +1,8 @@
+
 /*import React from 'react';
+
+import React from 'react';
+
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import $ from "jquery";
@@ -7,6 +11,7 @@ import { faUser, faEnvelope, faPhone, faLock, faEye, faEyeSlash } from '@fortawe
 import { useLoginContext } from '../GlobalVariables';
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+
 import './Register.css';*/
 
 import React from 'react';
@@ -18,6 +23,7 @@ import { faUser, faEnvelope, faPhone, faLock, faEye, faEyeSlash } from '@fortawe
 import { useLoginContext } from '../GlobalVariables';
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+
 import './Register.css';
 
 const Register = () => {
@@ -34,7 +40,11 @@ const Register = () => {
         setPasswordShown(!passwordShown);
     };
 
+
     /*const handleSubmit = (e) => {
+
+    const handleSubmit = (e) => {
+
         e.preventDefault();
         const form = $(e.target);
         $.ajax({
@@ -45,6 +55,7 @@ const Register = () => {
                 setResult(data);
             },
         });
+
     };*/
 
     const handleSubmit = async (e) => {
@@ -69,6 +80,7 @@ const Register = () => {
 
     return (
         <>
+
             <Navbar />
 
             <div className="form_r" id="form_r">
@@ -143,6 +155,98 @@ const Register = () => {
                         <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
                     </div>
                 </form>
+
+            <div className="div_f">
+                <div className="form_r" id="form_r">
+                    <form name="frmLogin" id="frmLogin"
+                        action="http://localhost:8000/register.php"
+                        method="post"
+                        onSubmit={(event) => handleSubmit(event)}>
+
+                        <h1>Registrazione</h1>
+                        <div className="riga">
+                            <div className="input-box_1">
+
+                                <input type="text" placeholder="Nome" id="name" name="name"
+                                    required />
+                                <div className="icon">
+                                    <FontAwesomeIcon icon={faUser} id="login" />
+                                </div>
+                            </div>
+
+                            <div className="input-box_1">
+
+                                <input type="text" placeholder="Cognome" id="lastname" name="lastname"
+                                    required />
+                                <div className="icon">
+                                    <FontAwesomeIcon icon={faUser} id="login" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="riga">
+                            <div className="input-box_1">
+
+                                <input type="email" placeholder="E-Mail" id="email_r" name="email"
+                                    required />
+
+                                <div className="icon">
+                                    <FontAwesomeIcon icon={faEnvelope} id="login" />
+                                </div>
+                            </div>
+
+                            <div className="input-box_1">
+
+                                <input type={passwordShown ? "text" : "password"} id="password_r" name="password" placeholder="Password" required />
+
+                                <div className="icon_pass">
+                                        <div><FontAwesomeIcon icon={faLock} id="login" /></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className="riga">
+                            <div className="input-box_1">
+
+                                <input type="date" id="d_nascita" name="d_nascita"
+                                    required />
+
+
+                                <div className="icon"><FontAwesomeIcon icon={faUser} id="login" />
+                                </div>
+                            </div>
+
+                            <div className="input-box_1">
+
+
+                                <input type="tel" placeholder="Telefono" id="tel" name="tel"
+                                    required />
+
+                                <div className="icon"> <FontAwesomeIcon icon={faPhone} id="login" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className="riga">
+                            <p><input type="checkbox" id="trattamento" name="trattamento"
+                                required /> Termini e condizioni</p>
+                                <br/>
+                            <button type="submit" className="btn">Registrati</button>
+                        </div>
+
+                        {result}
+
+                        <div className="riga">
+                            <div className="register-link">
+                                <hr />
+                                <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </>
     );

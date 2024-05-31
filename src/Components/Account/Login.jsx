@@ -1,13 +1,22 @@
 import React from 'react';
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import $ from "jquery";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLock, faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons'
-import './Style.css';
+import { useLoginContext } from '../GlobalVariables'; // Import the context hook
+import './Login.css';
 
 const Login = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const [result, setResult] = useState("");
+    const { useLogin, setUseLogin } = useLoginContext(); // Access the useLogin state
+
+
+    const toggleLogin = () => {
+        setUseLogin(!useLogin);
+    };
+    
 
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
@@ -27,13 +36,15 @@ const Login = () => {
     };
 
     return (
+        <>
+        <div className='blur' id='blur' onClick={toggleLogin}></div>
         <div className="wrapper" id="wrapper">
             <form name="frmLogin" id="frmLogin"
-                action="http://localhost:8000/server.php"
+                action="http://localhost:8000/login.php"
                 method="post"
                 onSubmit={(event) => handleSubmit(event)}
             >
-                <button type="button" className="backLogin">✕</button>
+                <button type="button" className="backLogin" onClick={toggleLogin}>✕</button>
                 <h1><img src={require("./Login_Icon.png")} alt='login' width="100" draggable="false"/></h1>
 
                 <div className="input-box">
@@ -62,10 +73,11 @@ const Login = () => {
 
                 <div className="register-link">
                     <hr/>
-                    <p><a href='about:blank'>Crea un account gratuitamente<i className='bx bx-chevrons-right'></i></a></p>
+                    <p><a href='about:blank' onClick={toggleLogin}><Link to="/registrazione">Crea un account gratuitamente</Link><i className='bx bx-chevrons-right'></i></a></p>
                 </div>
             </form>
         </div>
+        </>
   );
 };
 
