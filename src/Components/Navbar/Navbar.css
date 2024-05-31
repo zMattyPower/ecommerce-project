@@ -62,6 +62,8 @@
   color : rgb(0, 0, 0);
 }
 
+
+
 img.clothem{
 	width: 100%;
 }
@@ -257,7 +259,8 @@ a{
 }
 
 /*responsive*/
-@media (max-width: 991px) and (min-width: 1px){
+/*Tablet*/
+@media (max-width: 768px){
 	.header .item-center{
 		order:3;
 		flex:0 0 100%;
@@ -467,5 +470,11 @@ a{
 	  visibility: visible;
 	  opacity:1;	
 	}
+
+	img.clothem{
+		width: 100%;
+	}
+
+
 }
 

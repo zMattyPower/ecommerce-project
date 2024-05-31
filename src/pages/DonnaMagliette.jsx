@@ -13,7 +13,9 @@ import d_maglietta_3_2 from "../Components/Img/d_maglietta_3_2.jpg";
 
 function DonnaMagliette() {
   return (
+
     <>
+    
       <div className="contenitore_cat">
 
         <div className="riga1_prod"> {/* riga 1*/}
@@ -21,56 +23,63 @@ function DonnaMagliette() {
           <div className="link"><Link to="/Donna/Felpe">Felpe</Link></div>
           <div className="link"><Link to="/Donna/Giacche">Giacche</Link></div>
         </div>
-        <hr/>
+
         <div className="riga2_prod"> {/* riga 2 */}
 
           <div className="riga2_r1_c1_prod" id="c1"> {/* riga 1 della riga 2 e colonna 1 */}
-           
-              <div className="filtro">
+            <div classname="filtro">
+              <div className="filtro_1">
                 <h3>Filtri</h3>
-                <div className="filtro">
-                  Ordina per
-                  <ul>
-                    <li className = "list_fil">Prezzo (Crescente)</li>
-                    <li className = "list_fil">Prezzo (Decrescente)</li>
-                  </ul>
+
+                <div className="filtro_2">Ordina per
+                  <div className="filtro_3">
+
+                    <ul>
+                      <li className="list_fil">Prezzo (Crescente)</li>
+                      <li className="list_fil">Prezzo (Decrescente)</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <hr/>
-                <div className="filtro"> 
-                  Colore
-                  <ul>
-                  <li className = "list_fil">Bianco</li>
-                  <li className = "list_fil">Azzuro</li>
-                  <li className = "list_fil"></li>
-                  <li className = "list_fil">Kaki</li>
-                  <li className = "list_fil">Rosa</li>
-                  <li className = "list_fil">Grigio</li>
-                  </ul>
+                <div className="filtro_2">Colore
+                  <div className="filtro_3">
+
+                    <ul>
+                      <li className="list_fil">Bianco</li>
+                      <li className="list_fil">Azzuro</li>
+                      <li className="list_fil"></li>
+                      <li className="list_fil">Kaki</li>
+                      <li className="list_fil">Rosa</li>
+                      <li className="list_fil">Grigio</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <hr/>
-                <div className="filtro">
-                  Taglia
-                  <ul>
-                  <li className = "list_fil">XS</li>
-                  <li className = "list_fil">S</li>
-                  <li className = "list_fil">M</li>
-                  <li className = "list_fil">L</li>
-                  <li className = "list_fil">XL</li>
-                  </ul>
+                <div className="filtro_2">Taglia
+                  <div className="filtro_3">
+
+                    <ul>
+                      <li className="list_fil">XS</li>
+                      <li className="list_fil">S</li>
+                      <li className="list_fil">M</li>
+                      <li className="list_fil">L</li>
+                      <li className="list_fil">XL</li>
+                    </ul>
+                  </div>
                 </div>
 
               </div>
+            </div>
           </div>
 
           <div className="riga2_r1_c1_prod" id="c2"> {/* riga 1 della riga 2 */}
             <div className="riga2_r1_r1_prod"> {/* riga 1 della riga 1 della riga 2 e colonna 1 */}
               <div className="prod">
-                <Link to="#"><img src={d_maglietta_1_1} alt="d_maglietta_1_1" className="image"></img></Link>
+                <Link to="/Donna/Magliette/Prodotto"><img src={d_maglietta_1_1} alt="d_maglietta_1_1" className="image"></img></Link>
                 <p> Maglietta a maniche corte</p>
                 <p> 9,99 €</p>
               </div>
+
 
               <div className="prod">
                 <Link to="#"><img src={d_maglietta_2_1} alt="d_maglietta_2_1" className="image"></img></Link>
@@ -87,7 +96,7 @@ function DonnaMagliette() {
 
             <div className="riga2_r1_r1_prod"> {/* riga 1 della riga 1 della riga 2 e colonna 2 */}
               <div className="prod">
-                <Link to="#"><img src={d_maglietta_1_2} alt="d_maglietta_1_1" className="image"></img></Link>
+                <Link to=""><img src={d_maglietta_1_2} alt="d_maglietta_1_1" className="image"></img></Link>
                 <p> Maglietta a maniche corte</p>
                 <p> 9,99 €</p>
               </div>
