@@ -47,7 +47,7 @@ const Register = () => {
         };
         
         try {
-            const response = await axios.post('http://localhost:8000/register.php', formData);
+            const response = await axios.post('http://localhost/register.php', formData);
             setResult(response.data.message);
         } catch (error) {
             setResult('Errore durante la registrazione: ' + error.message);
@@ -59,7 +59,7 @@ const Register = () => {
             <Navbar />
             <div className="form_r" id="form_r">
                 <form name="frmLogin" id="frmLogin"
-                    action="http://localhost:8000/register.php"
+                    action="http://localhost/register.php"
                     method="post"
                     onSubmit={(event) => handleSubmit(event)}>
                     <h1>Registrazione</h1>
