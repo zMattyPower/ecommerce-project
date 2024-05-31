@@ -38,12 +38,12 @@ const Register = () => {
         e.preventDefault();
         const form = e.target;
         const formData = {
-            name: form.name.value,
-            lastname: form.lastname.value,
+            nome: form.nome.value,
+            cognome: form.cognome.value,
             email: form.email.value,
-            password: form.password.value,
-            d_nascita: form.d_nascita.value,
-            tel: form.tel.value,
+            pass: form.pass.value,
+            data_nascita: form.data_nascita.value,
+            telefono: form.telefono.value,
             trattamento: form.trattamento.checked ? 'on' : 'off'
         };
         
@@ -68,7 +68,7 @@ const Register = () => {
                         <div className="riga">
                             <div className="input-box_1">
 
-                                <input type="text" placeholder="Nome" id="name" name="name"
+                                <input type="text" placeholder="Nome" id="nome" name="nome"
                                     required />
                                 <div className="icon">
                                     <FontAwesomeIcon icon={faUser} id="login" />
@@ -77,7 +77,7 @@ const Register = () => {
 
                             <div className="input-box_1">
 
-                                <input type="text" placeholder="Cognome" id="lastname" name="lastname"
+                                <input type="text" placeholder="Cognome" id="cognome" name="cognome"
                                     required />
                                 <div className="icon">
                                     <FontAwesomeIcon icon={faUser} id="login" />
@@ -98,7 +98,7 @@ const Register = () => {
 
                             <div className="input-box_1">
 
-                                <input type={passwordShown ? "text" : "password"} id="password_r" name="password" placeholder="Password" required />
+                                <input type={passwordShown ? "text" : "password"} id="pass" name="pass" placeholder="Password" required />
 
                                 <div className="icon_pass">
                                         <div><FontAwesomeIcon icon={faLock} id="login" /></div>
@@ -110,7 +110,7 @@ const Register = () => {
                         <div className="riga">
                             <div className="input-box_1">
 
-                                <input type="date" id="d_nascita" name="d_nascita"
+                                <input type="date" id="data_nascita" name="data_nascita"
                                     required />
 
 
@@ -121,7 +121,7 @@ const Register = () => {
                             <div className="input-box_1">
 
 
-                                <input type="tel" placeholder="Telefono" id="tel" name="tel"
+                                <input type="tel" placeholder="Telefono" id="telefono" name="telefono"
                                     required />
 
                                 <div className="icon"> <FontAwesomeIcon icon={faPhone} id="login" />
