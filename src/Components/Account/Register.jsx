@@ -1,4 +1,8 @@
+
+/*import React from 'react';
+
 import React from 'react';
+
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import $ from "jquery";
@@ -7,6 +11,18 @@ import { faUser, faEnvelope, faPhone, faLock, faEye, faEyeSlash } from '@fortawe
 import { useLoginContext } from '../GlobalVariables';
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+
+import './Register.css';*/
+
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope, faPhone, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { useLoginContext } from '../GlobalVariables';
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+
 import './Register.css';
 
 const Register = () => {
@@ -14,126 +30,93 @@ const Register = () => {
     const [result, setResult] = useState("");
     const { useLogin, setUseLogin } = useLoginContext();
 
-    const toggleLogin = () => {
-        setUseLogin(!useLogin);
-    };
-
-
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const form = $(e.target);
-        $.ajax({
-            type: "POST",
-            url: form.attr("action"),
-            data: form.serialize(),
-            success(data) {
-                setResult(data);
-            },
-        });
+        const form = e.target;
+        const formData = {
+            name: form.name.value,
+            lastname: form.lastname.value,
+            email: form.email.value,
+            password: form.password.value,
+            d_nascita: form.d_nascita.value,
+            tel: form.tel.value,
+            trattamento: form.trattamento.checked ? 'on' : 'off'
+        };
+        
+        try {
+            const response = await axios.post('http://localhost:8000/register.php', formData);
+            setResult(response.data.message);
+        } catch (error) {
+            setResult('Errore durante la registrazione: ' + error.message);
+        }
     };
 
     return (
         <>
-            <div className="div_f">
-                <div className="form_r" id="form_r">
-                    <form name="frmLogin" id="frmLogin"
-                        action="http://localhost:8000/register.php"
-                        method="post"
-                        onSubmit={(event) => handleSubmit(event)}>
-
-                        <h1>Registrazione</h1>
-                        <div className="riga">
-                            <div className="input-box_1">
-
-                                <input type="text" placeholder="Nome" id="name" name="name"
-                                    required />
-                                <div className="icon">
-                                    <FontAwesomeIcon icon={faUser} id="login" />
-                                </div>
-                            </div>
-
-                            <div className="input-box_1">
-
-                                <input type="text" placeholder="Cognome" id="lastname" name="lastname"
-                                    required />
-                                <div className="icon">
-                                    <FontAwesomeIcon icon={faUser} id="login" />
-                                </div>
-                            </div>
+            <Navbar />
+            <div className="form_r" id="form_r">
+                <form name="frmLogin" id="frmLogin"
+                    action="http://localhost:8000/register.php"
+                    method="post"
+                    onSubmit={(event) => handleSubmit(event)}>
+                    <h1>Registrazione</h1>
+                    <div className="due_colonne">
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faUser} id="login" />
+                            <input type="text" placeholder="Nome" id="name" name="name" required />
                         </div>
-
-                        <div className="riga">
-                            <div className="input-box_1">
-
-                                <input type="email" placeholder="E-Mail" id="email_r" name="email"
-                                    required />
-
-                                <div className="icon">
-                                    <FontAwesomeIcon icon={faEnvelope} id="login" />
-                                </div>
-                            </div>
-
-                            <div className="input-box_1">
-
-                                <input type={passwordShown ? "text" : "password"} id="password_r" name="password" placeholder="Password" required />
-
-                                <div className="icon_pass">
-                                        <div><FontAwesomeIcon icon={faLock} id="login" /></div>
-                                </div>
-                            </div>
-
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faUser} id="login" />
+                            <input type="text" placeholder="Cognome" id="lastname" name="lastname" required />
                         </div>
-
-                        <div className="riga">
-                            <div className="input-box_1">
-
-                                <input type="date" id="d_nascita" name="d_nascita"
-                                    required />
-
-
-                                <div className="icon"><FontAwesomeIcon icon={faUser} id="login" />
-                                </div>
-                            </div>
-
-                            <div className="input-box_1">
-
-
-                                <input type="tel" placeholder="Telefono" id="tel" name="tel"
-                                    required />
-
-                                <div className="icon"> <FontAwesomeIcon icon={faPhone} id="login" />
-                                </div>
-                            </div>
-
+                    </div>
+                    <div className="due_colonne">
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faEnvelope} id="login" />
+                            <input type="email" placeholder="E-Mail" id="email" name="email" required />
                         </div>
-
-                        <div className="riga">
-                            <p><input type="checkbox" id="trattamento" name="trattamento"
-                                required /> Termini e condizioni</p>
-                                <br/>
-                            <button type="submit" className="btn">Registrati</button>
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faLock} id="login" />
+                            <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required />
+                            <FontAwesomeIcon
+                                icon={passwordShown ? faEyeSlash : faEye}
+                                onClick={togglePasswordVisibility}
+                                id='eye-icon'
+                            />
                         </div>
-
-                        {result}
-
-                        <div className="riga">
-                            <div className="register-link">
-                                <hr />
-                                <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
-                            </div>
+                    </div>
+                    <div className="due_colonne">
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faUser} id="login" />
+                            <input type="date" id="d_nascita" name="d_nascita" required />
                         </div>
-                    </form>
-                </div>
+                        <div className="input-box">
+                            <FontAwesomeIcon icon={faPhone} id="login" />
+                            <input type="tel" placeholder="Telefono" id="tel" name="tel" required />
+                        </div>
+                    </div>
+                    <div className="checkbox-box">
+                        <input type="checkbox" id="trattamento" name="trattamento" required />
+                        <label htmlFor="trattamento">Termini e condizioni</label>
+                    </div>
+                    <button type="submit" className="btn">Registrati</button>
+                    {result && <div className="result-message">{result}</div>}
+                    <div className="register-link">
+                        <hr />
+                        <p><Link to="/">Hai già un account? Fai il login</Link></p>
+                    </div>
+                </form>
             </div>
+            <Footer />
         </>
     );
 };
 
-export default Register
+export default Register;
 
 /*var currentLog = 0;
 var toggleLog = false;
@@ -164,7 +147,8 @@ function showLoginForm() {
         toggleLog = true;
         currentLog = 1;
     }
-}
+}*/
+
 
 //Mostra il Form della Registrazione
 /*function showRegisterForm() {
