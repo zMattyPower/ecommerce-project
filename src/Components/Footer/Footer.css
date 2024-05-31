@@ -1,4 +1,7 @@
 /* styles/Footer.css */
+body{
+  border: 2px solid blue;
+}
 
 .footer {
   left: 0;
@@ -35,4 +38,5 @@
 .social-links a:hover {
   color: red;
 }
+
 

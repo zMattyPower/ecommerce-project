@@ -106,7 +106,7 @@ div.riga::after {
 /*}*/
 
 /*Tablet*/
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 768px){
 
     div.form_r {
 
@@ -122,7 +122,7 @@ div.riga::after {
 }
 
 /*Telefoni iphone xr*/
-@media screen and (max-width: 550px) and (min-width: 46px) {
+@media screen and (max-width: 425px) and (min-width: 46px) {
 
     div.div_f {
         display: flex;
