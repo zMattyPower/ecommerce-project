@@ -3,3 +3,13 @@ div.p{
     color: red;
     border: 2px solid pink;
 }
+
+.evidenza{
+    display: flex;
+    justify-content: center; /* Centra gli elementi lungo l'asse principale (orizzontale) */
+    align-items: center; /* Centra gli elementi lungo l'asse trasversale (verticale) */
+    flex-wrap: wrap; /* Se l'elemento contiene più elementi, avvolge su più righe */
+}
+h1{
+    text-align: center;
+}
