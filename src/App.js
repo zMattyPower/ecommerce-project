@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from "./pages/Home";
 import Register from "./Components/Account/Register";
-import DonnaMaglietta from "./pages/DonnaMaglietta";
+import DonnaMagliette from './pages/DonnaMagliette';
 import UomoMaglietta from "./pages/UomoMaglietta";
 import BambinoMaglietta from "./pages/BambinoMaglietta";
 import NeonatoMaglietta from "./pages/NeonatoMaglietta";
@@ -29,7 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/registrazione" element={<Register/>} />
-          <Route path="/Donna/Maglietta/TShirt" element={< DonnaMaglietta/>} />
+          <Route path="/Donna/Magliette" element={< DonnaMagliette/>} />
           <Route path="/Uomo/Maglietta" element={<UomoMaglietta />} />
           <Route path="/bambino/maglietta" element={<BambinoMaglietta />} />
           <Route path="/neonato/maglietta" element={<NeonatoMaglietta />} />
