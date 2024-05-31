@@ -7,6 +7,7 @@ import { faMagnifyingGlass, faUser, faCartShopping } from '@fortawesome/free-sol
 import Login from '../Account/Login'
 import { useLoginContext } from '../GlobalVariables'; // Import the context hook
 
+
 import clothem from "../Img/clothem.jpg"
 
 //Page Link

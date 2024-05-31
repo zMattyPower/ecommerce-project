@@ -13,7 +13,9 @@ import d_maglietta_3_2 from "../Components/Img/d_maglietta_3_2.jpg";
 
 function DonnaMagliette() {
   return (
+
     <>
+    
       <div className="contenitore_cat">
 
         <div className="riga1_prod"> {/* riga 1*/}
@@ -67,10 +69,11 @@ function DonnaMagliette() {
           <div className="riga2_r1_c1_prod" id="c2"> {/* riga 1 della riga 2 */}
             <div className="riga2_r1_r1_prod"> {/* riga 1 della riga 1 della riga 2 e colonna 1 */}
               <div className="prod">
-                <Link to="#"><img src={d_maglietta_1_1} alt="d_maglietta_1_1" className="image"></img></Link>
+                <Link to="/Donna/Magliette/Prodotto"><img src={d_maglietta_1_1} alt="d_maglietta_1_1" className="image"></img></Link>
                 <p> Maglietta a maniche corte</p>
                 <p> 9,99 €</p>
               </div>
+
 
               <div className="prod">
                 <Link to="#"><img src={d_maglietta_2_1} alt="d_maglietta_2_1" className="image"></img></Link>
@@ -87,7 +90,7 @@ function DonnaMagliette() {
 
             <div className="riga2_r1_r1_prod"> {/* riga 1 della riga 1 della riga 2 e colonna 2 */}
               <div className="prod">
-                <Link to="#"><img src={d_maglietta_1_2} alt="d_maglietta_1_1" className="image"></img></Link>
+                <Link to=""><img src={d_maglietta_1_2} alt="d_maglietta_1_1" className="image"></img></Link>
                 <p> Maglietta a maniche corte</p>
                 <p> 9,99 €</p>
               </div>
