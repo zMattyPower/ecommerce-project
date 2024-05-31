@@ -21,12 +21,12 @@ try {
 
     if ($data) {
         // Estrazione dei dati
-        $name = $data['name'];
-        $lastname = $data['lastname'];
+        $nome = $data['nome'];
+        $cognome = $data['cognome'];
         $email = $data['email'];
-        $password = $data['password'];
-        $d_nascita = $data['d_nascita'];
-        $tel = $data['tel'];
+        $pass = $data['pass'];
+        $data_nascita = $data['data_nascita'];
+        $telefono = $data['telefono'];
         $trattamento = isset($data['trattamento']) && $data['trattamento'] == 'on' ? 1 : 0;
 
         // Preparazione della query di inserimento
@@ -71,8 +71,7 @@ try {
         $debito = $debito['debito'];
         $credito = $credito['credito'];
         $prepagata = $prepagata['prepagata'];
-        $trattamento = isset($data['trattamento']) && $data['trattamento'] == 'on' ? 1 : 0;
-
+        
         // Preparazione della query di inserimento
         $stmt = $conn->prepare("INSERT INTO t_utente (email, numero, scadenza, nome, cognome, debito, credito, prepagata) 
                                 VALUES (:email, :numero, :scadenza, :nome, :cognome, :debito , :credito, :prepagata)");

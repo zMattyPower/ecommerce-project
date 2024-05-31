@@ -37,12 +37,12 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = {
-            name: e.target.name.value,
-            lastname: e.target.lastname.value,
+            nome: e.target.nome.value,
+            cognome: e.target.cognome.value,
             email: e.target.email.value,
-            password: e.target.password.value,
-            d_nascita: e.target.d_nascita.value,
-            tel: e.target.tel.value,
+            pass: e.target.pass.value,
+            data_nascita: e.target.data_nascita.value,
+            telefono: e.target.telefono.value,
             trattamento: e.target.trattamento.checked ? 'on' : 'off'
         };
         
