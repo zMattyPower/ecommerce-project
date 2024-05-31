@@ -3,6 +3,7 @@ import Footer from "../Components/Footer/Footer";
 import "./Home.css";
 import CarouselWithCards from "../Components/Carousel/Carousel";
 
+
 const items = [
   {
     titolo: "Prima Card",
@@ -57,5 +58,11 @@ const items = [
 ];
 
 export default function Home() {
-  return <CarouselWithCards items={items} />;
+
+  return (
+  <>
+          <CarouselWithCards items={items} />;
+          
+  </>);
+  
 }
