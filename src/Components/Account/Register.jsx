@@ -36,18 +36,19 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const form = e.target;
         const formData = {
-            nome: e.target.nome.value,
-            cognome: e.target.cognome.value,
-            email: e.target.email.value,
-            pass: e.target.pass.value,
-            data_nascita: e.target.data_nascita.value,
-            telefono: e.target.telefono.value,
-            trattamento: e.target.trattamento.checked ? 'on' : 'off'
+            name: form.name.value,
+            lastname: form.lastname.value,
+            email: form.email.value,
+            password: form.password.value,
+            d_nascita: form.d_nascita.value,
+            tel: form.tel.value,
+            trattamento: form.trattamento.checked ? 'on' : 'off'
         };
         
         try {
-            const response = await axios.post('http://localhost/register.php', formData);
+            const response = await axios.post('http://localhost:8000/register.php', formData);
             setResult(response.data.message);
         } catch (error) {
             setResult('Errore durante la registrazione: ' + error.message);
@@ -59,7 +60,7 @@ const Register = () => {
             <Navbar />
             <div className="form_r" id="form_r">
                 <form name="frmLogin" id="frmLogin"
-                    action="http://localhost/register.php"
+                    action="http://localhost:8000/register.php"
                     method="post"
                     onSubmit={(event) => handleSubmit(event)}>
                     <h1>Registrazione</h1>
