@@ -1,7 +1,7 @@
 import React from 'react';
-import '/Carrello.css'; // Crea un file CSS per lo stile del pop-up
+import './Carrello.css'; // Crea un file CSS per lo stile del pop-up
 
-const CartPopup = ({ onClose }) => {
+const CarrelloPopUp = ({ onClose }) => {
   return (
     <div className="cart-popup">
       <div className="cart-popup-content">
@@ -14,4 +14,4 @@ const CartPopup = ({ onClose }) => {
   );
 };
 
-export default CartPopup;
+export default CarrelloPopUp;
