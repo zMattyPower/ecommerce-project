@@ -6,6 +6,8 @@ import { faMagnifyingGlass, faUser, faCartShopping } from '@fortawesome/free-sol
 import Login from '../Account/Login'
 import { useLoginContext } from '../GlobalVariables'; // Import the context hook
 
+import clothem from "../Img/clothem.jpg"
+
 //Page Link
 import { Link } from 'react-router-dom';
 import DonnaMagliette from "../../pages/DonnaMagliette";
@@ -35,7 +37,7 @@ const Navbar = () => {
           <div className="row v-center">
             <div className="header-item item-left">
               <div className="logo">
-                <Link to="/">Logo</Link>
+                <Link to="/"><img src = {clothem}  alt = "clothem" className="clothem"/></Link>
               </div>
             </div>
 
