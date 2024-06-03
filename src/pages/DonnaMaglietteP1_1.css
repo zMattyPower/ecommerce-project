@@ -47,6 +47,12 @@ p.des {
     justify-content: space-between;
 }
 
+div.quant{
+    width: 50%;
+}
+.car{
+    width: 100%;
+}
 .meno {
     background-color: rgb(255, 255, 255);
     color: black;
