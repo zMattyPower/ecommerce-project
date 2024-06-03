@@ -301,7 +301,6 @@ a {
     .header .item-left,
     .header .item-right {
         order: 2;
-        width: 100%;
         text-align: center;
         background-color: unset;
         display: flex;
@@ -557,4 +556,8 @@ a {
 
 
 /*Telefoni */
-@media screen and (max-width: 425px) {}
+@media screen and (max-width: 425px) {
+    .inputWithButton #button{
+        width: 10px;
+    }
+}
