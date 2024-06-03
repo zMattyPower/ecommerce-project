@@ -37,6 +37,7 @@ function App() {
       <GlobalVariables> 
          <Navbar/>   
         <Routes>
+          
           <Route path="/" element={<Home/>} />
           <Route path="/registrazione" element={<Register/>} />
           <Route path="/Donna/Magliette" element={< DonnaMagliette/>} />
