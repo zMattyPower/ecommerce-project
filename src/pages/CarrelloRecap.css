@@ -1,0 +1,4 @@
+.immagine-prodotto {
+    width: 50px; /* Imposta la larghezza desiderata */
+    height: 60px; /* Imposta l'altezza automaticamente in base al rapporto delle dimensioni originali */
+  }

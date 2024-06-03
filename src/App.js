@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar'
 import Login from './Components/Account/Login'
 import Footer from './Components/Footer/Footer'
-import Payment from './Components/Payment/payment'
+import Payment from './Components/Payment/payment.jsx'
 import CarrelloRecap from './pages/CarrelloRecap';
 import GlobalVariables from './Components/GlobalVariables';
 import React, { useState } from 'react';
