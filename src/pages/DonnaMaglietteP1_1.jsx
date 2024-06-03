@@ -44,11 +44,14 @@ function DonnaMaglietteP1_1() {
                             <div class="quant">
                                 <button className="meno"><FontAwesomeIcon icon={faMinus} /></button>
                                 <input type="number" value="0" min="1" max="10" className="number" />
-                                <button class="piu"><FontAwesomeIcon icon={faPlus} /></button>
+                                <button className="piu"><FontAwesomeIcon icon={faPlus} /></button>
                             </div>
+                            <div class="quant">
+                                <button className="car"> Aggiungi al carrello</button>
 
-                            <button> Aggiungi al carrello</button>
+                            </div>
                         </div>
+
 
                     </div>
                 </div>

@@ -10,6 +10,7 @@
 }
 
 div.m1c {
+    /* colonna */
     width: 50%;
     border: 2px solid blue;
 }
@@ -21,7 +22,7 @@ img.m1 {
 }
 
 .riga1_r1_prodM {
-    border: 2px solid rgb(0, 255, 26);
+    border: 2px solid rgb(36, 38, 36);
     margin: 10px;
 }
 
@@ -58,13 +59,85 @@ p.des {
     color: black;
 }
 
-.number{
+.number {
     text-align: center;
     width: 100px;
 }
 
-.piu{
+.piu {
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+    .contenitore_prod {
+        margin: 1% 5% 1% 5%;
+        border: 2px solid red;
+
+    }
+
+    .riga1_prodM {
+        border: 2px solid black;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    div.m1c {
+        /* colonna */
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid blue;
+    }
+
+    .riga1_r1_prodM {
+        border: 2px solid rgb(0, 255, 26);
+        margin: 5px;
+    }
+
+    p.des {
+        font-weight: 600;
+        font-size: 15px;
+        margin: 12px 10px 15px 20px;
+    }
+
+    .riga1_r4_prodM {
+        border: 2px solid rgb(0, 255, 153);
+        margin: 10px;
+    }
+
+    .meno {
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .number {
+        text-align: center;
+        width: 100px;
+    }
+
+    .piu {
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+}
+
+/*Telefoni*/
+@media screen and (max-width:426px) {
+    .riga1_r4_prodM {
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+    }
+
+    .car {
+        width: 100%;
+    }
+
+    .number {
+        width: 65%;
+    }
+
+}
