@@ -154,7 +154,7 @@ const Navbar = () => {
                             <Link to="/Donna/Magliette">Magliette</Link>
                           </li>
                           <li>
-                            <Link to="#">Felpe</Link>
+                            <Link to="/Donna/Felpe">Felpe</Link>
                           </li>
                           <li>
                             <Link to="#">Giacche</Link>

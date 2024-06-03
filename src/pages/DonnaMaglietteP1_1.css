@@ -1,0 +1,33 @@
+.contenitore_prod{
+    margin: 1% 15% 1% 15%;
+    border: 2px solid red;
+}
+
+.riga1_prodM{
+    display: flex;
+    border: 2px solid black;
+    width: 100%;
+}
+
+div.m1c{
+    width: 50%;
+    border: 2px solid blue;
+}
+
+img.m1{
+    width: 100%;
+    background-color: white;
+    margin-top: 1%;
+}
+
+.riga1_r1_prodM{
+    border: 2px solid red;
+    margin: 10px;
+}
+
+p.des {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 12px 10px 15px 20px;
+}
+
