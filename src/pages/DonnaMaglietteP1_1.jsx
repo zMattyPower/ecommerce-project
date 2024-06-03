@@ -57,6 +57,7 @@ function DonnaMaglietteP1_1() {
     }
   };
 
+
   return (
     <>
       <div className="contenitore_prod">
@@ -75,6 +76,7 @@ function DonnaMaglietteP1_1() {
                 {" "}
                 Maglietta a maniche corte <br /> 9,99 €
               </p>
+
             </div>
 
             <div className="riga1_r2_prodM">

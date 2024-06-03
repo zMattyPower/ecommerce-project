@@ -1,27 +1,25 @@
 .contenitore_prod {
     margin: 1% 15% 1% 15%;
-    border: 2px solid red;
 }
 
 .riga1_prodM {
-    display: flex;
     border: 2px solid black;
+    display: flex;
     width: 100%;
 }
 
 div.m1c {
+    /* colonna */
     width: 50%;
-    border: 2px solid blue;
 }
 
 img.m1 {
     width: 100%;
-    background-color: white;
     margin-top: 1%;
 }
 
 .riga1_r1_prodM {
-    border: 2px solid rgb(0, 255, 26);
+    border: 2px solid rgb(36, 38, 36);
     margin: 10px;
 }
 
@@ -32,39 +30,116 @@ p.des {
 }
 
 .riga1_r2_prodM {
-    border: 2px solid rgb(0, 8, 255);
     margin: 10px;
 }
 
 .c_m1 {
-    border: 2px solid rgb(255, 255, 255);
     width: 13%;
 }
 
 .riga1_r3_prodM {
-    border: 2px solid rgb(225, 0, 255);
     margin: 10px;
 }
 
 .riga1_r4_prodM {
-    border: 2px solid red;
     margin: 10px;
     display: flex;
     justify-content: space-between;
 }
 
+div.quant{
+    width: 50%;
+}
+.car{
+    width: 100%;
+}
 .meno {
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
-.number{
+.number {
     text-align: center;
     width: 100px;
 }
 
-.piu{
+.piu {
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+    .contenitore_prod {
+        margin: 1% 5% 1% 5%;
+
+    }
+
+    .riga1_prodM {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    div.m1c {
+        /* colonna */
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;;
+    }
+
+    .riga1_r1_prodM {
+        margin: 5px;
+    }
+
+    p.des {
+        font-weight: 600;
+        font-size: 15px;
+        margin: 12px 10px 15px 20px;
+    }
+
+    .riga1_r4_prodM {
+        margin: 10px;
+    }
+
+    .meno {
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .number {
+        text-align: center;
+        width: 40%;
+    }
+
+    div.quant{
+        width: 50%;
+    }
+
+    .car {
+        width: 100%;
+    }
+
+    .piu {
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+}
+
+/*Telefoni*/
+@media screen and (max-width:426px) {
+    .riga1_r4_prodM {
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+    }
+
+    .car {
+        width: 100%;
+    }
+
+    .number {
+        width: 65%;
+    }
+
+}
