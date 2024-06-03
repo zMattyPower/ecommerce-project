@@ -4,10 +4,12 @@ import "./Home.css";
 import CarouselWithCards from "../Components/Carousel/Carousel";
 import  CardImg  from "../Components/Card/CardImg";
 
+//Immagini
+import img1 from "../Components/Img/d_maglietta_1_1.jpg"
 
 const items = [
   {
-    titolo: "Prima Card",
+    titolo: "",
     descrizione: "Questa è la descrizione della prima card.",
     immagine:
       "https://static.bershka.net/4/photos2/2024/I/0/1/p/7541/538/800/276c778a4b18314fbfcc698a6db17b9f-7541538800_2_13_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh",
