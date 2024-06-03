@@ -60,7 +60,7 @@ div.quant{
 
 .number {
     text-align: center;
-    width: 100px;
+    width: 50px;
 }
 
 .piu {
@@ -142,4 +142,17 @@ div.quant{
         width: 65%;
     }
 
+}
+
+.meno,
+.piu {
+  width: 30px; /* Riduci la larghezza dei bottoni */
+  height: 30px; /* Riduci l'altezza dei bottoni */
+  font-size: 14px; /* Riduci la dimensione del testo */
+}
+
+button.aggiungi {
+  width: auto; /* Lascia che la larghezza del pulsante si adatti al contenuto */
+  padding: 8px 12px; /* Riduci il padding per rendere il pulsante più piccolo */
+  font-size: 14px; /* Riduci la dimensione del testo */
 }

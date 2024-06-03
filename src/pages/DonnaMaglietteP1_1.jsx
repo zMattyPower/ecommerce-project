@@ -100,8 +100,8 @@ function DonnaMaglietteP1_1() {
             </div>
 
             <div className="riga1_r4_prodM">
-              <div class="quant">
-                <button class="meno" onClick={decrementaQuantita}>
+              <div className="quant">
+                <button className="meno" onClick={decrementaQuantita}>
                   <FontAwesomeIcon icon={faMinus} />
                 </button>
                 <input
@@ -113,7 +113,7 @@ function DonnaMaglietteP1_1() {
                   readOnly
                 />
 
-                <button class="piu" onClick={incrementaQuantita}>
+                <button className="piu" onClick={incrementaQuantita}>
                   <FontAwesomeIcon icon={faPlus} />
                 </button>
               </div>
