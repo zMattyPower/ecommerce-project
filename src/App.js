@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Login from './Components/Account/Login'
 import Footer from './Components/Footer/Footer'
 import Payment from './Components/Payment/payment'
+import CarrelloRecap from './pages/CarrelloRecap';
 import GlobalVariables from './Components/GlobalVariables';
 import React, { useState } from 'react';
 
@@ -50,6 +51,8 @@ function App() {
           <Route path="/Uomo/Maglietta" element={<UomoMaglietta />} />
           <Route path="/bambino/maglietta" element={<BambinoMaglietta />} />
           <Route path="/neonato/maglietta" element={<NeonatoMaglietta />} />
+          <Route path="/CarrelloRecap" element={<CarrelloRecap/>} />
+          <Route path="/Payment" element={<Payment/>} />
         </Routes>
 
       

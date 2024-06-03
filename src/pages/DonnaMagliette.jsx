@@ -20,17 +20,18 @@ import DonnaMaglietteP1_1 from "./DonnaMaglietteP1_1";
 function DonnaMagliette() {
   const [cookies, setCookie] = useCookies(['carrello']);
 
-  const aggiungiAlCarrello = (nomeProdotto, prezzoProdotto) => {
-    const nuovoProdotto = { nome: nomeProdotto, prezzo: prezzoProdotto };
+  const aggiungiAlCarrello = (nomeProdotto, prezzoProdotto, imgProdotto) => {
+    const nuovoProdotto = { nome: nomeProdotto, prezzo: prezzoProdotto, img: imgProdotto }; // Aggiungi imgProdotto
     const carrello = cookies.carrello || [];
     const nuovoCarrello = [...carrello, nuovoProdotto];
     
     // Calcola il prezzo totale dei prodotti nel carrello
     const prezzoTotale = nuovoCarrello.reduce((acc, prodotto) => acc + parseFloat(prodotto.prezzo), 0);
-
+    
     // Salva il carrello aggiornato e il prezzo totale nel cookie
     setCookie('carrello', nuovoCarrello, { path: '/' });
     setCookie('prezzoTotale', prezzoTotale, { path: '/' });
+   
   };
   return (
 
@@ -98,7 +99,7 @@ function DonnaMagliette() {
                 
                 <p className = "donnamp"> Maglietta a maniche corte</p>
                 <p className = "donnamp"> 9,99 €</p>
-                <button onClick={() => aggiungiAlCarrello("Maglietta a maniche corte", "9.99")}>Aggiungi al carrello</button>
+                <button onClick={() => aggiungiAlCarrello("Maglietta a maniche corte", "9.99",require("../Components/Img/d_maglietta_1_1.jpg"))}>Aggiungi al carrello</button>
               </div>
 
 
@@ -106,7 +107,7 @@ function DonnaMagliette() {
                 <Link to="°"><img src={d_maglietta_2_1} alt="d_maglietta_2_1" className="image"></img></Link>
                 <p className = "donnamp"> Maglietta a maniche corte con stampa grafica</p>
                 <p className = "donnamp"> 13,99 €</p>
-                <button onClick={() => aggiungiAlCarrello("Maglietta a maniche corte", "13.99")}>Aggiungi al carrello</button>
+                <button onClick={() => aggiungiAlCarrello("Maglietta a maniche corte", "13.99",{d_maglietta_2_1})}>Aggiungi al carrello</button>
               </div>
 
               <div className="prod">

@@ -23,3 +23,7 @@
   overflow-y: auto; /* Abilita lo scroll verticale quando il contenuto supera l'altezza massima */
 }
 
+.immagine-prodotto {
+  width: 50px; /* Imposta la larghezza desiderata */
+  height: 60px; /* Imposta l'altezza automaticamente in base al rapporto delle dimensioni originali */
+}
