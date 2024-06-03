@@ -40,9 +40,13 @@ const CarrelloPopUp = ({ onClose }) => {
             {cookies.carrello &&
               cookies.carrello.map((prodotto, index) => (
                 <li key={index}>
-                  <img src={prodotto.img} alt={prodotto.nome} className="immagine-prodotto"/>{" "}
-                  {/* Visualizza l'immagine */}
-                  {prodotto.nome} - {prodotto.prezzo} €
+                  <img
+                    src={prodotto.img}
+                    alt={prodotto.nome}
+                    className="immagine-prodotto"
+                  />
+                  {prodotto.nome} - Taglia: {prodotto.taglia}, Quantità:{""}
+                  {prodotto.quantita} - {prodotto.prezzo} €
                   <button onClick={() => rimuoviDalCarrello(index)}>
                     Rimuovi dal carrello
                   </button>

@@ -1,68 +1,142 @@
-
 import "./DonnaMaglietteP1_1.css";
 import Taglia from "../Components/Taglia/Taglia";
 
 import d_maglietta_1_1 from "../Components/Img/d_maglietta_1_1.jpg";
 import d_maglietta_1_2 from "../Components/Img/d_maglietta_1_2.jpg";
 
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
 
-import { Tooltip } from 'react-tooltip';
+import { Tooltip } from "react-tooltip";
+import { useCookies } from "react-cookie";
+
 
 function DonnaMaglietteP1_1() {
+  const [cookies, setCookie] = useCookies(["carrello"]);
+  const [quantita, setQuantita] = useState(0); // Stato per il numero di magliette selezionate
+  const [tagliaSelezionata, setTagliaSelezionata] = useState(""); // Stato per la taglia selezionata
 
-    return (
-        <>
-            <div className="contenitore_prod">
+  const aggiungiAlCarrello = (
+    nomeProdotto,
+    prezzoProdotto,
+    imgProdotto,
+    taglia,
+    quantita
+  ) => {
+    const nuovoProdotto = {
+      nome: nomeProdotto,
+      prezzo: prezzoProdotto,
+      img: imgProdotto,
+      taglia: taglia, // Passa la taglia selezionata
+      quantita: quantita,
+    };
 
-                <div className="riga1_prodM">
-                    <div className="m1c">
-                        <img src={d_maglietta_1_1} alt="d_maglietta_1_1" className="m1"></img>
+    const carrello = cookies.carrello || [];
+    const nuovoCarrello = [...carrello, nuovoProdotto];
 
-                    </div>
+    // Calcola il prezzo totale dei prodotti nel carrello
+    const prezzoTotale = nuovoCarrello.reduce(
+      (acc, prodotto) => acc + parseFloat(prodotto.prezzo * prodotto.quantita),
+      0
+    );
 
-                    <div className="m1c">
-                        <div className="riga1_r1_prodM">
-                            <p className="des"> Maglietta a maniche corte <br /> 9,99 €</p>
-                        </div>
+    // Salva il carrello aggiornato e il prezzo totale nel cookie
+    setCookie("carrello", nuovoCarrello, { path: "/" });
+    setCookie("prezzoTotale", prezzoTotale, { path: "/" });
+  };
 
-                        <div className="riga1_r2_prodM">
-                            <img src={d_maglietta_1_1} alt="d_maglietta_1_1" className="c_m1"></img>
-                            <img src={d_maglietta_1_2} alt="d_maglietta_1_1" className="c_m1"></img>
-                        </div>
+  // Funzioni per incrementare e decrementare la quantità di magliette
+  const incrementaQuantita = () => {
+    setQuantita((prevQuantita) => prevQuantita + 1);
+  };
 
-                        <div className="riga1_r3_prodM">
-                            <div className="taglia">Taglia</div>
-                            <p className="taglia">
-                                <Taglia></Taglia>
-                            </p>
-                        </div>
-
-                        <div className="riga1_r4_prodM">
-                            <div class="quant">
-                                <button className="meno"><FontAwesomeIcon icon={faMinus} /></button>
-                                <input type="number" value="0" min="1" max="10" className="number" />
-                                <button className="piu"><FontAwesomeIcon icon={faPlus} /></button>
-                            </div>
-                            <div class="quant">
-                                <button className="car"> Aggiungi al carrello</button>
-
-                            </div>
-                        </div>
+  const decrementaQuantita = () => {
+    if (quantita > 0) {
+      setQuantita((prevQuantita) => prevQuantita - 1);
+    }
+  };
 
 
-                    </div>
-                </div>
+  return (
+    <>
+      <div className="contenitore_prod">
+        <div className="riga1_prodM">
+          <div className="m1c">
+            <img
+              src={d_maglietta_1_1}
+              alt="d_maglietta_1_1"
+              className="m1"
+            ></img>
+          </div>
+
+          <div className="m1c">
+            <div className="riga1_r1_prodM">
+              <p className="des">
+                {" "}
+                Maglietta a maniche corte <br /> 9,99 €
+              </p>
+
             </div>
 
+            <div className="riga1_r2_prodM">
+              <img
+                src={d_maglietta_1_1}
+                alt="d_maglietta_1_1"
+                className="c_m1"
+              ></img>
+              <img
+                src={d_maglietta_1_2}
+                alt="d_maglietta_1_1"
+                className="c_m1"
+              ></img>
+            </div>
 
-        </>
+            <div className="riga1_r3_prodM">
+              <div className="taglia">Taglia</div>
+              <p className="taglia">
+              <Taglia setTaglia={setTagliaSelezionata} tagliaSelezionata={tagliaSelezionata} />
+              </p>
+            </div>
 
+            <div className="riga1_r4_prodM">
+              <div class="quant">
+                <button class="meno" onClick={decrementaQuantita}>
+                  <FontAwesomeIcon icon={faMinus} />
+                </button>
+                <input
+                  type="number"
+                  value={quantita}
+                  min="1"
+                  max="10"
+                  className="number"
+                  readOnly
+                />
 
+                <button class="piu" onClick={incrementaQuantita}>
+                  <FontAwesomeIcon icon={faPlus} />
+                </button>
+              </div>
 
-    );
+              <button
+                onClick={() =>
+                  aggiungiAlCarrello(
+                    "Maglietta a maniche corte",
+                    "9.99",
+                    d_maglietta_1_1,
+                    tagliaSelezionata, // Passa la taglia selezionata
+                    quantita
+                  )
+                }
+              >
+                Aggiungi al carrello
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default DonnaMaglietteP1_1;
