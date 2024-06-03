@@ -1,27 +1,27 @@
-.contenitore_prod{
+.contenitore_prod {
     margin: 1% 15% 1% 15%;
     border: 2px solid red;
 }
 
-.riga1_prodM{
+.riga1_prodM {
     display: flex;
     border: 2px solid black;
     width: 100%;
 }
 
-div.m1c{
+div.m1c {
     width: 50%;
     border: 2px solid blue;
 }
 
-img.m1{
+img.m1 {
     width: 100%;
     background-color: white;
     margin-top: 1%;
 }
 
-.riga1_r1_prodM{
-    border: 2px solid red;
+.riga1_r1_prodM {
+    border: 2px solid rgb(0, 255, 26);
     margin: 10px;
 }
 
@@ -29,5 +29,42 @@ p.des {
     font-weight: 600;
     font-size: 20px;
     margin: 12px 10px 15px 20px;
+}
+
+.riga1_r2_prodM {
+    border: 2px solid rgb(0, 8, 255);
+    margin: 10px;
+}
+
+.c_m1 {
+    border: 2px solid rgb(255, 255, 255);
+    width: 13%;
+}
+
+.riga1_r3_prodM {
+    border: 2px solid rgb(225, 0, 255);
+    margin: 10px;
+}
+
+.riga1_r4_prodM {
+    border: 2px solid red;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meno {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.number{
+    text-align: center;
+    width: 100px;
+}
+
+.piu{
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 

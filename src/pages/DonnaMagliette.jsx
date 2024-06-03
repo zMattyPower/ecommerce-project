@@ -100,6 +100,8 @@ function DonnaMagliette() {
                 <p className = "donnamp"> Maglietta a maniche corte</p>
                 <p className = "donnamp"> 9,99 €</p>
                 <button onClick={() => aggiungiAlCarrello("Maglietta a maniche corte", "9.99",require("../Components/Img/d_maglietta_1_1.jpg"))}>Aggiungi al carrello</button>
+
+
               </div>
 
 
@@ -107,14 +109,16 @@ function DonnaMagliette() {
                 <Link to="°"><img src={d_maglietta_2_1} alt="d_maglietta_2_1" className="image"></img></Link>
                 <p className = "donnamp"> Maglietta a maniche corte con stampa grafica</p>
                 <p className = "donnamp"> 13,99 €</p>
+
                 <button onClick={() => aggiungiAlCarrello("Maglietta a maniche corte", "13.99",{d_maglietta_2_1})}>Aggiungi al carrello</button>
+
               </div>
 
               <div className="prod">
                 <Link to="#"><img src={d_maglietta_3_1} alt="d_maglietta_3_1" className="image"></img></Link>
                 <p className = "donnamp"> Maglietta cigno a maniche corte</p>
                 <p className = "donnamp"> 15,99 €</p>
-                <button> Aggiungi al carrello</button>
+                
               </div>
             </div>
 
@@ -123,21 +127,21 @@ function DonnaMagliette() {
                 <Link to=""><img src={d_maglietta_1_2} alt="d_maglietta_1_1" className="image"></img></Link>
                 <p className = "donnamp"> Maglietta a maniche corte</p>
                 <p className = "donnamp"> 9,99 €</p>
-                <button> Aggiungi al carrello</button>
+                
               </div>
 
               <div className="prod">
                 <Link to="#"><img src={d_maglietta_2_2} alt="d_maglietta_2_1" className="image"></img></Link>
                 <p className = "donnamp"> Maglietta a maniche corte con stampa grafica</p>
                 <p className = "donnamp"> 13,99 €</p>
-                <button> Aggiungi al carrello</button>
+                
               </div>
 
               <div className="prod">
                 <Link to="#"><img src={d_maglietta_3_2} alt="d_maglietta_3_1" className="image"></img></Link>
                 <p className = "donnamp"> Maglietta cigno a maniche corte</p>
                 <p className = "donnamp"> 15,99 €</p>
-                <button> Aggiungi al carrello</button>
+                
               </div>
             </div>
           </div>
