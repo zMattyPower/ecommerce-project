@@ -55,7 +55,7 @@ function Payment() {
       <h2>Compila i dettagli della carta di credito</h2>
       <div className="form-group">
           <label htmlFor="cardHolder">Titolare della carta:</label>
-          <input
+          <input className="text"
             type="text"
             id="cardHolder"
             value={cardHolder}
@@ -66,7 +66,7 @@ function Payment() {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="cardNumber">Numero della carta di credito:</label>
-          <input
+          <input className="text"
             type="text"
             id="cardNumber"
             value={cardNumber}
@@ -77,7 +77,7 @@ function Payment() {
         </div>
         <div className="form-group">
           <label>Data di scadenza:</label>
-          <input
+          <input className="text"
             type="date"
             value={expiryDate}
             onChange={handleExpiryDateChange}
@@ -86,7 +86,7 @@ function Payment() {
         </div>
         <div className="form-group">
           <label htmlFor="cvv">CVV:</label>
-          <input
+          <input className="text"
             type="text"
             id="cvv"
             value={cvv}
@@ -97,7 +97,7 @@ function Payment() {
         </div>
         <div className="form-group">
           <label>Città:</label>
-          <input
+          <input className="text"
             type="text"
             value={city}
             onChange={handleCityChange}
@@ -106,7 +106,7 @@ function Payment() {
         </div>
         <div className="form-group">
           <label>CAP:</label>
-          <input
+          <input className="text"
             type="text"
             value={postalCode}
             onChange={handlePostalCodeChange}
@@ -116,7 +116,7 @@ function Payment() {
         </div>
         <div className="form-group">
           <label>Indirizzo di casa:</label>
-          <input
+          <input className="text"
             type="text"
             value={address}
             onChange={handleAddressChange}
@@ -125,14 +125,14 @@ function Payment() {
         </div>
         <div className="form-group">
           <label>Nazione:</label>
-          <input
+          <input className="text"
             type="text"
             value={country}
             onChange={handleCountryChange}
             required
           />
         </div>
-        <button type="submit">Paga</button>
+        <button className="pay" type="submit">Paga</button>
       </form>
     </div>
   );

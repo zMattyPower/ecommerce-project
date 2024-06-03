@@ -17,9 +17,7 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="number"] {
+input.text{
   flex: 1; /* Ogni campo occupa la stessa quantità di spazio disponibile */
   padding: 10px;
   font-size: 16px;
@@ -28,13 +26,11 @@ input[type="number"] {
   margin-right: 10px; /* Aggiungi margine destro per separare i campi */
 }
 
-input[type="text"]:last-child,
-input[type="date"]:last-child,
-input[type="number"]:last-child {
+input.text:last-child {
   margin-right: 0; /* Rimuovi il margine destro per l'ultimo campo */
 }
 
-button {
+button.pay {
   width: 100%;
   padding: 10px;
   font-size: 16px;

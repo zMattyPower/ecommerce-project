@@ -48,7 +48,8 @@ p.des {
 }
 
 div.quant{
-    width: 50%;
+    width: 100%;
+    display: flex;
 }
 .car{
     width: 100%;
@@ -60,7 +61,7 @@ div.quant{
 
 .number {
     text-align: center;
-    width: 50px;
+    width: 150px;
 }
 
 .piu {
@@ -109,7 +110,7 @@ div.quant{
 
     .number {
         text-align: center;
-        width: 40%;
+        width: 100%;
     }
 
     div.quant{
@@ -134,25 +135,19 @@ div.quant{
         flex-direction: column;
     }
 
+
+    div.quant{
+        width: 100%;
+    }
+    
     .car {
         width: 100%;
     }
+
+
 
     .number {
         width: 65%;
     }
 
-}
-
-.meno,
-.piu {
-  width: 30px; /* Riduci la larghezza dei bottoni */
-  height: 30px; /* Riduci l'altezza dei bottoni */
-  font-size: 14px; /* Riduci la dimensione del testo */
-}
-
-button.aggiungi {
-  width: auto; /* Lascia che la larghezza del pulsante si adatti al contenuto */
-  padding: 8px 12px; /* Riduci il padding per rendere il pulsante più piccolo */
-  font-size: 14px; /* Riduci la dimensione del testo */
 }

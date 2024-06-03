@@ -117,8 +117,8 @@ function DonnaMaglietteP1_1() {
                   <FontAwesomeIcon icon={faPlus} />
                 </button>
               </div>
-
-              <button
+              <div className="quant"> 
+              <button className="car"
                 onClick={() =>
                   aggiungiAlCarrello(
                     "Maglietta a maniche corte",
@@ -131,6 +131,7 @@ function DonnaMaglietteP1_1() {
               >
                 Aggiungi al carrello
               </button>
+              </div>
             </div>
           </div>
         </div>
