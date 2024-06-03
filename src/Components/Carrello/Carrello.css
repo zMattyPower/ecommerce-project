@@ -2,11 +2,12 @@
   position: fixed;
   top: 10%; /* Modifica la posizione verticale secondo le tue esigenze */
   right: 10px; /* Posiziona vicino al bordo destro */
-
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  
 }
 
 .carrello-popup-content {
@@ -18,4 +19,7 @@
   height: auto; /* L'altezza si adatta al contenuto */
   position: relative;
   margin-top: 25px;
+  max-height: 400px; /* Imposta l'altezza massima del carrello */
+  overflow-y: auto; /* Abilita lo scroll verticale quando il contenuto supera l'altezza massima */
 }
+
