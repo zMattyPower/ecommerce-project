@@ -11,7 +11,7 @@
 	$login_password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 	// Makes a prepared statement
-	$chck_stmt = makePreparedStatement($conn, "SELECT * FROM t_utente_2 WHERE email = ?", $login_email);
+	$chck_stmt = makePreparedStatement($conn, "SELECT * FROM t_utente WHERE email = ?", $login_email);
 
 	if ($chck_stmt->num_rows == 0) {
 		$chck_stmt->close();
@@ -19,13 +19,13 @@
 	} else {
 		// User exists, check the password
 		$row = $chck_stmt->fetch_assoc();
-		$dbpass = $row['password'];
+		$dbpass = $row['pass'];
 		$chck_stmt->close();
 		
 		// Verify the password
 		if (password_verify($login_password, $dbpass)) {
-			$_SESSION['login_user'] = $row['username']; // Set session variable after successful login
-			echo json_encode(['success' => "Connected to: " . $row['username']]);
+			$_SESSION['login_user'] = $row['nome']; // Set session variable after successful login
+			echo json_encode(['success' => "Connected to: " . $row['nome']]);
 		} else {
 			echo json_encode(['error' => "Email o Password Sbagliata"]);
 		}

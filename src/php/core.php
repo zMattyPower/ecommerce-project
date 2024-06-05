@@ -5,7 +5,7 @@ function connectDatabase() {
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "ecommerce";
+	$dbname = "progetto_scuola";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);

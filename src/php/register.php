@@ -25,7 +25,7 @@
 
 		$query = "INSERT INTO t_utente (nome, cognome, email, pass, data_nascita, telefono, consenso_trattamento) VALUES (?, ?, ?, ?, ?, ?, ?)";
 		$stmt = $conn->prepare("$query");
-        $stmt->bind_param("sssssss", $login_nome, $login_cognome, $login_email, $login_password, $login_nascita, $login_telefono, $login_trattamento);
+        $stmt->bind_param("sssssss", $login_nome, $login_cognome, $login_email, $hashedPass, $login_nascita, $login_telefono, $login_trattamento);
 
         $stmt->execute();
         
