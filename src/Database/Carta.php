@@ -12,7 +12,7 @@ $carta_citta = filter_input(INPUT_POST, 'citta', FILTER_SANITIZE_FULL_SPECIAL_CH
 $carta_cap = filter_input(INPUT_POST, 'cap', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $carta_indirizzo = filter_input(INPUT_POST, 'indirizzo', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $carta_nazione = filter_input(INPUT_POST, 'nazione', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-
+$carta_cvc = filter_input(INPUT_POST,'cvc',FILTER_SANITIZE_SPECIAL_CHARS);
 //fare controlli
 
 ?>
