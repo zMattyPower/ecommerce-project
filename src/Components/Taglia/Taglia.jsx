@@ -1,6 +1,5 @@
-import React from 'react'
-import Select from 'react-select'
-import { useState } from "react"
+import React from 'react';
+import Select from 'react-select';
 
 const options = [
   { value: 'xs', label: 'XS' },
@@ -8,14 +7,22 @@ const options = [
   { value: 'm', label: 'M' },
   { value: 'l', label: 'L' },
   { value: 'xl', label: 'XL' }
-]
+];
 
-const Taglia = () => (
-  <Select 
-  defaultValue={{ value: "m", label: "M" }}
-  options={options}
-  /*value={tagliaSelezionata}
-  onChange={handleChange}*/
-  required />
-)
+const Taglia = ({ setTaglia, tagliaSelezionata }) => {
+  const handleChange = (selectedOption) => {
+    setTaglia(selectedOption.value);
+  };
+
+  return (
+    <Select 
+      defaultValue={options.find(option => option.value === tagliaSelezionata)}
+      options={options}
+      value={options.find(option => option.value === tagliaSelezionata)}
+      onChange={handleChange}
+      required
+    />
+  );
+};
+
 export default Taglia;
