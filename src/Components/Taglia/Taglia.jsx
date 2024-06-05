@@ -1,6 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
-
+import { useState } from "react"
 
 const options = [
   { value: 'xs', label: 'XS' },
@@ -11,6 +11,11 @@ const options = [
 ]
 
 const Taglia = () => (
-  <Select options={options} />
+  <Select 
+  defaultValue={{ value: "m", label: "M" }}
+  options={options}
+  /*value={tagliaSelezionata}
+  onChange={handleChange}*/
+  required />
 )
 export default Taglia;

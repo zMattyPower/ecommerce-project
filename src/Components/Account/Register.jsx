@@ -20,6 +20,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { useLoginContext } from '../GlobalVariables';
+import $ from "jquery";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
@@ -34,7 +35,7 @@ const Register = () => {
         setPasswordShown(!passwordShown);
     };
 
-    const handleSubmit = async (e) => {
+    /*const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
         const formData = {
@@ -53,16 +54,30 @@ const Register = () => {
         } catch (error) {
             setResult('Errore durante la registrazione: ' + error.message);
         }
+    };*/
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = $(e.target);
+        $.ajax({
+            type: "POST",
+            url: form.attr("action"),
+            data: form.serialize(),
+            success(data) {
+                setResult(data);
+            },
+        });
     };
 
     return (
         <>
-                        <div className="div_f">
+            <div className="div_f">
                 <div className="form_r" id="form_r">
                     <form name="frmLogin" id="frmLogin"
                         action="http://localhost:8000/register.php"
                         method="post"
-                        onSubmit={(event) => handleSubmit(event)}>
+                        onSubmit={(event) => handleSubmit(event)}
+                    >
 
                         <h1>Registrazione</h1>
                         <div className="riga">

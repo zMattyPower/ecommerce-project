@@ -14,7 +14,7 @@ import { useCookies } from "react-cookie";
 
 function DonnaMaglietteP1_1() {
   const [cookies, setCookie] = useCookies(["carrello"]);
-  const [quantita, setQuantita] = useState(0); // Stato per il numero di magliette selezionate
+  const [quantita, setQuantita] = useState(1); // Stato per il numero di magliette selezionate
   const [tagliaSelezionata, setTagliaSelezionata] = useState(""); // Stato per la taglia selezionata
 
   const aggiungiAlCarrello = (
@@ -52,7 +52,7 @@ function DonnaMaglietteP1_1() {
   };
 
   const decrementaQuantita = () => {
-    if (quantita > 0) {
+    if (quantita > 1) {
       setQuantita((prevQuantita) => prevQuantita - 1);
     }
   };
