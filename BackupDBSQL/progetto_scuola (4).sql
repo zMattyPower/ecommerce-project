@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 05, 2024 alle 15:58
+-- Creato il: Giu 06, 2024 alle 10:35
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.2.12
 
@@ -71,6 +71,16 @@ CREATE TABLE `t_categoria` (
 --
 
 INSERT INTO `t_categoria` (`id_categoria`, `tipo_categoria`) VALUES
+(1, 'felpe'),
+(2, 'gonne e vestiti'),
+(3, 'pantaloncini'),
+(4, 'giacche'),
+(5, 'camminata	'),
+(6, 'corsa'),
+(7, 'allenamento'),
+(8, 'borse'),
+(9, 'cappelli'),
+(10, 'occhiali perche adriano non ci vede'),
 (1234, 'magliette'),
 (1235, 'pantaloni');
 
