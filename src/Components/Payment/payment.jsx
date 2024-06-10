@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./payment.css";
 import $ from "jquery";
+import axios from 'axios'
 
-function Payment() {
+const Payment = () => {
 
   const [result, setResult] = useState("");
 
@@ -30,6 +31,7 @@ function Payment() {
   };
 
   return (
+    <>
     <div className="payment-container">
       <div className="div_f">
         <div className="form_r" id="form_r">
@@ -44,7 +46,7 @@ function Payment() {
             <div className="riga">
               <div className="input-box_1">
                 <input
-                  type="email"
+                  type="text"
                   placeholder="Email"
                   id="email"
                   name="email"
@@ -139,6 +141,7 @@ function Payment() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
