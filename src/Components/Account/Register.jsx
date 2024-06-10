@@ -36,7 +36,7 @@ const Register = () => {
 
     const { useLogin, setUseLogin } = useLoginContext();
     const toggleLogin = () => {
-      setUseLogin(!useLogin);
+        setUseLogin(!useLogin);
     };
 
     /*const handleSubmit = async (e) => {
@@ -165,11 +165,11 @@ const Register = () => {
                                     id="b_login_icon"
                                     onClick={toggleLogin}
                                 >
-                                Hai già un account? Fai il login<i className='bx bx-chevrons-right'></i></a></p>
+                                    Hai già un account? Fai il login<i className='bx bx-chevrons-right'></i></a></p>
+                            </div>
                         </div>
-                </div>
-            </form>
-        </div >
+                    </form>
+                </div >
 
             </div >
         </>

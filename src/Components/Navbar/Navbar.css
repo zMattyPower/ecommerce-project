@@ -542,7 +542,7 @@ a {
         width: 100%;
     }
 
-    h1{
+    h1 {
         font-size: 20px;
     }
 }
@@ -550,11 +550,11 @@ a {
 
 /*Telefoni */
 @media screen and (max-width: 426px) {
-    .inputWithButton #button{
+    .inputWithButton #button {
         width: 10px;
     }
 
-    .container{
+    .container {
         flex-direction: column;
     }
 
@@ -563,16 +563,16 @@ a {
         flex-wrap: wrap;
         gap: 5%;
     }
-    
+
     img.clothem {
         width: 100%;
     }
 
-    #search{
+    #search {
         height: 30px;
     }
-    
-    #b_search_icon{
+
+    #b_search_icon {
         height: 30px;
         top: 0;
     }
