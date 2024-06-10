@@ -1,25 +1,36 @@
 import React, { useState } from "react";
 import "./payment.css";
 import $ from "jquery";
+import axios from 'axios'
+
 
 function Payment() {
+
+
   const [result, setResult] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = $(e.target);
+    const formData = form.serializeArray();
+    let data = {};
+    formData.forEach(field => {
+      data[field.name] = field.value;
+    });
+
     $.ajax({
       type: "POST",
       url: form.attr("action"),
-      data: form.serialize(),
+      data: JSON.stringify(data),
+      contentType: "application/json",
       success(data) {
         setResult(data.success || data.error);
       },
-      
     });
   };
 
   return (
+    <>
     <div className="payment-container">
       <div className="div_f">
         <div className="form_r" id="form_r">
@@ -27,14 +38,15 @@ function Payment() {
             name="frmLogin"
             id="frmLogin"
             action="http://localhost:8000/Carta.php"
-            method="post"
-            onSubmit={handleSubmit}
+            method="POST"
+            onSubmit={(event) => handleSubmit(event)}
+
           >
             <h1>Compila i dettagli della carta di credito</h1>
             <div className="riga">
               <div className="input-box_1">
                 <input
-                  type="email"
+                  type="text"
                   placeholder="Email"
                   id="email"
                   name="email"
@@ -128,6 +140,7 @@ function Payment() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

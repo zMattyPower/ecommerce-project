@@ -1,6 +1,8 @@
 <?php
-	header('Access-Control-Allow-Origin: http://localhost:8000/progetto_scuola');
-	header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: http://localhost:8000/progetto_scuola');
+header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Allow-Headers: Content-Type');
+header('Content-Type: application/json');
 	
 	include "core.php";
 

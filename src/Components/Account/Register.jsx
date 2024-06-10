@@ -84,7 +84,7 @@ const Register = () => {
                     >
 
                         <h1>Registrazione</h1>
-                        <div className="riga">
+                        <div className="riga_reg">
                             <div className="input-box_1">
 
                                 <input type="text" placeholder="Nome" id="nome" name="nome"
@@ -104,7 +104,7 @@ const Register = () => {
                             </div>
                         </div>
 
-                        <div className="riga">
+                        <div className="riga_reg">
                             <div className="input-box_1">
 
                                 <input type="email" placeholder="E-Mail" id="email_r" name="email"
@@ -126,7 +126,7 @@ const Register = () => {
 
                         </div>
 
-                        <div className="riga">
+                        <div className="riga_reg">
                             <div className="input-box_1">
 
                                 <input type="date" id="data_nascita" name="data_nascita"
@@ -147,7 +147,7 @@ const Register = () => {
 
                         </div>
 
-                        <div className="riga">
+                        <div className="riga_reg">
                             <p><input type="checkbox" id="trattamento" name="trattamento"
                                 required /> Termini e condizioni</p>
                             <br />
@@ -156,7 +156,7 @@ const Register = () => {
 
                         {result}
 
-                        <div className="riga">
+                        <div className="riga_reg">
                             <div className="register-link">
                                 <hr />
                                 <p className='link_login'><a

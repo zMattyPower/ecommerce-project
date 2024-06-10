@@ -374,13 +374,13 @@ const Navbar = () => {
                       <h4 className="title">Scarpe</h4>
                       <ul>
                         <li>
-                          <Link to="#">Camminata</Link>
+                          <Link to="#"></Link>
                         </li>
                         <li>
-                          <Link to="#">Corsa</Link>
+                          <Link to="#"></Link>
                         </li>
                         <li>
-                          <Link to="#">Allenamento</Link>
+                          <Link to="#"></Link>
                         </li>
                       </ul>
                     </div>
@@ -388,9 +388,7 @@ const Navbar = () => {
                     <div className="list-item">
                       <h4 className="title">Accessori</h4>
                       <ul>
-                        <li>
-                          <Link to="#">Borse</Link>
-                        </li>
+                        
                         <li>
                           <Link to="#">Cappelli</Link>
                         </li>
