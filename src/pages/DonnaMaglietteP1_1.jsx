@@ -1,5 +1,7 @@
 import "./DonnaMaglietteP1_1.css";
+import { Link } from "react-router-dom";
 import Taglia from "../Components/Taglia/Taglia";
+
 
 import d_maglietta_1_1 from "../Components/Img/d_maglietta_1_1.jpg";
 import d_maglietta_1_2 from "../Components/Img/d_maglietta_1_2.jpg";
@@ -84,11 +86,11 @@ function DonnaMaglietteP1_1() {
                 alt="d_maglietta_1_1"
                 className="c_m1"
               ></img>
-              <img
+              <Link to = "/Donna/Magliette/P/1/_/2"><img
                 src={d_maglietta_1_2}
                 alt="d_maglietta_1_1"
                 className="c_m1"
-              ></img>
+              ></img></Link>
             </div>
 
             <div className="riga1_r3_prodM">

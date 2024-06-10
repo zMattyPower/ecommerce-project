@@ -127,7 +127,7 @@ function DonnaMagliette() {
               {" "}
               {/* riga 1 della riga 1 della riga 2 e colonna 2 */}
               <div className="prod">
-                <Link to="">
+                <Link to="/Donna/Magliette/P/1/_/2">
                   <img
                     src={d_maglietta_1_2}
                     alt="d_maglietta_1_1"
