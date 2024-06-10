@@ -1,11 +1,11 @@
 <?php
-header('Access-Control-Allow-Origin: http://localhost:8000/progetto_scuola');
+header('Access-Control-Allow-Origin: http://localhost:8000/clothem');
 
 function connectDatabase() {
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "progetto_scuola";
+	$dbname = "clothem";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);

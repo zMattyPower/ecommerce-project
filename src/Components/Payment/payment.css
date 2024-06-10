@@ -1,46 +1,68 @@
 .payment-container {
-  max-width: 400px;
+  max-width: 1000px; /* Aumenta la larghezza massima */
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
-.form-group {
+.payment-container h1 {
+  font-size: 1.5rem;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.riga {
   display: flex;
-  flex-wrap: wrap; /* Per consentire il wrapping dei campi su più righe se necessario */
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
-label {
-  flex-basis: 100%; /* Occupa tutta la larghezza disponibile */
-  margin-bottom: 5px;
+.input-box_1 {
+  width: calc(50% - 10px);
 }
 
-input.text{
-  flex: 1; /* Ogni campo occupa la stessa quantità di spazio disponibile */
+.input-box_1 input {
+  width: calc(1000% - 10px); /* Larghezza calcolata per tener conto del padding */
   padding: 10px;
-  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px; /* Aggiungi margine destro per separare i campi */
+  font-size: 1rem;
+}
+.input-box_1 input:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
-input.text:last-child {
-  margin-right: 0; /* Rimuovi il margine destro per l'ultimo campo */
-}
-
-button.pay {
+.btn {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
   border: none;
   border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   background-color: #0056b3;
+}
+
+.register-link {
+  text-align: center;
+}
+
+.link_login {
+  margin-top: 10px;
+}
+
+.link_login a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.link_login a:hover {
+  text-decoration: underline;
 }
