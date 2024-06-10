@@ -59,7 +59,7 @@ const Login = () => {
 
                 <div className="input-box">
                     <FontAwesomeIcon icon={faLock} id="login"/>
-                    <input type={passwordShown ? "text" : "password"} id="password" name="password" placeholder="Password" required/>
+                    <input type={passwordShown ? "text" : "password"} id="pass" name="pass" placeholder="Password" required/>
                     <FontAwesomeIcon
                         icon={passwordShown ? faEyeSlash : faEye}
                         onClick={togglePasswordVisibility}

@@ -2,12 +2,12 @@
 header('Access-Control-Allow-Origin: http://localhost:8000/progetto_scuola');
 header('Content-Type: application/json');
 
-include_once "core.php";
+include "core.php";
 
 $conn = connectDatabase();
-if ($conn->connect_error) {
+/*if ($conn->connect_error) {
     die(json_encode(['error' => "Connection failed: " . $conn->connect_error]));
-}
+}*/
 
 $carta_email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $carta_cardNumber = filter_input(INPUT_POST, 'cardNumber', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
