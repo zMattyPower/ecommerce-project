@@ -27,7 +27,6 @@ div.form_r {
 }
 
 h1 {
-    color: red;
     text-align: center;
     padding-top: 3px;
     padding-bottom: 8px;
@@ -92,7 +91,7 @@ div.register-link {
 
 
 div.register-link p a{
-    color: red;
+    color: rgb(0, 0, 0);
 }
 
 div.riga::after {
@@ -118,7 +117,7 @@ div.riga::after {
 }
 
 /*Telefoni iphone xr*/
-@media screen and (max-width: 425px) and (min-width: 46px) {
+@media screen and (max-width: 426px){
 
     div.div_f {
         display: flex;
@@ -126,8 +125,6 @@ div.riga::after {
     }
 
     div.form_r {
-        background-color: rgb(13, 0, 255);
-       
         color: black;
         margin-top: 10%;
         margin-left: 10%;
@@ -138,7 +135,6 @@ div.riga::after {
     }
 
     h1 {
-        color: red;
         text-align: center;
         padding-top: 2%;
         padding-bottom: 2%;
@@ -153,16 +149,10 @@ div.riga::after {
         
     }
 
-    div.riga p{
-        color:red;
-    }
-
-
     div.input-box_1 {
         width: 100%;
         height: 100%;
     }
-
 
     div.icon{
         margin-top: -23px;

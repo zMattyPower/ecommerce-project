@@ -29,10 +29,14 @@ import './Register.css';
 const Register = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const [result, setResult] = useState("");
-    const { useLogin, setUseLogin } = useLoginContext();
 
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
+    };
+
+    const { useLogin, setUseLogin } = useLoginContext();
+    const toggleLogin = () => {
+      setUseLogin(!useLogin);
     };
 
     /*const handleSubmit = async (e) => {
@@ -116,7 +120,7 @@ const Register = () => {
                                 <input type={passwordShown ? "text" : "password"} id="pass" name="pass" placeholder="Password" required />
 
                                 <div className="icon_pass">
-                                        <div><FontAwesomeIcon icon={faLock} id="login" /></div>
+                                    <div><FontAwesomeIcon icon={faLock} id="login" /></div>
                                 </div>
                             </div>
 
@@ -129,15 +133,13 @@ const Register = () => {
                                     required />
 
 
-                                <div className="icon"><FontAwesomeIcon icon={faUser} id="login" />
+                                <div className="icon">
                                 </div>
                             </div>
 
                             <div className="input-box_1">
 
-
-                                <input type="tel" placeholder="Telefono" id="telefono" name="telefono"
-                                    required />
+                                <input type="tel" placeholder="Telefono" id="telefono" name="telefono" required />
 
                                 <div className="icon"> <FontAwesomeIcon icon={faPhone} id="login" />
                                 </div>
@@ -148,7 +150,7 @@ const Register = () => {
                         <div className="riga">
                             <p><input type="checkbox" id="trattamento" name="trattamento"
                                 required /> Termini e condizioni</p>
-                                <br/>
+                            <br />
                             <button type="submit" className="btn">Registrati</button>
                         </div>
 
@@ -157,13 +159,19 @@ const Register = () => {
                         <div className="riga">
                             <div className="register-link">
                                 <hr />
-                                <p><a href='about:blank'><Link to="/">Hai già un account? Fai il login</Link><i className='bx bx-chevrons-right'></i></a></p>
-                            </div>
+                                <p className='link_login'><a
+                                    href="#"
+                                    className="user"
+                                    id="b_login_icon"
+                                    onClick={toggleLogin}
+                                >
+                                Hai già un account? Fai il login<i className='bx bx-chevrons-right'></i></a></p>
                         </div>
-                    </form>
                 </div>
+            </form>
+        </div >
 
-            </div>
+            </div >
         </>
     );
 };

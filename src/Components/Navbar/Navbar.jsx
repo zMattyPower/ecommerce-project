@@ -121,7 +121,7 @@ const Navbar = () => {
       </div>
       <header className="header">
         <div className="container">
-          <div className="row v-center">
+
             <div className="header-item item-left">
               <div className="logo">
                 <Link to="/">
@@ -442,7 +442,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="navbar-right"></div>
-          </div>
+
         </div>
       </header>
     </>
