@@ -3,7 +3,6 @@ import "./payment.css";
 import $ from "jquery";
 
 function Payment() {
-
   const [result, setResult] = useState("");
 
   const handleSubmit = (e) => {
@@ -14,11 +13,11 @@ function Payment() {
       url: form.attr("action"),
       data: form.serialize(),
       success(data) {
-        setResult(data);
+        setResult(data.success || data.error);
       },
+      
     });
   };
- 
 
   return (
     <div className="payment-container">
@@ -29,7 +28,7 @@ function Payment() {
             id="frmLogin"
             action="http://localhost:8000/Carta.php"
             method="post"
-            onSubmit={(event) => handleSubmit(event)}
+            onSubmit={handleSubmit}
           >
             <h1>Compila i dettagli della carta di credito</h1>
             <div className="riga">
@@ -103,7 +102,7 @@ function Payment() {
               <div className="input-box_1">
                 <input
                   type="text"
-                  placeholder="indirizzo"
+                  placeholder="Indirizzo"
                   id="indirizzo"
                   name="indirizzo"
                   required
@@ -112,7 +111,7 @@ function Payment() {
               <div className="input-box_1">
                 <input
                   type="text"
-                  placeholder="Citta"
+                  placeholder="Città"
                   id="citta"
                   name="citta"
                   required
@@ -125,7 +124,6 @@ function Payment() {
                 Paga
               </button>
             </div>
-            {result}
           </form>
         </div>
       </div>
