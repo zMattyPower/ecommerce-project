@@ -15,9 +15,6 @@ function Payment() {
       success(data) {
         setResult(data.success || data.error);
       },
-      error(jqXHR, textStatus, errorThrown) {
-        setResult("Errore: " + textStatus + " - " + errorThrown);
-      },
     });
   };
 
@@ -46,9 +43,9 @@ function Payment() {
               <div className="input-box_1">
                 <input
                   type="text"
-                  placeholder="Titolare"
-                  id="titolare"
-                  name="titolare"
+                  placeholder="Numero Carta"
+                  id="n_carta"
+                  name="n_carta"
                   required
                 />
               </div>
@@ -57,22 +54,23 @@ function Payment() {
               <div className="input-box_1">
                 <input
                   type="text"
-                  placeholder="Numero Carta"
-                  id="n_carta"
-                  name="n_carta"
+                  placeholder="Titolare"
+                  id="titolare"
+                  name="titolare"
                   required
                 />
               </div>
               <div className="input-box_1">
                 <input
                   type="text"
-                  placeholder="CAP"
-                  id="cap"
-                  name="cap"
+                  placeholder="Indirizzo"
+                  id="indirizzo"
+                  name="indirizzo"
                   required
                 />
               </div>
             </div>
+            
             <div className="riga">
               <div className="input-box_1">
                 <input
@@ -92,6 +90,10 @@ function Payment() {
                   required
                 />
               </div>
+            </div>
+
+            <div className="riga">
+  
               <div className="input-box_1">
                 <input
                   type="text"
@@ -104,9 +106,9 @@ function Payment() {
               <div className="input-box_1">
                 <input
                   type="text"
-                  placeholder="Indirizzo"
-                  id="indirizzo"
-                  name="indirizzo"
+                  placeholder="CAP"
+                  id="cap"
+                  name="cap"
                   required
                 />
               </div>
@@ -120,6 +122,7 @@ function Payment() {
                 />
               </div>
             </div>
+
             <div className="riga">{result}</div>
             <div className="riga">
               <button type="submit" className="btn">
