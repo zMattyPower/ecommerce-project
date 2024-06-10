@@ -9,16 +9,25 @@ function Payment() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = $(e.target);
+    const formData = form.serializeArray();
+    let data = {};
+    formData.forEach(field => {
+      data[field.name] = field.value;
+    });
+
     $.ajax({
       type: "POST",
       url: form.attr("action"),
-      data: form.serialize(),
+      data: JSON.stringify(data),
+      contentType: "application/json",
       success(data) {
-        setResult(data);
+        setResult(data.success || data.error);
       },
+      error(jqXHR, textStatus, errorThrown) {
+        setResult(`Request failed: ${textStatus}`);
+      }
     });
   };
- 
 
   return (
     <div className="payment-container">
@@ -28,7 +37,7 @@ function Payment() {
             name="frmLogin"
             id="frmLogin"
             action="http://localhost:8000/Carta.php"
-            method="post"
+            method="POST"
             onSubmit={(event) => handleSubmit(event)}
           >
             <h1>Compila i dettagli della carta di credito</h1>
