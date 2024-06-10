@@ -3,6 +3,7 @@ import "./payment.css";
 import $ from "jquery";
 
 function Payment() {
+
   const [result, setResult] = useState("");
 
   const handleSubmit = (e) => {
@@ -17,6 +18,7 @@ function Payment() {
       },
     });
   };
+ 
 
   return (
     <div className="payment-container">

@@ -77,10 +77,7 @@ if ($email_check_stmt->num_rows == 0) {
             echo json_encode(['error' => "Errore durante l'inserimento dei dati: " . $stmt->error]);
         }
         $stmt->close();
-    } else {
-        $chck_stmt->close();
-        echo json_encode(['error' => "La carta esiste già!"]);
-    }
+
 }
 
 $conn->close();

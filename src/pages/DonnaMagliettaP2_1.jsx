@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Taglia from "../Components/Taglia/Taglia";
 
 
-import d_maglietta_1_1 from "../Components/Img/d_maglietta_1_1.jpg";
-import d_maglietta_1_2 from "../Components/Img/d_maglietta_1_2.jpg";
+import d_maglietta_2_1 from "../Components/Img/d_maglietta_2_1.jpg";
+import d_maglietta_2_2 from "../Components/Img/d_maglietta_2_2.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +13,7 @@ import React, { useState } from "react";
 import { useCookies } from "react-cookie";
 
 
-function DonnaMaglietteP1_1() {
+function DonnaMaglietteP2_1() {
   const [cookies, setCookie] = useCookies(["carrello"]);
   const [quantita, setQuantita] = useState(1); // Stato per il numero di magliette selezionate
   const [tagliaSelezionata, setTagliaSelezionata] = useState(""); // Stato per la taglia selezionata
@@ -65,8 +65,8 @@ function DonnaMaglietteP1_1() {
         <div className="riga1_prodM">
           <div className="m1c">
             <img
-              src={d_maglietta_1_1}
-              alt="d_maglietta_1_1"
+              src={d_maglietta_2_1}
+              alt="d_maglietta_2_1"
               className="m1"
             ></img>
           </div>
@@ -75,20 +75,20 @@ function DonnaMaglietteP1_1() {
             <div className="riga1_r1_prodM">
               <p className="des">
                 {" "}
-                Maglietta a maniche corte <br /> 9,99 €
+                Maglietta a maniche corte con stampa grafica<br /> 13,99 €
               </p>
 
             </div>
 
             <div className="riga1_r2_prodM">
               <img
-                src={d_maglietta_1_1}
-                alt="d_maglietta_1_1"
+                src={d_maglietta_2_1}
+                alt="d_maglietta_2_1"
                 className="c_m1"
               ></img>
-              <Link to = "/Donna/Magliette/P/1/_/2"><img
-                src={d_maglietta_1_2}
-                alt="d_maglietta_1_1"
+              <Link to = "/Donna/Magliette/P/2/_/2"><img
+                src={d_maglietta_2_2}
+                alt="d_maglietta_2_2"
                 className="c_m1"
               ></img></Link>
             </div>
@@ -123,8 +123,8 @@ function DonnaMaglietteP1_1() {
                 onClick={() =>
                   aggiungiAlCarrello(
                     "Maglietta a maniche corte",
-                    "9.99",
-                    d_maglietta_1_1,
+                    "13.99",
+                    d_maglietta_2_1,
                     tagliaSelezionata, // Passa la taglia selezionata
                     quantita
                   )
@@ -141,4 +141,4 @@ function DonnaMaglietteP1_1() {
   );
 }
 
-export default DonnaMaglietteP1_1;
+export default DonnaMaglietteP2_1;
