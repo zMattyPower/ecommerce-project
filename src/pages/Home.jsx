@@ -52,8 +52,8 @@ const items = [
       "https://static.bershka.net/4/photos2/2024/V/0/2/p/3319/352/426/207dbe98dd78490927592219f11a547f-3319352426_2_4_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh",
   },
   {
-    titolo: "Prima Card",
-    descrizione: "Questa è la descrizione della prima card.",
+    titolo: "BAGGY JEANS",
+    descrizione: "34,00 €",
     immagine:
       "https://static.bershka.net/4/photos2/2024/V/0/2/p/0409/335/428/89e7ea83808b7523df299979d00aa114-0409335428_2_4_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh",
   },
@@ -64,20 +64,20 @@ const items = [
       "https://static.bershka.net/4/photos2/2024/V/0/1/p/3559/168/300/8fa2863e4121ba07c42dd038998c4e8a-3559168300_2_4_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh",
   },
   {
-    titolo: "Prima Card",
-    descrizione: "Questa è la descrizione della prima card.",
+    titolo: "Maglietta polo",
+    descrizione: "35,99 €",
     immagine:
       "https://static.bershka.net/4/photos2/2024/I/0/2/p/2837/623/526//15/2837623526_2_4_3.jpg?t=1716803796526",
   },
   {
-    titolo: "Prima Card",
-    descrizione: "Questa è la descrizione della prima card.",
+    titolo: "Felpa con cappuccio",
+    descrizione: "29,99 €",
     immagine:
       "https://static.bershka.net/4/photos2/2024/V/0/2/p/7448/732/802/c82350546f35d208a126e11f1eee88ad-7448732802_2_4_0.jpg?imwidth=850&impolicy=bershka-itxmediumhigh",
   },
   {
-    titolo: "Prima Card",
-    descrizione: "Questa è la descrizione della prima card.",
+    titolo: "Top bretelle a righe",
+    descrizione: "19,99 €",
     immagine:
       "https://static.bershka.net/4/photos2/2024/V/0/1/p/3834/168/902//01/3834168902_2_4_3.jpg?t=1709806241279",
   },
