@@ -98,7 +98,7 @@ function DonnaMagliette() {
                 <p className="donnamp"> 9,99 €</p>
               </div>
               <div className="prod">
-                <Link to="°">
+                <Link to="/Donna/Magliette/P/2/_/1">
                   <img
                     src={d_maglietta_2_1}
                     alt="d_maglietta_2_1"
@@ -112,7 +112,7 @@ function DonnaMagliette() {
                 <p className="donnamp"> 13,99 €</p>
               </div>
               <div className="prod">
-                <Link to="#">
+                <Link to="/Donna/Magliette/P/3/_/1">
                   <img
                     src={d_maglietta_3_1}
                     alt="d_maglietta_3_1"
@@ -130,7 +130,7 @@ function DonnaMagliette() {
                 <Link to="/Donna/Magliette/P/1/_/2">
                   <img
                     src={d_maglietta_1_2}
-                    alt="d_maglietta_1_1"
+                    alt="d_maglietta_1_2"
                     className="image"
                   ></img>
                 </Link>
@@ -138,10 +138,10 @@ function DonnaMagliette() {
                 <p className="donnamp"> 9,99 €</p>
               </div>
               <div className="prod">
-                <Link to="#">
+                <Link to="/Donna/Magliette/P/2/_/2">
                   <img
                     src={d_maglietta_2_2}
-                    alt="d_maglietta_2_1"
+                    alt="d_maglietta_2_2"
                     className="image"
                   ></img>
                 </Link>
@@ -152,10 +152,10 @@ function DonnaMagliette() {
                 <p className="donnamp"> 13,99 €</p>
               </div>
               <div className="prod">
-                <Link to="#">
+                <Link to="/Donna/Magliette/P/3/_/2">
                   <img
                     src={d_maglietta_3_2}
-                    alt="d_maglietta_3_1"
+                    alt="d_maglietta_3_2"
                     className="image"
                   ></img>
                 </Link>
