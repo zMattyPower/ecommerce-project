@@ -3,11 +3,11 @@
 /*Desktop
 @media (min-width: 1200px) {*/
 
- /*   div.form_r {
+/*   div.form_r {
         background-color: rgb(0, 0, 0);
     }*/
 
-    
+
 div.div_f {
     display: grid;
 
@@ -17,13 +17,13 @@ div.form_r {
     border: 2px solid black;
     /*background-color: rgba(255, 253, 253, 0.382);*/
     color: black;
-   
-        margin-top: 5%;
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-bottom: 5%;
-        
-        float:inline-start;
+
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+
+    float: inline-start;
 }
 
 h1 {
@@ -33,41 +33,49 @@ h1 {
 }
 
 div.riga {
-   /* border: 2px solid rgb(229, 0, 255); */
+    /* border: 2px solid rgb(229, 0, 255); */
     width: 90%;
-   /* height: 50px; */
+    /* height: 50px; */
     margin-left: 5%;
     margin-right: 5%;
 }
 
 div.input-box_1 {
-    float: left; /*rrrrttyfyufyfy*/
+    float: left;
+    /*rrrrttyfyufyfy*/
     width: 50%;
-  /* border: 3px solid rgb(0, 255, 60); */
+    /* border: 3px solid rgb(0, 255, 60); */
     height: 100%;
     padding: 10px;
 }
 
-div.input-box_1 input{
+div.input-box_1 input {
     width: 100%;
     height: 135%;
 
 }
-input#nome, input#cognome, input#email_r, input#pass, input#data_nascita, input#telefono{
-  /*  border: 2px solid green; */
+
+input#nome,
+input#cognome,
+input#email_r,
+input#pass,
+input#data_nascita,
+input#telefono {
+    /*  border: 2px solid green; */
     padding-top: 8px;
     padding-left: 28px;
 
 }
-div.icon{
+
+div.icon {
     position: absolute;
     margin-top: -26px;
     margin-left: 8px;
-    
+
 }
 
 
-div.icon_pass{
+div.icon_pass {
     margin-top: -25px;
     margin-left: 8px;
     margin-right: 8px;
@@ -90,7 +98,7 @@ div.register-link {
 }
 
 
-div.register-link p a{
+div.register-link p a {
     color: rgb(0, 0, 0);
 }
 
@@ -98,13 +106,13 @@ div.riga::after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 
 /*}*/
 
 /*Tablet*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
     div.form_r {
         color: black;
@@ -112,16 +120,16 @@ div.riga::after {
         margin-left: 15%;
         margin-right: 15%;
         margin-bottom: 5%;
-        float:inline-start;
+        float: inline-start;
     }
 }
 
 /*Telefoni iphone xr*/
-@media screen and (max-width: 426px){
+@media screen and (max-width: 426px) {
 
     div.div_f {
         display: flex;
-    
+
     }
 
     div.form_r {
@@ -130,8 +138,8 @@ div.riga::after {
         margin-left: 10%;
         margin-right: 10%;
         margin-bottom: 10%;
-        
-        float:inline-start;
+
+        float: inline-start;
     }
 
     h1 {
@@ -143,10 +151,10 @@ div.riga::after {
 
     div.riga {
         width: 100%;
-        margin-top:0;
-        margin-left:0;
+        margin-top: 0;
+        margin-left: 0;
         height: 100%;
-        
+
     }
 
     div.input-box_1 {
@@ -154,14 +162,14 @@ div.riga::after {
         height: 100%;
     }
 
-    div.icon{
+    div.icon {
         margin-top: -23px;
         margin-left: 4px;
         height: 30px;
-        
+
     }
 
-    div.icon_pass{
+    div.icon_pass {
         margin-top: -22px;
         margin-left: 2px;
         height: 30px;
