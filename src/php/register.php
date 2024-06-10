@@ -1,5 +1,5 @@
 <?php
-	header('Access-Control-Allow-Origin: http://localhost:3000');
+	header('Access-Control-Allow-Origin: http://localhost:8000/progetto_scuola');
 
 	include "core.php";
 
