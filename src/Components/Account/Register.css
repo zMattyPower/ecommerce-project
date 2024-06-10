@@ -32,7 +32,7 @@ h1 {
     padding-bottom: 8px;
 }
 
-div.riga {
+div.riga_reg {
     /* border: 2px solid rgb(229, 0, 255); */
     width: 90%;
     /* height: 50px; */
@@ -83,11 +83,11 @@ div.icon_pass {
     justify-content: space-between;
 }
 
-div.riga input#trattamento {
+div.riga_reg input#trattamento {
     margin-left: 10px;
 }
 
-div.riga button.btn {
+div.riga_reg button.btn {
     width: 97%;
     margin-left: 10px;
 }
@@ -101,7 +101,7 @@ div.register-link p a {
     color: rgb(0, 0, 0);
 }
 
-div.riga::after {
+div.riga_reg::after {
     content: "";
     display: table;
     clear: both;
@@ -148,7 +148,7 @@ div.riga::after {
         size: 10px;
     }
 
-    div.riga {
+    div.riga_reg {
         width: 100%;
         margin-top: 0;
         margin-left: 0;
