@@ -1,5 +1,3 @@
-import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/Footer/Footer";
 
 import { Link } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
@@ -13,10 +11,8 @@ import d_maglietta_1_2 from "../Components/Img/d_maglietta_1_2.jpg";
 import d_maglietta_2_2 from "../Components/Img/d_maglietta_2_2.jpg";
 import d_maglietta_3_2 from "../Components/Img/d_maglietta_3_2.jpg";
 
-import DonnaMaglietteP1_1 from "./DonnaMaglietteP1_1";
-
 function DonnaMagliette() {
-  
+
   return (
     <>
       <div className="contenitore_cat">
