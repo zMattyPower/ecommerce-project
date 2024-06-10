@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./payment.css";
+import $ from "jquery";
 
 function Payment() {
   const [cardNumber, setCardNumber] = useState("");
@@ -10,6 +11,7 @@ function Payment() {
   const [city, setCity] = useState("");
   const [postalCode, setPostalCode] = useState("");
   const [country, setCountry] = useState("");
+  const [result, setResult] = useState("");// come la faccio diventare utilizzata ?!?!?!?!?
 
   const handleCardNumberChange = (event) => {
     const input = event.target.value.replace(/\D/g, '').slice(0, 16); // Rimuove i non numeri e limita a 16 caratteri
@@ -45,10 +47,18 @@ function Payment() {
     setCountry(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Esegui qui la logica per inviare i dettagli della carta di credito al backend o per elaborare il pagamento
-  };
+  const handleSubmit = (e) => {   ///*********** OCCHIO QUA */
+    e.preventDefault();
+    const form = $(e.target);
+    $.ajax({
+        type: "POST",
+        url: form.attr("action"),
+        data: form.serialize(),
+        success(data) {
+            setResult(data);
+        },
+    });
+};
 
   return (
     <div className="payment-container">

@@ -41,6 +41,7 @@ if ($chck_stmt->num_rows == 0) {
 
     if ($stmt->execute()) {
         echo json_encode(['success' => "Pagamento effettuato con successo."]);
+        $result = $stmt->get_result(); /// DOVEEEEEEEEEEEEEEEEEEEEEEE VA MESSAAAAAA  ?????????????
     } else {
         echo json_encode(['error' => "Errore durante l'inserimento dei dati: " . $stmt->error]);
     }
