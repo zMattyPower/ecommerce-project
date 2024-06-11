@@ -1,7 +1,6 @@
 <?php
-	header('Access-Control-Allow-Origin: http://localhost:8000/progetto_scuola');
-	header('Content-Type: application/json');
-	
+	header('Access-Control-Allow-Origin: http://localhost:3000');
+
 	include "core.php";
 
 	// Connecting to Database

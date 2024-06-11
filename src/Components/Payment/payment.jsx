@@ -13,7 +13,7 @@ function Payment() {
       url: form.attr("action"),
       data: form.serialize(),
       success(data) {
-        setResult(data.success || data.error);
+        setResult(data);
       },
     });
   };
@@ -27,7 +27,7 @@ function Payment() {
             id="frmLogin"
             action="http://localhost:8000/Carta.php"
             method="post"
-            onSubmit={handleSubmit}
+            onSubmit={(event) => handleSubmit(event)}
           >
             <h1>Compila i dettagli della carta di credito</h1>
             <div className="riga">
@@ -44,8 +44,8 @@ function Payment() {
                 <input
                   type="text"
                   placeholder="Numero Carta"
-                  id="n_carta"
-                  name="n_carta"
+                  id="numero"
+                  name="numero"
                   required
                 />
               </div>

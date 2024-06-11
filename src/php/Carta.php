@@ -1,6 +1,6 @@
 <?php
-header('Access-Control-Allow-Origin: http://localhost:8000/clothem');
-header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: http://localhost:3000');
+
 
 include "core.php";
 
@@ -15,7 +15,7 @@ $data = [];
 parse_str($input, $data);
 
 $carta_email = isset($data['email']) ? filter_var($data['email'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : null;
-$carta_cardNumber = isset($data['n_carta']) ? filter_var($data['n_carta'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : null;
+$carta_cardNumber = isset($data['numero']) ? filter_var($data['numero'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : null;
 $carta_expiryDate = isset($data['scadenza']) ? filter_var($data['scadenza'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : null;
 $carta_cardHolder = isset($data['titolare']) ? filter_var($data['titolare'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : null;
 $carta_city = isset($data['citta']) ? filter_var($data['citta'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : null;
