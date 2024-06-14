@@ -8,7 +8,7 @@
 
 	// Gets the input from the login form
 	$login_email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-	$login_password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	$login_password = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 	// Makes a prepared statement
 	$chck_stmt = makePreparedStatement($conn, "SELECT * FROM t_utente WHERE email = ?", $login_email);

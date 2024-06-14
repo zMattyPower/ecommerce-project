@@ -1,0 +1,30 @@
+services:
+  website:
+    image: ecommerce-project
+    ports:
+      - "3000:3000"
+  db:
+    image: mariadb
+    container_name: sql
+    environment:
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: progetto_scuola
+      MYSQL_USER: root
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: true
+    ports:
+      - "3306:3306"
+    volumes:
+      - /path/on/host:/var/lib/mysql
+      - ./progetto_nuovo.sql:/docker-entrypoint-initdb.d/progetto_nuovo.sql
+  php:
+    image: php:7.1-apache
+    build:
+      dockerfile: /src/php/Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src/php:/var/www/html/
+  hello-world-java:
+    image: accenturepbg/hello-world-java
+    ports:
+      - "8080:8080"

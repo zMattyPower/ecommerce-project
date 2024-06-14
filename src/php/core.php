@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: http://localhost:3000');
 
 function connectDatabase() {
-	$servername = "localhost";
+	$servername = "db";
 	$username = "root";
 	$password = "";
 	$dbname = "progetto_scuola";
