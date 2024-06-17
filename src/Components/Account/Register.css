@@ -58,7 +58,7 @@ div.input-box_1 input {
 input#nome,
 input#cognome,
 input#email_r,
-input#pass,
+input#pass_r,
 input#data_nascita,
 input#telefono {
     /*  border: 2px solid green; */

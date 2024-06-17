@@ -12,7 +12,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 	$login_nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$login_cognome = filter_input(INPUT_POST, 'cognome', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$login_email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-	$login_password = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	$login_password = filter_input(INPUT_POST, 'pass_r', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$login_nascita = filter_input(INPUT_POST, 'data_nascita', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$login_telefono = filter_input(INPUT_POST, 'telefono', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$login_trattamento = filter_input(INPUT_POST, 'trattamento', FILTER_SANITIZE_FULL_SPECIAL_CHARS);

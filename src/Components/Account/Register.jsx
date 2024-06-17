@@ -117,7 +117,7 @@ const Register = () => {
 
                             <div className="input-box_1">
 
-                                <input type={passwordShown ? "text" : "password"} id="pass" name="pass" placeholder="Password" required />
+                                <input type={passwordShown ? "text" : "password"} id="pass_r" name="pass_r" placeholder="Password" required />
 
                                 <div className="icon_pass">
                                     <div><FontAwesomeIcon icon={faLock} id="login" /></div>

@@ -60,7 +60,11 @@ const Login = () => {
                 <div className="input-box">
                     <FontAwesomeIcon icon={faLock} id="login"/>
                     <input type={passwordShown ? "text" : "password"} id="pass" name="pass" placeholder="Password" required/>
-                   
+                    <FontAwesomeIcon
+                        icon={passwordShown ? faEyeSlash : faEye}
+                        onClick={togglePasswordVisibility}
+                        id='eye-icon'
+                    />
                 </div>
                 
                 <button type="submit" className="btn">Accedi</button>
