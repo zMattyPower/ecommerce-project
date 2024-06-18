@@ -14,7 +14,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /path/on/host:/var/lib/mysql
+      - /db:/var/lib/mysql
       - ./progetto_nuovo.sql:/docker-entrypoint-initdb.d/progetto_nuovo.sql
   php:
     image: php:7.1-apache
@@ -28,3 +28,20 @@ services:
     image: accenturepbg/hello-world-java
     ports:
       - "8080:8080"
+  java-application:
+    image: openjdk:8
+    build:
+      dockerfile: /DockerfileJava
+    ports:
+      - "222:222"
+  phpmyadmin:
+    image: phpmyadmin:latest
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80

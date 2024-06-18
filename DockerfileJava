@@ -1,0 +1,7 @@
+# Use the OpenJDK as the base image
+FROM openjdk:8
+ADD src/java/Main.java /src/
+RUN javac /src/Main.java
+
+# Specify the entry point for running the application
+CMD java -cp /src/ Main
